@@ -63,6 +63,7 @@ function refresh(){
 	document.getElementById("helium").innerHTML = commafy(helium);
 	document.getElementById("ice").innerHTML = commafy(ice);
 	document.getElementById("meteorite").innerHTML = commafy(meteorite);
+	
 }
 
 function refreshPerSec(){
@@ -1729,44 +1730,75 @@ function refreshResources(){
 		document.getElementById(resourcesUnlocked[i]).className = "";
 	}
 	if(contains(resourcesUnlocked, "oilNav")){
-		document.getElementById("oilNav").className = "earth";
+		document.getElementById("oilNav").className = "fuel";
 	}
 	if(contains(resourcesUnlocked, "charcoalNav")){
-		document.getElementById("charcoalNav").className = "earth";
+		document.getElementById("charcoalNav").className = "fuel";
 	}
 	if(contains(resourcesUnlocked, "spaceMetalNav")){
-		document.getElementById("spaceMetalNav").className = "innerPlanet";
+		document.getElementById("spaceMetalNav").className = "metal";
 	}
 	if(contains(resourcesUnlocked, "methaneNav")){
-		document.getElementById("methaneNav").className = "innerPlanet";
+		document.getElementById("methaneNav").className = "metal";
 	}
 	if(contains(resourcesUnlocked, "titaniumNav")){
-		document.getElementById("titaniumNav").className = "innerPlanet";
+		document.getElementById("titaniumNav").className = "metal";
 	}
 	if(contains(resourcesUnlocked, "goldNav")){
-		document.getElementById("goldNav").className = "innerPlanet";
+		document.getElementById("goldNav").className = "metal";
 	}
 	if(contains(resourcesUnlocked, "silverNav")){
-		document.getElementById("silverNav").className = "innerPlanet";
+		document.getElementById("silverNav").className = "metal";
 	}
 	if(contains(resourcesUnlocked, "siliconNav")){
-		document.getElementById("siliconNav").className = "innerPlanet";
+		document.getElementById("siliconNav").className = "metal";
 	}
 	if(contains(resourcesUnlocked, "hydrogenNav")){
-		document.getElementById("hydrogenNav").className = "outerPlanet";
+		document.getElementById("hydrogenNav").className = "fuel";
 	}
 	if(contains(resourcesUnlocked, "heliumNav")){
-		document.getElementById("heliumNav").className = "outerPlanet";
+		document.getElementById("heliumNav").className = "fuel";
 	}
 	if(contains(resourcesUnlocked, "iceNav")){
-		document.getElementById("iceNav").className = "outerPlanet";
+		document.getElementById("iceNav").className = "earth";
 	}
 	if(contains(resourcesUnlocked, "meteoriteNav")){
-		document.getElementById("meteoriteNav").className = "outerPlanet";
+		document.getElementById("meteoriteNav").className = "metal";
 	}
 	if(contains(resourcesUnlocked, "spaceMetalNav")){
-		document.getElementById("spaceMetalNav").className = "innerPlanet";
+		document.getElementById("spaceMetalNav").className = "metal";
 	}
+	
+	if(contains(resourcesUnlocked, "plasmaNav")){
+		document.getElementById("plasmaNav").className = "energy";
+	}
+	
+	if(contains(resourcesUnlocked, "energyNav")){
+		document.getElementById("energyNav").className = "energy";
+	}
+	
+	if(contains(resourcesUnlocked, "uraniumNav")){
+		document.getElementById("uraniumNav").className = "energy";
+	}
+	
+	if(contains(resourcesUnlocked, "titaniumNav")){
+		document.getElementById("titaniumNav").className = "metal";
+	}
+	
+	if(contains(resourcesUnlocked, "lavaNav")){
+		document.getElementById("lavaNav").className = "metal";
+	}
+	
+	/*!if(contains(resourcesUnlocked, "metalNav")){
+		document.getElementById("metalNav").className = "metal";
+	}
+	metal
+	gems
+	lava
+	wood
+	*/
+	
+	
 	for(var i=0; i<noBorder.length; i++){
 		for(var j=0; j<4; j++){
 			document.getElementById(noBorder[i] + j).style.border = "";
@@ -1871,6 +1903,50 @@ $('.collapseEarth').click(function(){
         $(this).addClass("collapsed");
     }
 });
+
+$('.collapseFuel').click(function(){
+    if($(this).hasClass("collapsed")){
+        for(var i = 0; i < document.getElementsByClassName("fuel").length; i++){
+        	document.getElementsByClassName("fuel")[i].className = "fuel";
+        }
+        $(this).removeClass("collapsed");
+    } else {
+        for(var i = 0; i < document.getElementsByClassName("fuel").length; i++){
+        	document.getElementsByClassName("fuel")[i].className = "fuel hidden";
+        }
+        $(this).addClass("collapsed");
+    }
+});
+
+$('.collapseEnergy').click(function(){
+    if($(this).hasClass("collapsed")){
+        for(var i = 0; i < document.getElementsByClassName("energy").length; i++){
+        	document.getElementsByClassName("energy")[i].className = "energy";
+        } 
+        $(this).removeClass("collapsed");
+    } else {
+        for(var i = 0; i < document.getElementsByClassName("energy").length; i++){
+        	document.getElementsByClassName("energy")[i].className = "energy hidden";
+        }
+        $(this).addClass("collapsed");
+    }
+});
+
+$('.collapseMetal').click(function(){
+    if($(this).hasClass("collapsed")){
+        for(var i = 0; i < document.getElementsByClassName("metal").length; i++){
+        	document.getElementsByClassName("metal")[i].className = "metal";
+        } 
+        $(this).removeClass("collapsed");
+    } else {
+        for(var i = 0; i < document.getElementsByClassName("metal").length; i++){
+        	document.getElementsByClassName("metal")[i].className = "metal hidden";
+        }
+        $(this).addClass("collapsed");
+    }
+});
+
+
 
 $('.collapseInnerPlanet').click(function(){
     if($(this).hasClass("collapsed")){
