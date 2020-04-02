@@ -50,6 +50,7 @@ function refresh(){
 	document.getElementById("charcoal").innerHTML = commafy(charcoal);
 	document.getElementById("wood").innerHTML = commafy(wood);
 	document.getElementById("science").innerHTML = commafy(science);
+    document.getElementById("rocket").innerHTML = commafy(rocket);
 	document.getElementById("rocketFuel").innerHTML = commafy(rocketFuel);
 	document.getElementById("spaceMetal").innerHTML = commafy(spaceMetal);
 	document.getElementById("methane").innerHTML = commafy(methane);
@@ -307,8 +308,8 @@ function refreshPerSec(){
 	if(meteorite === 0){
 		document.getElementById("meteorite").className = "red";
 	}
-    if(rocketLaunched){
-        rocketFuel -= 5;
+    if(rocketLaunched === true){
+        rocketFuel -= 2/10;
     }
 
 }
@@ -448,6 +449,8 @@ function refreshUI(){
 	document.getElementById("fusionReactorTitaniumCost").innerHTML = commafy(fusionReactorTitaniumCost);
 	document.getElementById("fusionReactorSiliconCost").innerHTML = commafy(fusionReactorSiliconCost);
 	document.getElementById("pump").innerHTML = pump;
+    document.getElementById("rocket").innerHTML = rocket;
+    document.getElementById("rocketFuel").innerHTML = rocketFuel;
 	document.getElementById("pumpMetalCost").innerHTML = commafy(pumpMetalCost);
 	document.getElementById("pumpGemCost").innerHTML = commafy(pumpGemCost);
 	document.getElementById("pumpjack").innerHTML = pumpjack;
@@ -1716,7 +1719,7 @@ function checkRedCost(){
     } else{
         document.getElementById("launchRocketRocketCost").className = "";
     }
-    if(rocketFuelps < 5){
+    if(rocketFuelps < 2){
         document.getElementById("launchRocketRocketFuelpsCost").className = "red";
     } else{
         document.getElementById("launchRocketRocketFuelpsCost").className = "";

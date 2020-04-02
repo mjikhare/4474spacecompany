@@ -209,6 +209,7 @@ function save(type){
 		labMetalCost: labMetalCost,
 		rocket: rocket,
 		rocketFuel: rocketFuel,
+        rocketFuelps: rocketFuelps,
 		chemicalPlant: chemicalPlant,
 		chemicalPlantMetalCost: chemicalPlantMetalCost,
 		chemicalPlantGemCost: chemicalPlantGemCost,
@@ -545,6 +546,7 @@ function load(type){
 		if(typeof savegame.labMetalCost !== "undefined") labMetalCost = savegame.labMetalCost;
 		if(typeof savegame.rocket !== "undefined") rocket = savegame.rocket;
 		if(typeof savegame.rocketFuel !== "undefined") rocketFuel = savegame.rocketFuel;
+        if(typeof savegame.rocketFuelps !== "undefined") rocketFuelps = savegame.rocketFuelps;
 		if(typeof savegame.chemicalPlant !== "undefined") chemicalPlant = savegame.chemicalPlant;
 		if(typeof savegame.chemicalPlantMetalCost !== "undefined") chemicalPlantMetalCost = savegame.chemicalPlantMetalCost;
 		if(typeof savegame.chemicalPlantGemCost !== "undefined") chemicalPlantGemCost = savegame.chemicalPlantGemCost;

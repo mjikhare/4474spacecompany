@@ -29,7 +29,7 @@ function gainResources(){
 		if(oil >= chemicalPlant*20/10 && charcoal >= chemicalPlant*20/10){
 			oil -= chemicalPlant*20/10;
 			charcoal -= chemicalPlant*20/10;
-			rocketFuel += chemicalPlant/5/10;
+			rocketFuel += chemicalPlant/10;
 		}
 	}
 	if(spaceMetal + spaceMetalps/10 < spaceMetalStorage){
@@ -678,7 +678,9 @@ function getHeater(){
 		refresh();
 		refreshPerSec();
 		tier1 += 1;
-	}
+	} else{
+        noEnough();
+    }
 }
 
 function getCharcoalEngine(){
@@ -698,7 +700,9 @@ function getCharcoalEngine(){
 		refresh();
 		refreshPerSec();
 		tier1 += 1;
-	}
+	} else{
+        noEnough();
+    }
 }
 
 function getSolarPanel(){
@@ -714,7 +718,9 @@ function getSolarPanel(){
 		refresh();
 		refreshPerSec();
 		tier2 += 1;
-	}
+	} else{
+        noEnough();
+    }
 }
 
 function getMethaneStation(){
@@ -730,7 +736,9 @@ function getMethaneStation(){
 		refresh();
 		refreshPerSec();
 		tier3 += 1;
-	}
+	} else{
+        noEnough();
+    }
 }
 
 function getNuclearStation(){
@@ -746,7 +754,9 @@ function getNuclearStation(){
 		refresh();
 		refreshPerSec();
 		tier4 += 1;
-	}
+	} else{
+        noEnough();
+    }
 }
 
 
@@ -766,7 +776,9 @@ function getMagmatic(){
 		refresh();
 		refreshPerSec();
 		tier5 += 1;
-	}
+	} else{
+        noEnough();
+    }
 }
 
 function getFusionReactor(){
@@ -785,7 +797,9 @@ function getFusionReactor(){
 		refresh();
 		refreshPerSec();
 		tier6 += 1;
-	}
+	} else{
+        noEnough();
+    }
 }
 
 function getGrinder(){
@@ -804,7 +818,9 @@ function getGrinder(){
 		refresh();
 		refreshPerSec();
 		tier1 += 1;
-	}
+	} else{
+        noEnough();
+    }
 }
 
 function getCubic(){
@@ -823,7 +839,9 @@ function getCubic(){
 		refresh();
 		refreshPerSec();
 		tier2 += 1;
-	}
+	} else{
+        noEnough();
+    }
 }
 
 function getEnricher(){
@@ -842,7 +860,9 @@ function getEnricher(){
 		refresh();
 		refreshPerSec();
 		tier3 += 1;
-	}
+	} else{
+        noEnough();
+    }
 }
 
 function getPump(){
@@ -863,7 +883,9 @@ function getPump(){
 		refresh();
 		refreshPerSec();
 		tier1 += 1;
-	}
+	} else{
+        noEnough();
+    }
 }
 
 function getPumpjack(){
@@ -882,7 +904,9 @@ function getPumpjack(){
 		refresh();
 		refreshPerSec();
 		tier2 += 1;
-	}
+	} else{
+        noEnough();
+    }
 }
 
 function getOilField(){
@@ -901,14 +925,16 @@ function getOilField(){
 		refresh();
 		refreshPerSec();
 		tier3 += 1;
-	}
+	} else{
+        noEnough();
+    }
 }
 
 function noEnough(){
 	PNotify.prototype.options.styling = "bootstrap3";
 	new PNotify({
-		title: "not enough resource",
-		type: 'info',
+		title: "Insufficient resources",
+		type: 'error',
 		animation: 'fade',
 		animate_speed: 'fast',
 		addclass: "stack-bottomright"
@@ -918,7 +944,7 @@ function noEnough(){
 function notify(title){
 	PNotify.prototype.options.styling = "bootstrap3";
 	new PNotify({
-		title: title+" is being mined",
+		title: title+" is being produced",
 		type: 'info',
 		animation: 'fade',
 		animate_speed: 'fast',
@@ -953,7 +979,9 @@ function getMiner(){
 		refresh();
 		refreshPerSec();
 		tier1 += 1;
-	}
+	} else{
+        noEnough();
+    }
 }
 
 function getHeavyDrill(){
@@ -972,7 +1000,9 @@ function getHeavyDrill(){
 		refresh();
 		refreshPerSec();
 		tier2 += 1;
-	}
+	} else{
+        noEnough();
+    }
 }
 
 function getGigaDrill(){
@@ -991,7 +1021,9 @@ function getGigaDrill(){
 		refresh();
 		refreshPerSec();
 		tier3 += 1;
-	}
+	} else{
+        noEnough();
+    }
 }
 
 function getGemMiner(){
@@ -1012,7 +1044,9 @@ function getGemMiner(){
 		refresh();
 		refreshPerSec();
 		tier1 += 1;
-	}
+	} else{
+        noEnough();
+    }
 }
 
 function getAdvancedDrill(){
@@ -1031,7 +1065,9 @@ function getAdvancedDrill(){
 		refresh();
 		refreshPerSec();
 		tier2 += 1;
-	}
+	} else{
+        noEnough();
+    }
 }
 
 function getDiamondDrill(){
@@ -1050,7 +1086,9 @@ function getDiamondDrill(){
 		refresh();
 		refreshPerSec();
 		tier3 += 1;
-	}
+	} else{
+        noEnough();
+    }
 }
 
 function getWoodburner(){
@@ -1071,7 +1109,9 @@ function getWoodburner(){
 		refresh();
 		refreshPerSec();
 		tier1 += 1;
-	}
+	} else{
+        noEnough();
+    }
 }
 
 function getFurnace(){
@@ -1090,7 +1130,9 @@ function getFurnace(){
 		refresh();
 		refreshPerSec();
 		tier2 += 1;
-	}
+	} else{
+        noEnough();
+    }
 }
 
 function getKiln(){
@@ -1109,7 +1151,9 @@ function getKiln(){
 		refresh();
 		refreshPerSec();
 		tier3 += 1;
-	}
+	} else{
+        noEnough();
+    }
 }
 
 function getWoodcutter(){
@@ -1129,7 +1173,9 @@ function getWoodcutter(){
 		refresh();
 		refreshPerSec();
 		tier1 += 1;
-	}
+	} else{
+        noEnough();
+    }
 }
 
 function getLaserCutter(){
@@ -1148,7 +1194,9 @@ function getLaserCutter(){
 		refresh();
 		refreshPerSec();
 		tier2 += 1;
-	}
+	} else{
+        noEnough();
+    }
 }
 
 function getDeforester(){
@@ -1167,7 +1215,9 @@ function getDeforester(){
 		refresh();
 		refreshPerSec();
 		tier3 += 1;
-	}
+	} else{
+        noEnough();
+    }
 }
 
 function getMoonWorker(){
@@ -1180,7 +1230,9 @@ function getMoonWorker(){
 		refresh();
 		refreshPerSec();
 		tier1 += 1;
-	}
+	} else{
+        noEnough();
+    }
 }
 
 function getMoonDrill(){
@@ -1199,7 +1251,9 @@ function getMoonDrill(){
 		refresh();
 		refreshPerSec();
 		tier2 += 1;
-	}
+	} else{
+        noEnough();
+    }
 }
 
 function getMoonQuarry(){
@@ -1218,7 +1272,9 @@ function getMoonQuarry(){
 		refresh();
 		refreshPerSec();
 		tier3 += 1;
-	}
+	} else{
+        noEnough();
+    }
 }
 
 function getVacuum(){
@@ -1234,7 +1290,9 @@ function getVacuum(){
 		refresh();
 		refreshPerSec();
 		tier1 += 1;
-	}
+	} else{
+        noEnough();
+    }
 }
 
 function getSuctionExcavator(){
@@ -1253,7 +1311,9 @@ function getSuctionExcavator(){
 		refresh();
 		refreshPerSec();
 		tier2 += 1;
-	}
+	} else{
+        noEnough();
+    }
 }
 
 function getSpaceCow(){
@@ -1272,7 +1332,9 @@ function getSpaceCow(){
 		refresh();
 		refreshPerSec();
 		tier3 += 1;
-	}
+	} else{
+        noEnough();
+    }
 }
 
 function getExplorer(){
@@ -1285,7 +1347,9 @@ function getExplorer(){
 		refresh();
 		refreshPerSec();
 		tier1 += 1;
-	}
+	} else{
+        noEnough();
+    }
 }
 
 function getSpaceMetalDrill(){
@@ -1304,7 +1368,9 @@ function getSpaceMetalDrill(){
 		refresh();
 		refreshPerSec();
 		tier2 += 1;
-	}
+	} else{
+        noEnough();
+    }
 }
 
 function getPentaDrill(){
@@ -1323,7 +1389,9 @@ function getPentaDrill(){
 		refresh();
 		refreshPerSec();
 		tier3 += 1;
-	}
+	} else{
+        noEnough();
+    }
 }
 
 function getDroid(){
@@ -1339,7 +1407,9 @@ function getDroid(){
 		refresh();
 		refreshPerSec();
 		tier1 += 1;
-	}
+	} else{
+        noEnough();
+    }
 }
 
 function getDestroyer(){
@@ -1358,7 +1428,9 @@ function getDestroyer(){
 		refresh();
 		refreshPerSec();
 		tier2 += 1;
-	}
+	} else{
+        noEnough();
+    }
 }
 
 function getDeathStar(){
@@ -1377,7 +1449,9 @@ function getDeathStar(){
 		refresh();
 		refreshPerSec();
 		tier3 += 1;
-	}
+	} else{
+        noEnough();
+    }
 }
 
 function getScout(){
@@ -1393,7 +1467,9 @@ function getScout(){
 		refresh();
 		refreshPerSec();
 		tier1 += 1;
-	}
+	} else{
+        noEnough();
+    }
 }
 
 function getSpaceLaser(){
@@ -1412,7 +1488,9 @@ function getSpaceLaser(){
 		refresh();
 		refreshPerSec();
 		tier2 += 1;
-	}
+	} else{
+        noEnough();
+    }
 }
 
 function getBertha(){
@@ -1431,7 +1509,9 @@ function getBertha(){
 		refresh();
 		refreshPerSec();
 		tier3 += 1;
-	}
+	} else{
+        noEnough();
+    }
 }
 
 function getBlowtorch(){
@@ -1447,7 +1527,9 @@ function getBlowtorch(){
 		refresh();
 		refreshPerSec();
 		tier1 += 1;
-	}
+	} else{
+        noEnough();
+    }
 }
 
 function getScorcher(){
@@ -1466,7 +1548,9 @@ function getScorcher(){
 		refresh();
 		refreshPerSec();
 		tier2 += 1;
-	}
+	} else{
+        noEnough();
+    }
 }
 
 function getAnnihilator(){
@@ -1485,7 +1569,9 @@ function getAnnihilator(){
 		refresh();
 		refreshPerSec();
 		tier3 += 1;
-	}
+	} else{
+        noEnough();
+    }
 }
 
 function getCrucible(){
@@ -1501,7 +1587,9 @@ function getCrucible(){
 		refresh();
 		refreshPerSec();
 		tier1 += 1;
-	}
+	} else{
+        noEnough();
+    }
 }
 
 function getExtractor(){
@@ -1520,7 +1608,9 @@ function getExtractor(){
 		refresh();
 		refreshPerSec();
 		tier2 += 1;
-	}
+	} else{
+        noEnough();
+    }
 }
 
 function getExtruder(){
@@ -1539,7 +1629,9 @@ function getExtruder(){
 		refresh();
 		refreshPerSec();
 		tier3 += 1;
-	}
+	} else{
+        noEnough();
+    }
 }
 
 function getCollector(){
@@ -1555,7 +1647,9 @@ function getCollector(){
 		refresh();
 		refreshPerSec();
 		tier1 += 1;
-	}
+	} else{
+        noEnough();
+    }
 }
 
 function getMagnet(){
@@ -1574,7 +1668,9 @@ function getMagnet(){
 		refresh();
 		refreshPerSec();
 		tier2 += 1;
-	}
+	} else{
+        noEnough();
+    }
 }
 
 function getECell(){
@@ -1593,7 +1689,9 @@ function getECell(){
 		refresh();
 		refreshPerSec();
 		tier3 += 1;
-	}
+	} else{
+        noEnough();
+    }
 }
 
 function getDrone(){
@@ -1609,7 +1707,9 @@ function getDrone(){
 		refresh();
 		refreshPerSec();
 		tier1 += 1;
-	}
+	} else{
+        noEnough();
+    }
 }
 
 function getTanker(){
@@ -1628,7 +1728,9 @@ function getTanker(){
 		refresh();
 		refreshPerSec();
 		tier2 += 1;
-	}
+	} else{
+        noEnough();
+    }
 }
 
 function getCompressor(){
@@ -1647,7 +1749,9 @@ function getCompressor(){
 		refresh();
 		refreshPerSec();
 		tier3 += 1;
-	}
+	} else{
+        noEnough();
+    }
 }
 
 function getIcePick(){
@@ -1663,7 +1767,9 @@ function getIcePick(){
 		refresh();
 		refreshPerSec();
 		tier1 += 1;
-	}
+	} else{
+        noEnough();
+    }
 }
 
 function getIceDrill(){
@@ -1682,7 +1788,9 @@ function getIceDrill(){
 		refresh();
 		refreshPerSec();
 		tier2 += 1;
-	}
+	} else{
+        noEnough();
+    }
 }
 
 function getFreezer(){
@@ -1701,5 +1809,7 @@ function getFreezer(){
 		refresh();
 		refreshPerSec();
 		tier3 += 1;
-	}
+	} else{
+        noEnough();
+    }
 }
