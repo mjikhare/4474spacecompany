@@ -1,4 +1,4 @@
-/*window.setInterval(function(){
+window.setInterval(function(){
 	// if(loadVal >= 5){
 		if(pageLoaded === true){
 			document.getElementById("loadScreen").className = "hidden";
@@ -6,7 +6,7 @@
 			loadVal = 0;
 		}
 	// }
-},1000);*/
+},1000);
 var Game = (function() {
     'use strict';
 
