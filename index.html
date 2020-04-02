@@ -5,116 +5,117 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Space Company</title>
 	<link href="SpaceCompanyFavicon.png" rel="shortcut icon" type="image/x-icon" />	
-	<link href="https://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="styles/base-bootstrap.min.css" id="theme_css">
 	<link href="lib/pnotify.custom.min.css" rel="stylesheet" type="text/css">
-	<link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
 	<link href="style.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+	
 	<!--********Comet-CHANGED*******-->
 	<style>
-			/*change the roll mode*/
-		div::-webkit-scrollbar{
-		width:10px;
-		height:10px;
-		/**/
-		}
-		div::-webkit-scrollbar-track{
-		background: rgb(239, 239, 239);
-		border-radius:2px;
-		}
-		div::-webkit-scrollbar-thumb{
-		background: #bfbfbf;
-		border-radius:10px;
-		}
-		div::-webkit-scrollbar-thumb:hover{
-		background: #333;
-		}
-		div::-webkit-scrollbar-corner{
-		background: #179a16;
-		}
-	
-		/*menu*/
-		#menu{
-			width:100%; 
-			height:95%;
-			padding-top: 100px;
-			box-sizing: border-box;
-			display: none;
-			overflow: hidden
-		}
-		#menu .targetBtn{
-			margin-top: 100px;
-			float: left;
-			text-align: left;
-			font-size:28px;
-			color: #666;
-			cursor: pointer;
-		}
-		#menu .targetBtn +.targetBtn{
-			float: right;
-		}
-		#menu .targetBtn:hover,#menu .targetBtn:active{
-			color: #999;
-		}
-		/*tutorial*/
-		#tutorial{
-			width:95%; height:95%;
-			display: none;
-			box-sizing: border-box;
-			padding-top:100px;
-			padding-left: 2.5%;
-		}
-		#tutorial .row{
-			margin-bottom: 20px;
-			box-shadow: 10px 10px 10px #eee;
-		}
-		#tutorial .row .container{
-			height: 450px;
-		}
-	
-		#tutorial .nav li{
-			width: 95%;
-			font-size: 18px;
-		}
-	
-		/**/
-		#tutorial #exampleModal .modal-dialog{
-			width: 90%;
-			height: 80%;
-		}
-		#tutorial #exampleModal .modal-dialog .modal-content{
-			
-			height: 100%;
-		}
-	
-		#tutorial .row .container.tab-pane{
-			font-size: 18px;
-		}
-		#tutorial .nav li.active{
-			border-right: 1px solid deepskyblue;
-			background-color:#e8e8e8
-		}
-		#tutorial .box{
-			border: 2px solid #ccc;
-			box-shadow: 3px 3px 3px #333;
-			height: 360px;
-			overflow: auto;
-		}
-		#tutorial .title{
-			line-height: 40px;
-			text-align: center;
-		}
-	
-		button.myBtn{
-			background: #999;
-		}
-		button.myBtn:hover{
-			background: #999 !important;
-		}
-		</style>
-	
-		<script src="./lib/popper.min.js"></script>
-	<!--******Comet-STOP*********-->
+		/*change the roll mode*/
+	div::-webkit-scrollbar{
+	width:10px;
+	height:10px;
+	/**/
+	}
+	div::-webkit-scrollbar-track{
+	background: rgb(239, 239, 239);
+	border-radius:2px;
+	}
+	div::-webkit-scrollbar-thumb{
+	background: #bfbfbf;
+	border-radius:10px;
+	}
+	div::-webkit-scrollbar-thumb:hover{
+	background: #333;
+	}
+	div::-webkit-scrollbar-corner{
+	background: #179a16;
+	}
+
+	/*menu*/
+	#menu{
+		width:100%; 
+		height:95%;
+		padding-top: 100px;
+		box-sizing: border-box;
+		display: none;
+		overflow: hidden
+	}
+	#menu .targetBtn{
+		margin-top: 100px;
+		float: left;
+		text-align: left;
+		font-size:28px;
+		color: #666;
+		cursor: pointer;
+	}
+	#menu .targetBtn +.targetBtn{
+		float: right;
+	}
+	#menu .targetBtn:hover,#menu .targetBtn:active{
+		color: #999;
+	}
+	/*tutorial*/
+	#tutorial{
+		width:95%; height:95%;
+		display: none;
+		box-sizing: border-box;
+		padding-top:100px;
+		padding-left: 2.5%;
+	}
+	#tutorial .row{
+		margin-bottom: 20px;
+		box-shadow: 10px 10px 10px #eee;
+	}
+	#tutorial .row .container{
+		height: 450px;
+	}
+
+	#tutorial .nav li{
+		width: 95%;
+		font-size: 18px;
+	}
+
+	/**/
+	#tutorial #exampleModal .modal-dialog{
+		width: 90%;
+		height: 80%;
+	}
+	#tutorial #exampleModal .modal-dialog .modal-content{
+		
+		height: 100%;
+	}
+
+	#tutorial .row .container.tab-pane{
+		font-size: 18px;
+	}
+	#tutorial .nav li.active{
+		border-right: 1px solid deepskyblue;
+		background-color:#e8e8e8
+	}
+	#tutorial .box{
+		border: 2px solid #ccc;
+		box-shadow: 3px 3px 3px #333;
+		height: 360px;
+		overflow: auto;
+	}
+	#tutorial .title{
+		line-height: 40px;
+		text-align: center;
+	}
+
+	button.myBtn{
+		background: #999;
+	}
+	button.myBtn:hover{
+		background: #999 !important;
+	}
+	</style>
+
+	<script src="./lib/popper.min.js"></script>
+<!--******Comet-STOP*********-->
 	
 	<script>
 	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -138,141 +139,142 @@
 </div>
 <script type="text/javascript" src="loading.js"></script>
 
+
 <!--********Comet-CHANGED*******-->
 <div id="menu">
-		<div style="width:60%; font-size:50px; font-family: 'Orbitron', 'sans-serif'; font-weight: lighter; color:#000000; line-height:72px; text-align:center; margin: auto; margin-top:3%;">
-			Space Company
-		<!-- </div>
-		<div style="margin-left:31%; "> -->
-			<img id="loadLogo" style="opacity: 1; width:30%; height:30%;" src="SpaceCompanyFavicon.png">
-			<br>
-			<div class="targetBtn"  id="STARTJOURNEY">START JOURNEY </div><div class="targetBtn" id="TUTORIAL">TUTORIAL</div>
-			
-		</div>
-		<div>
-			
-		</div>
-	</div>
-	<div id="tutorial">
-		<!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-			Launch demo modal
-		  </button> -->
-		<!-- Modal -->
-	<div class="modal fade" id="exampleModal" data-show="true" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-		<div class="modal-dialog" role="document">
-		  <div class="modal-content">
-			<div class="modal-header">
-			  <h5 class="modal-title" id="exampleModalLabel">Background story
-				  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-					<span aria-hidden="true">&times;</span>
-				</button>
-			</h5>
-			  
-			</div>
-			<div class="modal-body">
-				<!--****bg STORY!!!!!!!*****-->
-			  write Here
-			</div>
-			
-		  </div>
-		</div>
-	  </div>
-	  <div style="width:60%; font-size:50px; font-family: 'Orbitron', 'sans-serif'; font-weight: lighter; color:#000000; line-height:62px; text-align:left; margin-left:10%;margin-bottom:1%;">
-			Tutorial</div>
-	  <div style="width:30%; font-size:18px; font-family: 'Orbitron', 'sans-serif'; font-weight: lighter; color:#000000; line-height:22px; text-align:left; margin-left:10%;margin-bottom:3%;">
-					Try the buttons to see what you can do in this world.</div>
-		<div class="container">
-				
-			<div class="row">
-				<div class="container col-xs-2" >
-					<ul class="nav ">
-							<li role="presentation" class="active"><a href="#menu1" data-toggle="tab">Resources</a></li>
-							<li role="presentation"><a href="#menu2" data-toggle="tab">Research</a></li>
-							<li role="presentation"><a href="#menu3" data-toggle="tab">Exploration</a></li>
-							<li role="presentation"><a href="#menu4" data-toggle="tab">Challenges</a></li>
-					</ul>
-					
-	
-				</div>
-				<div class="tab-content" >
-					
-					<div id="menu1" class="container tab-pane active">
-							<div id="" class="tab-pane fade in" style="margin-left:10px; width:100px; float:left;">
-									<div class="container" style="max-width:800px;">
-										<table class="table">
-											<tr>
-												<td style="border:none;">
-													<h2 class="default btn-link">
-														Metal
-													</h2>
-													<span>
-														Metal is one of the primary resources. It is used for many things, including storage upgrades, machinery and most things in space.
-													</span>
-													<hide class="gainButton">
-													<br>
-													<br>
-													<div  class="btn btn-default" data-toggle="popover" title="Tips" data-content="Click this button to get the corresponding resources!">Gain <span id="">1</span></div>
-													</hide>
-													<br>
-													<br>
-												</td>
-											</tr>
-											
-											<tr>
-												<td>
-													<h3 class="default btn-link">
-														Miner: <span>0</span>
-													</h3>
-													<span>
-														Build a pickaxe for your miner.
-														<br>
-														Produces 1 Metal per second.
-														<br>
-														Costs <span id="">10</span> Metal, <span id="">5</span> Wood.
-													</span>
-													<br>
-													<br>
-													<button  class="btn btn-default" data-toggle="popover" title="Tips" data-content="Click this button to synthesize the corresponding resources if the conditions are met!">Get Miner</button>
-													<button  class="btn btn-default destroy hidden">Destroy Miner</button>
-												</td>
-											</tr>
-											
-										</table>
-										
-									</div>
-								</div>
-					</div>
-					<div id="menu2" class="container tab-pane ">
-							To unlock research, you must purchase a metal miner, costing 10 Metal and 5 Wood. This is the first step to idle automation. The Research tab is where you can build laboratories to produce science for you, and also where you can discover and research new technologies to further help you through the game.
-			
-							The first technology you can research is 'Storage Upgrades', which allows you to build storages to hold more of each type of resource. This is necessary when building machines and other tools costs more than 50 of a resource. You can also research 'Basic Energy Production', which opens up the world of power and advanced machines to help you get resources even faster.
-						
-					</div>
-					<div id="menu3" class="container tab-pane fade">
-							This game has different amounts output by each machine. This can make balancing your resources hard, especially your Energy, Charcoal and Wood as they are consumed by other machines. As at tip, prioritise which resources you should build machines for first - in most cases Metal - and produce the 2 Energy required for a heavy drill. Don't upgrade everything to machines at once as you will end up with an Energy deficit (this is bad as the machines won't work without Energy). Build up your Charcoal to build engines or increase the number of solar panels to counter this.
-						
-					</div>
-					<div id="menu4" class="container tab-pane fade">
-							Well, it isn't called Space Company for nothing. The first thing needed to unlock inter-planetary exploration is to build a rocket. This is the first large goal that you should aim for as a target. To build a rocket, you need a lot of resources, which you most likely need to use advanced machines to get without taking an extremely long time. Secondly, to launch it requires 20 rocket fuel, which can be made in chemical plants. These require a large amount of Oil and Charcoal to produce - 20 of each per second per plant. Once you have 20 Rocket Fuel and have built a rocket, press the launch button to unlock exploration around the solar system and new technologies and ways to get resources.
-					
-						</div>
-				</div>
-				
-			</div>
-			<div class="" style="padding: 0 15px;">
-				<div class="btn btn-primary" id="tutorial_goback">
-					< go Back
-				</div>
-				<div class="btn btn-success" id="tutorial_start" style="float: right;">
-					start >
-				</div>
-			</div>
-		</div>
-	
-	</div>
+	<div style="width:60%; font-size:50px; font-family: 'Orbitron', 'sans-serif'; font-weight: lighter; color:#000000; line-height:72px; text-align:center; margin: auto; margin-top:3%;">
+		Space Company
+	<!-- </div>
+	<div style="margin-left:31%; "> -->
+		<img id="loadLogo" style="opacity: 1; width:30%; height:30%;" src="SpaceCompanyFavicon.png">
+		<br>
+		<div class="targetBtn"  id="STARTJOURNEY">START JOURNEY </div><div class="targetBtn" id="TUTORIAL">TUTORIAL</div>
 		
 	</div>
-	<!--******Comet-STOP*********-->
+	<div>
+		
+	</div>
+</div>
+<div id="tutorial">
+	<!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+		Launch demo modal
+	  </button> -->
+	<!-- Modal -->
+<div class="modal fade" id="exampleModal" data-show="true" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+	  <div class="modal-content">
+		<div class="modal-header">
+		  <h5 class="modal-title" id="exampleModalLabel">Background story
+			  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				<span aria-hidden="true">&times;</span>
+			</button>
+		</h5>
+		  
+		</div>
+		<div class="modal-body">
+			<!--****bg STORY!!!!!!!*****-->
+		  write Here
+		</div>
+		
+	  </div>
+	</div>
+  </div>
+  <div style="width:60%; font-size:50px; font-family: 'Orbitron', 'sans-serif'; font-weight: lighter; color:#000000; line-height:62px; text-align:left; margin-left:10%;margin-bottom:1%;">
+		Tutorial</div>
+  <div style="width:30%; font-size:18px; font-family: 'Orbitron', 'sans-serif'; font-weight: lighter; color:#000000; line-height:22px; text-align:left; margin-left:10%;margin-bottom:3%;">
+				Try the buttons to see what you can do in this world.</div>
+	<div class="container">
+			
+		<div class="row">
+			<div class="container col-xs-2" >
+				<ul class="nav ">
+						<li role="presentation" class="active"><a href="#menu1" data-toggle="tab">Resources</a></li>
+						<li role="presentation"><a href="#menu2" data-toggle="tab">Research</a></li>
+						<li role="presentation"><a href="#menu3" data-toggle="tab">Exploration</a></li>
+						<li role="presentation"><a href="#menu4" data-toggle="tab">Challenges</a></li>
+				</ul>
+				
+
+			</div>
+			<div class="tab-content" >
+				
+				<div id="menu1" class="container tab-pane active">
+						<div id="" class="tab-pane fade in" style="margin-left:10px; width:100px; float:left;">
+								<div class="container" style="max-width:800px;">
+									<table class="table">
+										<tr>
+											<td style="border:none;">
+												<h2 class="default btn-link">
+													Metal
+												</h2>
+												<span>
+													Metal is one of the primary resources. It is used for many things, including storage upgrades, machinery and most things in space.
+												</span>
+												<hide class="gainButton">
+												<br>
+												<br>
+												<div  class="btn btn-default" data-toggle="popover" title="Tips" data-content="Click this button to get the corresponding resources!">Gain <span id="">1</span></div>
+												</hide>
+												<br>
+												<br>
+											</td>
+										</tr>
+										
+										<tr>
+											<td>
+												<h3 class="default btn-link">
+													Miner: <span>0</span>
+												</h3>
+												<span>
+													Build a pickaxe for your miner.
+													<br>
+													Produces 1 Metal per second.
+													<br>
+													Costs <span id="">10</span> Metal, <span id="">5</span> Wood.
+												</span>
+												<br>
+												<br>
+												<button  class="btn btn-default" data-toggle="popover" title="Tips" data-content="Click this button to synthesize the corresponding resources if the conditions are met!">Get Miner</button>
+												<button  class="btn btn-default destroy hidden">Destroy Miner</button>
+											</td>
+										</tr>
+										
+									</table>
+									
+								</div>
+							</div>
+				</div>
+				<div id="menu2" class="container tab-pane ">
+						To unlock research, you must purchase a metal miner, costing 10 Metal and 5 Wood. This is the first step to idle automation. The Research tab is where you can build laboratories to produce science for you, and also where you can discover and research new technologies to further help you through the game.
+		
+						The first technology you can research is 'Storage Upgrades', which allows you to build storages to hold more of each type of resource. This is necessary when building machines and other tools costs more than 50 of a resource. You can also research 'Basic Energy Production', which opens up the world of power and advanced machines to help you get resources even faster.
+					
+				</div>
+				<div id="menu3" class="container tab-pane fade">
+						This game has different amounts output by each machine. This can make balancing your resources hard, especially your Energy, Charcoal and Wood as they are consumed by other machines. As at tip, prioritise which resources you should build machines for first - in most cases Metal - and produce the 2 Energy required for a heavy drill. Don't upgrade everything to machines at once as you will end up with an Energy deficit (this is bad as the machines won't work without Energy). Build up your Charcoal to build engines or increase the number of solar panels to counter this.
+					
+				</div>
+				<div id="menu4" class="container tab-pane fade">
+						Well, it isn't called Space Company for nothing. The first thing needed to unlock inter-planetary exploration is to build a rocket. This is the first large goal that you should aim for as a target. To build a rocket, you need a lot of resources, which you most likely need to use advanced machines to get without taking an extremely long time. Secondly, to launch it requires 20 rocket fuel, which can be made in chemical plants. These require a large amount of Oil and Charcoal to produce - 20 of each per second per plant. Once you have 20 Rocket Fuel and have built a rocket, press the launch button to unlock exploration around the solar system and new technologies and ways to get resources.
+				
+					</div>
+			</div>
+			
+		</div>
+		<div class="" style="padding: 0 15px;">
+			<div class="btn btn-primary" id="tutorial_goback">
+				< go Back
+			</div>
+			<div class="btn btn-success" id="tutorial_start" style="float: right;">
+				start >
+			</div>
+		</div>
+	</div>
+
+</div>
+	
+</div>
+<!--******Comet-STOP*********-->
 <div id="game" class="container hidden" style="width:95%; margin: auto;">
 
 	<!--  Bar at top of screen -->
@@ -336,11 +338,18 @@
 
 <!-- Tab panes -->
 
-	<div class="tab-content" id="tabContent">
+	<div class="tab-content">
 			<!-- Resources -->
 		<div role="tabpanel" class="tab-pane fade in active" id="resources">
 			<div class="container" style="width:380px; padding:0; float:left;">
 				<table class="table table-hover text-primary no-select pointer">
+					
+					<tr id="collapseEnergy" class="collapseEnergy" style="border:none;">
+						<td colspan="4">
+							<span>Energy Sources</span> <span class="caret"></span>
+						</td>
+					</tr>
+					
 					<tr id="plasmaNav" onclick="activeResourceTab('plasmaNav')" class="hidden" href="#plasmaTab" aria-controls="plasmaTab" role="tab" data-toggle="tab" style="height:60px;">
 						<td style="border:none; vertical-align:middle;">
 							<img src="Icons/plasmaIcon.png" style="width:30px; height:auto">
@@ -403,33 +412,58 @@
 							<span id="uraniumStorage">50</span>
 						</td>
 					</tr>
-					<tr id="lavaNav" onclick="activeResourceTab('lavaNav')" class="hidden" href="#lavaTab" aria-controls="lavaTab" role="tab" data-toggle="tab" style="height:60px;">
+					
+					<tr id="collapseFuel" class="collapseFuel" style="border:none;">
+						<td colspan="4">
+							<span>Fuel</span> <span class="caret"></span>
+						</td>
+					</tr>
+					
+					<tr id="hydrogenNav" onclick="activeResourceTab('hydrogenNav')" class="hidden" href="#hydrogenTab" aria-controls="hydrogenTab" role="tab" data-toggle="tab" style="height:60px;">
 						<td style="vertical-align:middle;">
-							<img src="Icons/lavaIcon.png" style="width:30px; height:auto">
+							<img src="Icons/hydrogenIcon.png" style="width:30px; height:auto">
 						</td>
 						<td style="vertical-align:middle;">
 							<span>
-								Lava
+								Hydrogen
 							</span>
 						</td>
 						<td style="vertical-align:middle; text-align:center;">
 							<span>
-								<span id="lavaps">0</span>/Sec
+								<span id="hydrogenps">0</span>/Sec
 							</span>
 						</td>
 						<td style="vertical-align:middle; text-align:right;">
-							<span id="lava">
+							<span id="hydrogen">
 								0
 							</span>
 							/
-							<span id="lavaStorage">50</span>
+							<span id="hydrogenStorage">50</span>
 						</td>
 					</tr>
-					<tr id="collapseEarth" class="collapseEarth" style="border:none;">
-						<td colspan="4">
-							<span>Earth Resources</span> <span class="caret"></span>
+					<tr id="heliumNav" onclick="activeResourceTab('heliumNav')" class="hidden" href="#heliumTab" aria-controls="heliumTab" role="tab" data-toggle="tab" style="height:60px;">
+						<td style="vertical-align:middle;">
+							<img src="Icons/heliumIcon.png" style="width:30px; height:auto">
+						</td>
+						<td style="vertical-align:middle;">
+							<span>
+								Helium
+							</span>
+						</td>
+						<td style="vertical-align:middle; text-align:center;">
+							<span>
+								<span id="heliumps">0</span>/Sec
+							</span>
+						</td>
+						<td style="vertical-align:middle; text-align:right;">
+							<span id="helium">
+								0
+							</span>
+							/
+							<span id="heliumStorage">50</span>
 						</td>
 					</tr>
+					
 					<tr id="oilNav" onclick="activeResourceTab('oilNav')" class="hidden" href="#oilTab" aria-controls="oilTab" role="tab" data-toggle="tab" style="height:60px;">
 						<td id="oilNav0" style="vertical-align:middle;">
 							<img src="Icons/oilIcon.png" style="width:30px; height:auto">
@@ -452,121 +486,7 @@
 							<span id="oilStorage">50</span>
 						</td>
 					</tr>
-					<tr id="metalNav" onclick="activeResourceTab('metalNav')" class="earth" href="#metalTab" aria-controls="metalTab" role="tab" data-toggle="tab" style="height:60px;">
-						<td id="metalNav0" style="vertical-align:middle;">
-							<img src="Icons/metalIcon.png" style="width:30px; height:auto">
-						</td>
-						<td id="metalNav1" style="vertical-align:middle;">
-							<span>
-								Metal
-							</span>
-						</td>
-						<td id="metalNav2" style="vertical-align:middle; text-align:center;">
-							<span>
-								<span id="metalps">0</span>/Sec
-							</span>
-						</td>
-						<td id="metalNav3" style="vertical-align:middle; text-align:right;">
-							<span id="metal">
-								0
-							</span>
-							/
-							<span id="metalStorage">50</span>
-						</td>
-					</tr>
-					<tr id="gemNav" onclick="activeResourceTab('gemNav')" class="earth" href="#gemTab" aria-controls="gemTab" role="tab" data-toggle="tab" style="height:60px;">
-						<td style="vertical-align:middle;">
-							<img src="Icons/gemIcon.png" style="width:30px; height:auto">
-						</td>
-						<td style="vertical-align:middle;">
-							<span>
-								Gems
-							</span>
-						</td>
-						<td style="vertical-align:middle; text-align:center;">
-							<span>
-								<span id="gemps">0</span>/Sec
-							</span>
-						</td>
-						<td style="vertical-align:middle; text-align:right;">
-							<span id="gem">
-								0
-							</span>
-							/
-							<span id="gemStorage">50</span>
-						</td>
-					</tr>
-					<tr id="charcoalNav" onclick="activeResourceTab('charcoalNav')" class="hidden" href="#charcoalTab" aria-controls="charcoalTab" role="tab" data-toggle="tab" style="height:60px;">
-						<td style="vertical-align:middle;">
-							<img src="Icons/charcoalIcon.png" style="width:30px; height:auto;">
-						</td>
-						<td style="vertical-align:middle;">
-							<span>
-								Charcoal
-							</span>
-						</td>
-						<td style="vertical-align:middle; text-align:center;">
-							<span>
-								<span id="charcoalps">0</span>/Sec
-							</span>
-						</td>
-						<td style="vertical-align:middle; text-align:right;">
-							<span id="charcoal">
-								0
-							</span>
-							/
-							<span id="charcoalStorage">50</span>
-						</td>
-					</tr>
-					<tr id="woodNav" onclick="activeResourceTab('woodNav')" class="earth" href="#woodTab" aria-controls="woodTab" role="tab" data-toggle="tab" style="height:60px;">
-						<td style="vertical-align:middle;">
-							<img src="Icons/woodIcon.png" style="width:30px; height:auto">
-						</td>
-						<td style="vertical-align:middle;">
-							<span>
-								Wood
-							</span>
-						</td>
-						<td style="vertical-align:middle; text-align:center;">
-							<span>
-								<span id="woodps">0</span>/Sec
-							</span>
-						</td>
-						<td style="vertical-align:middle; text-align:right;">
-							<span id="wood">
-								0
-							</span>
-							/
-							<span id="woodStorage">50</span>
-						</td>
-					</tr>
-					<tr id="collapseInnerPlanet" class="collapseInnerPlanet hidden">
-						<td colspan="4">
-							<span>Inner Planetary Resources</span> <span class="caret"></span>
-						</td>
-					</tr>
-					<tr id="spaceMetalNav" onclick="activeResourceTab('spaceMetalNav')" class="hidden" href="#spaceMetalTab" aria-controls="spaceMetalTab" role="tab" data-toggle="tab" style="height:60px;">
-						<td style="vertical-align:middle;">
-							<img src="Icons/spaceMetalIcon.png" style="width:30px; height:auto">
-						</td>
-						<td style="vertical-align:middle;">
-							<span>
-								Space Metal
-							</span>
-						</td>
-						<td style="vertical-align:middle; text-align:center;">
-							<span>
-								<span id="spaceMetalps">0</span>/Sec
-							</span>
-						</td>
-						<td style="vertical-align:middle; text-align:right;">
-							<span id="spaceMetal">
-								0
-							</span>
-							/
-							<span id="spaceMetalStorage">50</span>
-						</td>
-					</tr>
+					
 					<tr id="methaneNav" onclick="activeResourceTab('methaneNav')" class="hidden" href="#methaneTab" aria-controls="methaneTab" role="tab" data-toggle="tab" style="height:60px;">
 						<td style="vertical-align:middle;">
 							<img src="Icons/methaneIcon.png" style="width:30px; height:auto">
@@ -589,6 +509,59 @@
 							<span id="methaneStorage">50</span>
 						</td>
 					</tr>
+					
+					<tr id="charcoalNav" onclick="activeResourceTab('charcoalNav')" class="hidden" href="#charcoalTab" aria-controls="charcoalTab" role="tab" data-toggle="tab" style="height:60px;">
+						<td style="vertical-align:middle;">
+							<img src="Icons/charcoalIcon.png" style="width:30px; height:auto;">
+						</td>
+						<td style="vertical-align:middle;">
+							<span>
+								Charcoal
+							</span>
+						</td>
+						<td style="vertical-align:middle; text-align:center;">
+							<span>
+								<span id="charcoalps">0</span>/Sec
+							</span>
+						</td>
+						<td style="vertical-align:middle; text-align:right;">
+							<span id="charcoal">
+								0
+							</span>
+							/
+							<span id="charcoalStorage">50</span>
+						</td>
+					</tr>
+					
+					<tr id="collapseMetal" class="collapseMetal" style="border:none;">
+						<td colspan="4">
+							<span>Rocks/Ores</span> <span class="caret"></span>
+						</td>
+					</tr>
+					
+					<tr id="spaceMetalNav" onclick="activeResourceTab('spaceMetalNav')" class="hidden" href="#spaceMetalTab" aria-controls="spaceMetalTab" role="tab" data-toggle="tab" style="height:60px;">
+						<td style="vertical-align:middle;">
+							<img src="Icons/spaceMetalIcon.png" style="width:30px; height:auto">
+						</td>
+						<td style="vertical-align:middle;">
+							<span>
+								Space Metal
+							</span>
+						</td>
+						<td style="vertical-align:middle; text-align:center;">
+							<span>
+								<span id="spaceMetalps">0</span>/Sec
+							</span>
+						</td>
+						<td style="vertical-align:middle; text-align:right;">
+							<span id="spaceMetal">
+								0
+							</span>
+							/
+							<span id="spaceMetalStorage">50</span>
+						</td>
+					</tr>
+					
 					<tr id="titaniumNav" onclick="activeResourceTab('titaniumNav')" class="hidden" href="#titaniumTab" aria-controls="titaniumTab" role="tab" data-toggle="tab" style="height:60px;">
 						<td style="vertical-align:middle;">
 							<img src="Icons/titaniumIcon.png" style="width:30px; height:auto">
@@ -677,77 +650,8 @@
 							<span id="siliconStorage">50</span>
 						</td>
 					</tr>
-					<tr id="collapseOuterPlanet" class="collapseOuterPlanet hidden">
-						<td colspan="4">
-							<span>Outer Planetary Resources</span> <span class="caret"></span>
-						</td>
-					</tr>
-					<tr id="hydrogenNav" onclick="activeResourceTab('hydrogenNav')" class="hidden" href="#hydrogenTab" aria-controls="hydrogenTab" role="tab" data-toggle="tab" style="height:60px;">
-						<td style="vertical-align:middle;">
-							<img src="Icons/hydrogenIcon.png" style="width:30px; height:auto">
-						</td>
-						<td style="vertical-align:middle;">
-							<span>
-								Hydrogen
-							</span>
-						</td>
-						<td style="vertical-align:middle; text-align:center;">
-							<span>
-								<span id="hydrogenps">0</span>/Sec
-							</span>
-						</td>
-						<td style="vertical-align:middle; text-align:right;">
-							<span id="hydrogen">
-								0
-							</span>
-							/
-							<span id="hydrogenStorage">50</span>
-						</td>
-					</tr>
-					<tr id="heliumNav" onclick="activeResourceTab('heliumNav')" class="hidden" href="#heliumTab" aria-controls="heliumTab" role="tab" data-toggle="tab" style="height:60px;">
-						<td style="vertical-align:middle;">
-							<img src="Icons/heliumIcon.png" style="width:30px; height:auto">
-						</td>
-						<td style="vertical-align:middle;">
-							<span>
-								Helium
-							</span>
-						</td>
-						<td style="vertical-align:middle; text-align:center;">
-							<span>
-								<span id="heliumps">0</span>/Sec
-							</span>
-						</td>
-						<td style="vertical-align:middle; text-align:right;">
-							<span id="helium">
-								0
-							</span>
-							/
-							<span id="heliumStorage">50</span>
-						</td>
-					</tr>
-					<tr id="iceNav" onclick="activeResourceTab('iceNav')" class="hidden" href="#iceTab" aria-controls="iceTab" role="tab" data-toggle="tab" style="height:60px;">
-						<td style="vertical-align:middle;">
-							<img src="Icons/iceIcon.png" style="width:30px; height:auto">
-						</td>
-						<td style="vertical-align:middle;">
-							<span>
-								Ice
-							</span>
-						</td>
-						<td style="vertical-align:middle; text-align:center;">
-							<span>
-								<span id="iceps">0</span>/Sec
-							</span>
-						</td>
-						<td style="vertical-align:middle; text-align:right;">
-							<span id="ice">
-								0
-							</span>
-							/
-							<span id="iceStorage">50</span>
-						</td>
-					</tr>
+					
+					
 					<tr id="meteoriteNav" onclick="activeResourceTab('meteoriteNav')" class="hidden" href="#meteoriteTab" aria-controls="meteoriteTab" role="tab" data-toggle="tab" style="height:60px;">
 						<td style="vertical-align:middle;">
 							<img src="Icons/meteoriteIcon.png" style="width:30px; height:auto">
@@ -770,9 +674,137 @@
 							<span id="meteoriteStorage">50</span>
 						</td>
 					</tr>
+					
+					
+					
+					<tr id="collapseEarth" class="collapseEarth">
+						<td colspan="4">
+							<span>Other Materials</span> <span class="caret"></span>
+						</td>
+					</tr>
+					
+					<tr id="metalNav" onclick="activeResourceTab('metalNav')" class="earth" href="#metalTab" aria-controls="metalTab" role="tab" data-toggle="tab" style="height:60px;">
+						<td id="metalNav0" style="vertical-align:middle;">
+							<img src="Icons/metalIcon.png" style="width:30px; height:auto">
+						</td>
+						<td id="metalNav1" style="vertical-align:middle;">
+							<span>
+								Metal
+							</span>
+						</td>
+						<td id="metalNav2" style="vertical-align:middle; text-align:center;">
+							<span>
+								<span id="metalps">0</span>/Sec
+							</span>
+						</td>
+						<td id="metalNav3" style="vertical-align:middle; text-align:right;">
+							<span id="metal">
+								0
+							</span>
+							/
+							<span id="metalStorage">50</span>
+						</td>
+					</tr>
+					
+					<tr id="gemNav" onclick="activeResourceTab('gemNav')" class="earth" href="#gemTab" aria-controls="gemTab" role="tab" data-toggle="tab" style="height:60px;">
+						<td style="vertical-align:middle;">
+							<img src="Icons/gemIcon.png" style="width:30px; height:auto">
+						</td>
+						<td style="vertical-align:middle;">
+							<span>
+								Gems
+							</span>
+						</td>
+						<td style="vertical-align:middle; text-align:center;">
+							<span>
+								<span id="gemps">0</span>/Sec
+							</span>
+						</td>
+						<td style="vertical-align:middle; text-align:right;">
+							<span id="gem">
+								0
+							</span>
+							/
+							<span id="gemStorage">50</span>
+						</td>
+					</tr>
+					
+					<tr id="woodNav" onclick="activeResourceTab('woodNav')" class="earth" href="#woodTab" aria-controls="woodTab" role="tab" data-toggle="tab" style="height:60px;">
+						<td style="vertical-align:middle;">
+							<img src="Icons/woodIcon.png" style="width:30px; height:auto">
+						</td>
+						<td style="vertical-align:middle;">
+							<span>
+								Wood
+							</span>
+						</td>
+						<td style="vertical-align:middle; text-align:center;">
+							<span>
+								<span id="woodps">0</span>/Sec
+							</span>
+						</td>
+						<td style="vertical-align:middle; text-align:right;">
+							<span id="wood">
+								0
+							</span>
+							/
+							<span id="woodStorage">50</span>
+						</td>
+					</tr>
+					
+					
+					<tr id="iceNav" onclick="activeResourceTab('iceNav')" class="hidden" href="#iceTab" aria-controls="iceTab" role="tab" data-toggle="tab" style="height:60px;">
+						<td style="vertical-align:middle;">
+							<img src="Icons/iceIcon.png" style="width:30px; height:auto">
+						</td>
+						<td style="vertical-align:middle;">
+							<span>
+								Ice
+							</span>
+						</td>
+						<td style="vertical-align:middle; text-align:center;">
+							<span>
+								<span id="iceps">0</span>/Sec
+							</span>
+						</td>
+						<td style="vertical-align:middle; text-align:right;">
+							<span id="ice">
+								0
+							</span>
+							/
+							<span id="iceStorage">50</span>
+						</td>
+					</tr>
+					
+					
+					<tr id="lavaNav" onclick="activeResourceTab('lavaNav')" class="hidden" href="#lavaTab" aria-controls="lavaTab" role="tab" data-toggle="tab" style="height:60px;">
+						<td style="vertical-align:middle;">
+							<img src="Icons/lavaIcon.png" style="width:30px; height:auto">
+						</td>
+						<td style="vertical-align:middle;">
+							<span>
+								Lava
+							</span>
+						</td>
+						<td style="vertical-align:middle; text-align:center;">
+							<span>
+								<span id="lavaps">0</span>/Sec
+							</span>
+						</td>
+						<td style="vertical-align:middle; text-align:right;">
+							<span id="lava">
+								0
+							</span>
+							/
+							<span id="lavaStorage">50</span>
+						</td>
+					</tr>
+					
+					
+					
 				</table>
 			</div>
-			<div class="tab-content" id="resourceTabParent" >
+			<div class="tab-content" id="resourceTabParent">
 				<div id="plasmaTab" class="tab-pane fade in" style="margin-left:10px; float:left;">
 					<div class="container" style="max-width:800px;">
 						<table class="table">
@@ -1182,7 +1214,7 @@
 							</tr>
 							<tr>
 								<td>
-									<h3 class="default btn-link">
+									<h3 class="pointer btn-link">
 										Miner: <span id="miner">0</span>
 									</h3>
 									<span>
@@ -1195,7 +1227,7 @@
 									<br>
 									<br>
 									<button onclick="getMiner()" class="btn btn-default">Get Miner</button>
-									<button onclick="destroyMachine('miner')" class="btn btn-default destroy hidden">Destroy Miner</button>
+									<button onclick="destroyMachine(miner, 'miner')" class="btn btn-default destroy hidden">Destroy Miner</button>
 								</td>
 							</tr>
 							<tr id="metalMachine1" class="hidden">
@@ -1241,13 +1273,13 @@
 						</table>
 						<!--********Comet-CHANGED*******-->
 						<div class="alert alert-success  show">
-								<button type="button" class="close" data-dismiss="alert">&times;</button>
-								 Only<strong> 100 </strong><img src="Icons/metalIcon.png" style="width:30px; height:auto"> are needed to unlock <img src="Icons/charcoalIcon.png" style="width:30px; height:auto;">！。
-							  </div>
-						<div >
-								
-						</div>
-						<!--********STOP*******-->
+							<button type="button" class="close" data-dismiss="alert">&times;</button>
+							 Only<strong> 100 </strong><img src="Icons/metalIcon.png" style="width:30px; height:auto"> are needed to unlock <img src="Icons/charcoalIcon.png" style="width:30px; height:auto;">！。
+						  </div>
+					<div >
+							
+					</div>
+					<!--********STOP*******-->
 					</div>
 				</div>							
 				<div id="gemTab" class="tab-pane fade in" style="margin-left:10px; width:100px; float:left;">
@@ -1287,7 +1319,7 @@
 							</tr>
 							<tr>
 								<td>
-									<h3 class="default btn-link">
+									<h3 class="pointer btn-link">
 										Gem Miner: <span id="gemMiner">0</span>
 									</h3>
 									<span>
@@ -1300,7 +1332,7 @@
 									<br>
 									<br>
 									<button onclick="getGemMiner()" class="btn btn-default">Get Gem Miner</button>
-									<button onclick="destroyMachine('gemMiner')" class="btn btn-default destroy hidden">Destroy Gem Miner</button>
+									<button onclick="destroyMachine(gemMiner, 'gemMiner')" class="btn btn-default destroy hidden">Destroy Gem Miner</button>
 								</td>
 							</tr>
 							<tr id="gemMachine1" class="hidden">
@@ -1346,11 +1378,11 @@
 						</table>
 						<!--********Comet-CHANGED*******-->
 						<div class="alert alert-success  show">
-								<button type="button" class="close" data-dismiss="alert">&times;</button>
-								 Only<strong> 75 </strong><img src="Icons/gemIcon.png" style="width:30px; height:auto"> are needed to unlock <img src="Icons/charcoalIcon.png" style="width:30px; height:auto;"> ！。
-						</div>
-						
-						<!--********Comet-STOP*******-->
+							<button type="button" class="close" data-dismiss="alert">&times;</button>
+							 Only<strong> 75 </strong><img src="Icons/gemIcon.png" style="width:30px; height:auto"> are needed to unlock <img src="Icons/charcoalIcon.png" style="width:30px; height:auto;"> ！。
+					</div>
+					
+					<!--********Comet-STOP*******-->
 					</div>
 				</div>
 				<div id="charcoalTab" class="tab-pane fade in" style="margin-left:10px; width:100px; float:left;">
@@ -1365,6 +1397,8 @@
 										Charcoal is a secondary tier resource and is used by Engines to produce power for your company. 1 Charcoal is created by burning <span id="manualCharcoalCost">2</span> wood.
 										<br>
                                         <img src="Icons/plus.png" style="width:13px; height:auto"> 1 Charcoal
+                                        <br>
+                                        <img src="Icons/minus.png" style="width:13px; height:auto"> 2 Wood
 									</span>
 									<br>
                                     <br>
@@ -1502,7 +1536,7 @@
 									<br>
 									<br>
 									<button onclick="getWoodcutter()" class="btn btn-default">Get Woodcutter</button>
-									<button onclick="destroyMachine('woodcutter')" class="btn btn-default destroy hidden">Destroy Woodcutter</button>
+									<button onclick="destroyMachine(woodcutter, 'woodcutter')" class="btn btn-default destroy hidden">Destroy Woodcutter</button>
 								</td>
 							</tr>
 							<tr id="woodMachine1" class="hidden">
@@ -1546,8 +1580,8 @@
 								</td>
 							</tr>
 						</table>
-						<!--********Comet_CHANGED*******-->
-						<div class="alert alert-success  show">
+							<!--********Comet_CHANGED*******-->
+							<div class="alert alert-success  show">
 								<button type="button" class="close" data-dismiss="alert">&times;</button>
 								 Only<strong> 75 </strong><img src="Icons/woodIcon.png" style="width:30px; height:auto"> are needed to unlock <img src="Icons/charcoalIcon.png" style="width:30px; height:auto;"> ！。
 							  </div>
@@ -2595,7 +2629,7 @@
 					</tr>
 				</table>
 			</div>
-			<div class="tab-content" id="resourceTabParent" >
+			<div class="tab-content" id="resourceTabParent">
 				<div id="scienceTab" class="tab-pane fade in" style="margin-left:10px; float:left;">
 					<div class="container" style="max-width:800px;">
 						<table class="table">
@@ -3089,7 +3123,7 @@
 									<span>
 										Chemical plants are used to make rocket fuel automatically.
 										<br>
-                                        <img src="Icons/plus.png" style="width:13px; height:auto"> 0.2 Rocket Fuel /sec.
+                                        <img src="Icons/plus.png" style="width:13px; height:auto"> 1 Rocket Fuel /sec.
                                         <br>
                                         <img src="Icons/minus.png" style="width:13px; height:auto"> 20 Oil /sec, 20 Charcoal /sec.
                                         <br>
@@ -3146,7 +3180,7 @@
 									<span>
 										Launching the rocket into space will unlock space mining, exploration and other planets.
 										<br>
-                                        <img src="Icons/minus.png" style="width:13px; height:auto"> <span id="launchRocketRocketFuelpsCost">5</span> Rocket Fuel /sec.
+                                        <img src="Icons/minus.png" style="width:13px; height:auto"> <span id="launchRocketRocketFuelpsCost">2</span> Rocket Fuel /sec.
                                         <br>
 										<img src="Icons/coins.png" style="width:19px; height:auto"> <span id="launchRocketRocketCost">1</span> Rocket
 									</span>

@@ -2,11 +2,16 @@ window.setInterval(function(){
 	// if(loadVal >= 5){
 		if(pageLoaded === true){
 			document.getElementById("loadScreen").className = "hidden";
-			document.getElementById("menu").className = "show";
+			document.getElementById("game").className = "container";
 			loadVal = 0;
 		}
 	// }
 },1000);
+/* all unclickable grey buttons have the id='#resourceTabParent' controlled in this script
+** when the page has been refreshed again in the same browser the loading page will be loaded so fast
+** that we can't see ... maybe its already in the local cockies 
+**During the presentation we need to load the page in a new browser or download the whole project again for the loading page 
+*/
 var Game = (function() {
     'use strict';
 
@@ -296,7 +301,7 @@ var Game = (function() {
     };
 
     instance.noticeStack = {"dir1": "up", "dir2": "left", "firstpos1": 25, "firstpos2": 25};
-
+/*
     instance.notifyInfo = function(title, message) {
         if(title == "Game Saved" && Game.settings.entries.saveNotifsEnabled == false){
             return;
@@ -358,7 +363,7 @@ var Game = (function() {
             stack: this.noticeStack
         });
     };
-
+*/
     instance.removeExcess = function(array, id){
         var check = false;
         for(var i = array.length; i > 0 ; i--){
