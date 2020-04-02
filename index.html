@@ -98,6 +98,13 @@
 		<div role="tabpanel" class="tab-pane fade in active" id="resources">
 			<div class="container" style="width:380px; padding:0; float:left;">
 				<table class="table table-hover text-primary no-select pointer">
+					
+					<tr id="collapseEnergy" class="collapseEnergy" style="border:none;">
+						<td colspan="4">
+							<span>Energy Sources</span> <span class="caret"></span>
+						</td>
+					</tr>
+					
 					<tr id="plasmaNav" onclick="activeResourceTab('plasmaNav')" class="hidden" href="#plasmaTab" aria-controls="plasmaTab" role="tab" data-toggle="tab" style="height:60px;">
 						<td style="border:none; vertical-align:middle;">
 							<img src="Icons/plasmaIcon.png" style="width:30px; height:auto">
@@ -160,33 +167,58 @@
 							<span id="uraniumStorage">50</span>
 						</td>
 					</tr>
-					<tr id="lavaNav" onclick="activeResourceTab('lavaNav')" class="hidden" href="#lavaTab" aria-controls="lavaTab" role="tab" data-toggle="tab" style="height:60px;">
+					
+					<tr id="collapseFuel" class="collapseFuel" style="border:none;">
+						<td colspan="4">
+							<span>Fuel</span> <span class="caret"></span>
+						</td>
+					</tr>
+					
+					<tr id="hydrogenNav" onclick="activeResourceTab('hydrogenNav')" class="hidden" href="#hydrogenTab" aria-controls="hydrogenTab" role="tab" data-toggle="tab" style="height:60px;">
 						<td style="vertical-align:middle;">
-							<img src="Icons/lavaIcon.png" style="width:30px; height:auto">
+							<img src="Icons/hydrogenIcon.png" style="width:30px; height:auto">
 						</td>
 						<td style="vertical-align:middle;">
 							<span>
-								Lava
+								Hydrogen
 							</span>
 						</td>
 						<td style="vertical-align:middle; text-align:center;">
 							<span>
-								<span id="lavaps">0</span>/Sec
+								<span id="hydrogenps">0</span>/Sec
 							</span>
 						</td>
 						<td style="vertical-align:middle; text-align:right;">
-							<span id="lava">
+							<span id="hydrogen">
 								0
 							</span>
 							/
-							<span id="lavaStorage">50</span>
+							<span id="hydrogenStorage">50</span>
 						</td>
 					</tr>
-					<tr id="collapseEarth" class="collapseEarth" style="border:none;">
-						<td colspan="4">
-							<span>Earth Resources</span> <span class="caret"></span>
+					<tr id="heliumNav" onclick="activeResourceTab('heliumNav')" class="hidden" href="#heliumTab" aria-controls="heliumTab" role="tab" data-toggle="tab" style="height:60px;">
+						<td style="vertical-align:middle;">
+							<img src="Icons/heliumIcon.png" style="width:30px; height:auto">
+						</td>
+						<td style="vertical-align:middle;">
+							<span>
+								Helium
+							</span>
+						</td>
+						<td style="vertical-align:middle; text-align:center;">
+							<span>
+								<span id="heliumps">0</span>/Sec
+							</span>
+						</td>
+						<td style="vertical-align:middle; text-align:right;">
+							<span id="helium">
+								0
+							</span>
+							/
+							<span id="heliumStorage">50</span>
 						</td>
 					</tr>
+					
 					<tr id="oilNav" onclick="activeResourceTab('oilNav')" class="hidden" href="#oilTab" aria-controls="oilTab" role="tab" data-toggle="tab" style="height:60px;">
 						<td id="oilNav0" style="vertical-align:middle;">
 							<img src="Icons/oilIcon.png" style="width:30px; height:auto">
@@ -209,121 +241,7 @@
 							<span id="oilStorage">50</span>
 						</td>
 					</tr>
-					<tr id="metalNav" onclick="activeResourceTab('metalNav')" class="earth" href="#metalTab" aria-controls="metalTab" role="tab" data-toggle="tab" style="height:60px;">
-						<td id="metalNav0" style="vertical-align:middle;">
-							<img src="Icons/metalIcon.png" style="width:30px; height:auto">
-						</td>
-						<td id="metalNav1" style="vertical-align:middle;">
-							<span>
-								Metal
-							</span>
-						</td>
-						<td id="metalNav2" style="vertical-align:middle; text-align:center;">
-							<span>
-								<span id="metalps">0</span>/Sec
-							</span>
-						</td>
-						<td id="metalNav3" style="vertical-align:middle; text-align:right;">
-							<span id="metal">
-								0
-							</span>
-							/
-							<span id="metalStorage">50</span>
-						</td>
-					</tr>
-					<tr id="gemNav" onclick="activeResourceTab('gemNav')" class="earth" href="#gemTab" aria-controls="gemTab" role="tab" data-toggle="tab" style="height:60px;">
-						<td style="vertical-align:middle;">
-							<img src="Icons/gemIcon.png" style="width:30px; height:auto">
-						</td>
-						<td style="vertical-align:middle;">
-							<span>
-								Gems
-							</span>
-						</td>
-						<td style="vertical-align:middle; text-align:center;">
-							<span>
-								<span id="gemps">0</span>/Sec
-							</span>
-						</td>
-						<td style="vertical-align:middle; text-align:right;">
-							<span id="gem">
-								0
-							</span>
-							/
-							<span id="gemStorage">50</span>
-						</td>
-					</tr>
-					<tr id="charcoalNav" onclick="activeResourceTab('charcoalNav')" class="hidden" href="#charcoalTab" aria-controls="charcoalTab" role="tab" data-toggle="tab" style="height:60px;">
-						<td style="vertical-align:middle;">
-							<img src="Icons/charcoalIcon.png" style="width:30px; height:auto;">
-						</td>
-						<td style="vertical-align:middle;">
-							<span>
-								Charcoal
-							</span>
-						</td>
-						<td style="vertical-align:middle; text-align:center;">
-							<span>
-								<span id="charcoalps">0</span>/Sec
-							</span>
-						</td>
-						<td style="vertical-align:middle; text-align:right;">
-							<span id="charcoal">
-								0
-							</span>
-							/
-							<span id="charcoalStorage">50</span>
-						</td>
-					</tr>
-					<tr id="woodNav" onclick="activeResourceTab('woodNav')" class="earth" href="#woodTab" aria-controls="woodTab" role="tab" data-toggle="tab" style="height:60px;">
-						<td style="vertical-align:middle;">
-							<img src="Icons/woodIcon.png" style="width:30px; height:auto">
-						</td>
-						<td style="vertical-align:middle;">
-							<span>
-								Wood
-							</span>
-						</td>
-						<td style="vertical-align:middle; text-align:center;">
-							<span>
-								<span id="woodps">0</span>/Sec
-							</span>
-						</td>
-						<td style="vertical-align:middle; text-align:right;">
-							<span id="wood">
-								0
-							</span>
-							/
-							<span id="woodStorage">50</span>
-						</td>
-					</tr>
-					<tr id="collapseInnerPlanet" class="collapseInnerPlanet hidden">
-						<td colspan="4">
-							<span>Inner Planetary Resources</span> <span class="caret"></span>
-						</td>
-					</tr>
-					<tr id="spaceMetalNav" onclick="activeResourceTab('spaceMetalNav')" class="hidden" href="#spaceMetalTab" aria-controls="spaceMetalTab" role="tab" data-toggle="tab" style="height:60px;">
-						<td style="vertical-align:middle;">
-							<img src="Icons/spaceMetalIcon.png" style="width:30px; height:auto">
-						</td>
-						<td style="vertical-align:middle;">
-							<span>
-								Space Metal
-							</span>
-						</td>
-						<td style="vertical-align:middle; text-align:center;">
-							<span>
-								<span id="spaceMetalps">0</span>/Sec
-							</span>
-						</td>
-						<td style="vertical-align:middle; text-align:right;">
-							<span id="spaceMetal">
-								0
-							</span>
-							/
-							<span id="spaceMetalStorage">50</span>
-						</td>
-					</tr>
+					
 					<tr id="methaneNav" onclick="activeResourceTab('methaneNav')" class="hidden" href="#methaneTab" aria-controls="methaneTab" role="tab" data-toggle="tab" style="height:60px;">
 						<td style="vertical-align:middle;">
 							<img src="Icons/methaneIcon.png" style="width:30px; height:auto">
@@ -346,6 +264,59 @@
 							<span id="methaneStorage">50</span>
 						</td>
 					</tr>
+					
+					<tr id="charcoalNav" onclick="activeResourceTab('charcoalNav')" class="hidden" href="#charcoalTab" aria-controls="charcoalTab" role="tab" data-toggle="tab" style="height:60px;">
+						<td style="vertical-align:middle;">
+							<img src="Icons/charcoalIcon.png" style="width:30px; height:auto;">
+						</td>
+						<td style="vertical-align:middle;">
+							<span>
+								Charcoal
+							</span>
+						</td>
+						<td style="vertical-align:middle; text-align:center;">
+							<span>
+								<span id="charcoalps">0</span>/Sec
+							</span>
+						</td>
+						<td style="vertical-align:middle; text-align:right;">
+							<span id="charcoal">
+								0
+							</span>
+							/
+							<span id="charcoalStorage">50</span>
+						</td>
+					</tr>
+					
+					<tr id="collapseMetal" class="collapseMetal" style="border:none;">
+						<td colspan="4">
+							<span>Rocks/Ores</span> <span class="caret"></span>
+						</td>
+					</tr>
+					
+					<tr id="spaceMetalNav" onclick="activeResourceTab('spaceMetalNav')" class="hidden" href="#spaceMetalTab" aria-controls="spaceMetalTab" role="tab" data-toggle="tab" style="height:60px;">
+						<td style="vertical-align:middle;">
+							<img src="Icons/spaceMetalIcon.png" style="width:30px; height:auto">
+						</td>
+						<td style="vertical-align:middle;">
+							<span>
+								Space Metal
+							</span>
+						</td>
+						<td style="vertical-align:middle; text-align:center;">
+							<span>
+								<span id="spaceMetalps">0</span>/Sec
+							</span>
+						</td>
+						<td style="vertical-align:middle; text-align:right;">
+							<span id="spaceMetal">
+								0
+							</span>
+							/
+							<span id="spaceMetalStorage">50</span>
+						</td>
+					</tr>
+					
 					<tr id="titaniumNav" onclick="activeResourceTab('titaniumNav')" class="hidden" href="#titaniumTab" aria-controls="titaniumTab" role="tab" data-toggle="tab" style="height:60px;">
 						<td style="vertical-align:middle;">
 							<img src="Icons/titaniumIcon.png" style="width:30px; height:auto">
@@ -434,77 +405,8 @@
 							<span id="siliconStorage">50</span>
 						</td>
 					</tr>
-					<tr id="collapseOuterPlanet" class="collapseOuterPlanet hidden">
-						<td colspan="4">
-							<span>Outer Planetary Resources</span> <span class="caret"></span>
-						</td>
-					</tr>
-					<tr id="hydrogenNav" onclick="activeResourceTab('hydrogenNav')" class="hidden" href="#hydrogenTab" aria-controls="hydrogenTab" role="tab" data-toggle="tab" style="height:60px;">
-						<td style="vertical-align:middle;">
-							<img src="Icons/hydrogenIcon.png" style="width:30px; height:auto">
-						</td>
-						<td style="vertical-align:middle;">
-							<span>
-								Hydrogen
-							</span>
-						</td>
-						<td style="vertical-align:middle; text-align:center;">
-							<span>
-								<span id="hydrogenps">0</span>/Sec
-							</span>
-						</td>
-						<td style="vertical-align:middle; text-align:right;">
-							<span id="hydrogen">
-								0
-							</span>
-							/
-							<span id="hydrogenStorage">50</span>
-						</td>
-					</tr>
-					<tr id="heliumNav" onclick="activeResourceTab('heliumNav')" class="hidden" href="#heliumTab" aria-controls="heliumTab" role="tab" data-toggle="tab" style="height:60px;">
-						<td style="vertical-align:middle;">
-							<img src="Icons/heliumIcon.png" style="width:30px; height:auto">
-						</td>
-						<td style="vertical-align:middle;">
-							<span>
-								Helium
-							</span>
-						</td>
-						<td style="vertical-align:middle; text-align:center;">
-							<span>
-								<span id="heliumps">0</span>/Sec
-							</span>
-						</td>
-						<td style="vertical-align:middle; text-align:right;">
-							<span id="helium">
-								0
-							</span>
-							/
-							<span id="heliumStorage">50</span>
-						</td>
-					</tr>
-					<tr id="iceNav" onclick="activeResourceTab('iceNav')" class="hidden" href="#iceTab" aria-controls="iceTab" role="tab" data-toggle="tab" style="height:60px;">
-						<td style="vertical-align:middle;">
-							<img src="Icons/iceIcon.png" style="width:30px; height:auto">
-						</td>
-						<td style="vertical-align:middle;">
-							<span>
-								Ice
-							</span>
-						</td>
-						<td style="vertical-align:middle; text-align:center;">
-							<span>
-								<span id="iceps">0</span>/Sec
-							</span>
-						</td>
-						<td style="vertical-align:middle; text-align:right;">
-							<span id="ice">
-								0
-							</span>
-							/
-							<span id="iceStorage">50</span>
-						</td>
-					</tr>
+					
+					
 					<tr id="meteoriteNav" onclick="activeResourceTab('meteoriteNav')" class="hidden" href="#meteoriteTab" aria-controls="meteoriteTab" role="tab" data-toggle="tab" style="height:60px;">
 						<td style="vertical-align:middle;">
 							<img src="Icons/meteoriteIcon.png" style="width:30px; height:auto">
@@ -527,6 +429,134 @@
 							<span id="meteoriteStorage">50</span>
 						</td>
 					</tr>
+					
+					
+					
+					<tr id="collapseEarth" class="collapseEarth">
+						<td colspan="4">
+							<span>Other Materials</span> <span class="caret"></span>
+						</td>
+					</tr>
+					
+					<tr id="metalNav" onclick="activeResourceTab('metalNav')" class="earth" href="#metalTab" aria-controls="metalTab" role="tab" data-toggle="tab" style="height:60px;">
+						<td id="metalNav0" style="vertical-align:middle;">
+							<img src="Icons/metalIcon.png" style="width:30px; height:auto">
+						</td>
+						<td id="metalNav1" style="vertical-align:middle;">
+							<span>
+								Metal
+							</span>
+						</td>
+						<td id="metalNav2" style="vertical-align:middle; text-align:center;">
+							<span>
+								<span id="metalps">0</span>/Sec
+							</span>
+						</td>
+						<td id="metalNav3" style="vertical-align:middle; text-align:right;">
+							<span id="metal">
+								0
+							</span>
+							/
+							<span id="metalStorage">50</span>
+						</td>
+					</tr>
+					
+					<tr id="gemNav" onclick="activeResourceTab('gemNav')" class="earth" href="#gemTab" aria-controls="gemTab" role="tab" data-toggle="tab" style="height:60px;">
+						<td style="vertical-align:middle;">
+							<img src="Icons/gemIcon.png" style="width:30px; height:auto">
+						</td>
+						<td style="vertical-align:middle;">
+							<span>
+								Gems
+							</span>
+						</td>
+						<td style="vertical-align:middle; text-align:center;">
+							<span>
+								<span id="gemps">0</span>/Sec
+							</span>
+						</td>
+						<td style="vertical-align:middle; text-align:right;">
+							<span id="gem">
+								0
+							</span>
+							/
+							<span id="gemStorage">50</span>
+						</td>
+					</tr>
+					
+					<tr id="woodNav" onclick="activeResourceTab('woodNav')" class="earth" href="#woodTab" aria-controls="woodTab" role="tab" data-toggle="tab" style="height:60px;">
+						<td style="vertical-align:middle;">
+							<img src="Icons/woodIcon.png" style="width:30px; height:auto">
+						</td>
+						<td style="vertical-align:middle;">
+							<span>
+								Wood
+							</span>
+						</td>
+						<td style="vertical-align:middle; text-align:center;">
+							<span>
+								<span id="woodps">0</span>/Sec
+							</span>
+						</td>
+						<td style="vertical-align:middle; text-align:right;">
+							<span id="wood">
+								0
+							</span>
+							/
+							<span id="woodStorage">50</span>
+						</td>
+					</tr>
+					
+					
+					<tr id="iceNav" onclick="activeResourceTab('iceNav')" class="hidden" href="#iceTab" aria-controls="iceTab" role="tab" data-toggle="tab" style="height:60px;">
+						<td style="vertical-align:middle;">
+							<img src="Icons/iceIcon.png" style="width:30px; height:auto">
+						</td>
+						<td style="vertical-align:middle;">
+							<span>
+								Ice
+							</span>
+						</td>
+						<td style="vertical-align:middle; text-align:center;">
+							<span>
+								<span id="iceps">0</span>/Sec
+							</span>
+						</td>
+						<td style="vertical-align:middle; text-align:right;">
+							<span id="ice">
+								0
+							</span>
+							/
+							<span id="iceStorage">50</span>
+						</td>
+					</tr>
+					
+					
+					<tr id="lavaNav" onclick="activeResourceTab('lavaNav')" class="hidden" href="#lavaTab" aria-controls="lavaTab" role="tab" data-toggle="tab" style="height:60px;">
+						<td style="vertical-align:middle;">
+							<img src="Icons/lavaIcon.png" style="width:30px; height:auto">
+						</td>
+						<td style="vertical-align:middle;">
+							<span>
+								Lava
+							</span>
+						</td>
+						<td style="vertical-align:middle; text-align:center;">
+							<span>
+								<span id="lavaps">0</span>/Sec
+							</span>
+						</td>
+						<td style="vertical-align:middle; text-align:right;">
+							<span id="lava">
+								0
+							</span>
+							/
+							<span id="lavaStorage">50</span>
+						</td>
+					</tr>
+					
+					
+					
 				</table>
 			</div>
 			<div class="tab-content">

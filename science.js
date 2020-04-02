@@ -39,7 +39,7 @@ function unlockStorage(){
 function unlockBasicEnergy(){
 	if(science >= 20){
 		science -= 20;
-		document.getElementById("charcoalNav").className = "earth";
+		document.getElementById("charcoalNav").className = "";
 		document.getElementById("energyNav").className = "";
 		document.getElementById("collapseEarth").style.border = "";
 		document.getElementById("unlockBasicEnergy").className = "hidden";
