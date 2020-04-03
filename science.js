@@ -39,8 +39,10 @@ function unlockStorage(){
 function unlockBasicEnergy(){
 	if(science >= 20){
 		science -= 20;
-		document.getElementById("charcoalNav").className = "";
-		document.getElementById("energyNav").className = "";
+        document.getElementById("collapseFuel").className = "collapseFuel";
+        document.getElementById("collapseEnergy").className = "collapseEnergy";
+		document.getElementById("charcoalNav").className = "fuel unlocked";
+		document.getElementById("energyNav").className = "energy unlocked";
 		document.getElementById("collapseEarth").style.border = "";
 		document.getElementById("unlockBasicEnergy").className = "hidden";
 		document.getElementById("unlockSolar").className = "";
@@ -60,7 +62,7 @@ function unlockOil(){
 	if(science >= 30){
 		science -= 30;
 		document.getElementById("unlockOil").className = "hidden";
-		document.getElementById("oilNav").className = "earth";
+		document.getElementById("oilNav").className = "other unlocked";
 		refresh();
 		resourcesUnlocked.push("oilNav");
 		researched.push("unlockOil");
@@ -179,7 +181,7 @@ function unlockPlasma(){
 	if(science >= 40000){
 		science -= 40000;
 		document.getElementById("unlockPlasma").className = "hidden";
-		document.getElementById("plasmaNav").className = "";
+		document.getElementById("plasmaNav").className = "energy unlocked";
 		for(var i = 0; i < 4; i++){
 			document.getElementById("energyNav" + [i]).style.border = "";
 		}
@@ -210,7 +212,7 @@ function unlockMeteorite(){
 	if(science >= 100000){
 		science -= 100000;
 		document.getElementById("unlockMeteorite").className = "hidden";
-		document.getElementById("meteoriteNav").className = "outerPlanet";
+		document.getElementById("meteoriteNav").className = "other unlocked";
 		researched.push("unlockMeteorite");
 		techsResearchedNum += 1;
 		resourcesUnlockedNum += 1;

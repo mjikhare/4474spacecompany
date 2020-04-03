@@ -49,7 +49,7 @@ function exploreMoon(){
 		rocketFuel -= 20;
 		document.getElementById("exploreMoon").className = "hidden";
 		document.getElementById("collapseInnerPlanet").className = "collapseInnerPlanet";
-		document.getElementById("spaceMetalNav").className = "innerPlanet";
+		document.getElementById("spaceMetalNav").className = "other unlocked";
 		resourcesUnlocked.push("spaceMetalNav", "collapseInnerPlanet");
 		buttonsHidden.push("exploreMoon");
 		explored.push("moon");
@@ -64,7 +64,7 @@ function exploreVenus(){
 	if(rocketFuel >= 50){
 		rocketFuel -= 50;
 		document.getElementById("exploreVenus").className = "hidden";
-		document.getElementById("methaneNav").className = "innerPlanet";
+		document.getElementById("methaneNav").className = "fuel unlocked";
 		document.getElementById("methanePower").className = "";
 		resourcesUnlocked.push("methaneNav", "methanePower");
 		buttonsHidden.push("exploreVenus");
@@ -80,8 +80,8 @@ function exploreMars(){
 	if(rocketFuel >= 80){
 		rocketFuel -= 80;
 		document.getElementById("exploreMars").className = "hidden";
-		document.getElementById("titaniumNav").className = "innerPlanet";
-		document.getElementById("siliconNav").className = "innerPlanet";
+		document.getElementById("titaniumNav").className = "other unlocked";
+		document.getElementById("siliconNav").className = "other unlocked";
 		resourcesUnlocked.push("titaniumNav", "siliconNav");
 		buttonsHidden.push("exploreMars");
 		explored.push("mars");
@@ -104,8 +104,8 @@ function exploreAsteroidBelt(){
 		document.getElementById("neptune").className = "outer";
 		document.getElementById("pluto").className = "outer";
 		document.getElementById("kuiperBelt").className = "outer";
-		document.getElementById("goldNav").className = "innerPlanet";
-		document.getElementById("silverNav").className = "innerPlanet";
+		document.getElementById("goldNav").className = "other unlocked";
+		document.getElementById("silverNav").className = "other unlocked";
 		resourcesUnlocked.push("goldNav", "silverNav");
 		buttonsHidden.push("exploreAsteroidBelt");
 		explored.push("asteroidBelt");
@@ -135,7 +135,7 @@ function exploreJupiter(){
 		rocketFuel -= 1000;
 		document.getElementById("exploreJupiter").className = "hidden";
 		document.getElementById("collapseOuterPlanet").className = "collapseOuterPlanet";
-		document.getElementById("hydrogenNav").className = "outerPlanet";
+		document.getElementById("hydrogenNav").className = "fuel unlocked";
 		document.getElementById("fusionPower").className = "";
 		resourcesUnlocked.push("hydrogenNav", "collapseOuterPlanet", "fusionPower");
 		buttonsHidden.push("exploreJupiter");
@@ -151,7 +151,7 @@ function exploreSaturn(){
 	if(rocketFuel >= 2000){
 		rocketFuel -= 2000;
 		document.getElementById("exploreSaturn").className = "hidden";
-		document.getElementById("heliumNav").className = "outerPlanet";
+		document.getElementById("heliumNav").className = "fuel unlocked";
 		resourcesUnlocked.push("heliumNav");
 		buttonsHidden.push("exploreSaturn");
 		explored.push("saturn");
@@ -166,7 +166,7 @@ function explorePluto(){
 	if(rocketFuel >= 5000){
 		rocketFuel -= 5000;
 		document.getElementById("explorePluto").className = "hidden";
-		document.getElementById("iceNav").className = "outerPlanet";
+		document.getElementById("iceNav").className = "other unlocked";
 		resourcesUnlocked.push("iceNav");
 		buttonsHidden.push("explorePluto");
 		explored.push("pluto");

@@ -1733,63 +1733,56 @@ function refreshResources(){
 		document.getElementById(resourcesUnlocked[i]).className = "";
 	}
 	if(contains(resourcesUnlocked, "oilNav")){
-		document.getElementById("oilNav").className = "fuel";
+		document.getElementById("oilNav").className = "other unlocked";
 	}
 	if(contains(resourcesUnlocked, "charcoalNav")){
-		document.getElementById("charcoalNav").className = "fuel";
+		document.getElementById("charcoalNav").className = "fuel unlocked";
 	}
 	if(contains(resourcesUnlocked, "spaceMetalNav")){
-		document.getElementById("spaceMetalNav").className = "metal";
+		document.getElementById("spaceMetalNav").className = "other unlocked";
 	}
 	if(contains(resourcesUnlocked, "methaneNav")){
-		document.getElementById("methaneNav").className = "metal";
-	}
-	if(contains(resourcesUnlocked, "titaniumNav")){
-		document.getElementById("titaniumNav").className = "metal";
+		document.getElementById("methaneNav").className = "fuel unlocked";
 	}
 	if(contains(resourcesUnlocked, "goldNav")){
-		document.getElementById("goldNav").className = "metal";
+		document.getElementById("goldNav").className = "other unlocked";
 	}
 	if(contains(resourcesUnlocked, "silverNav")){
-		document.getElementById("silverNav").className = "metal";
+		document.getElementById("silverNav").className = "other unlocked";
 	}
 	if(contains(resourcesUnlocked, "siliconNav")){
-		document.getElementById("siliconNav").className = "metal";
+		document.getElementById("siliconNav").className = "other unlocked";
 	}
 	if(contains(resourcesUnlocked, "hydrogenNav")){
-		document.getElementById("hydrogenNav").className = "fuel";
+		document.getElementById("hydrogenNav").className = "fuel unlocked";
 	}
 	if(contains(resourcesUnlocked, "heliumNav")){
-		document.getElementById("heliumNav").className = "fuel";
+		document.getElementById("heliumNav").className = "fuel unlocked";
 	}
 	if(contains(resourcesUnlocked, "iceNav")){
-		document.getElementById("iceNav").className = "earth";
+		document.getElementById("iceNav").className = "other unlocked";
 	}
 	if(contains(resourcesUnlocked, "meteoriteNav")){
-		document.getElementById("meteoriteNav").className = "metal";
+		document.getElementById("meteoriteNav").className = "other unlocked";
 	}
-	if(contains(resourcesUnlocked, "spaceMetalNav")){
-		document.getElementById("spaceMetalNav").className = "metal";
-	}
-	
 	if(contains(resourcesUnlocked, "plasmaNav")){
-		document.getElementById("plasmaNav").className = "energy";
+		document.getElementById("plasmaNav").className = "energy unlocked";
 	}
 	
 	if(contains(resourcesUnlocked, "energyNav")){
-		document.getElementById("energyNav").className = "energy";
+		document.getElementById("energyNav").className = "energy unlocked";
 	}
 	
 	if(contains(resourcesUnlocked, "uraniumNav")){
-		document.getElementById("uraniumNav").className = "energy";
+		document.getElementById("uraniumNav").className = "fuel unlocked";
 	}
 	
 	if(contains(resourcesUnlocked, "titaniumNav")){
-		document.getElementById("titaniumNav").className = "metal";
+		document.getElementById("titaniumNav").className = "other unlocked";
 	}
 	
 	if(contains(resourcesUnlocked, "lavaNav")){
-		document.getElementById("lavaNav").className = "metal";
+		document.getElementById("lavaNav").className = "fuel unlocked";
 	}
 	
 	/*!if(contains(resourcesUnlocked, "metalNav")){
@@ -1893,15 +1886,15 @@ function refreshTabs(){
 
 // Collapses Resources
 
-$('.collapseEarth').click(function(){
+$('.collapseOther').click(function(){
     if($(this).hasClass("collapsed")){
-        for(var i = 0; i < document.getElementsByClassName("earth").length; i++){
-        	document.getElementsByClassName("earth")[i].className = "earth";
+        for(var i = 0; i < document.getElementsByClassName("other unlocked").length; i++){
+        	document.getElementsByClassName("other unlocked")[i].className = "other unlocked";
         }
         $(this).removeClass("collapsed");
     } else {
-        for(var i = 0; i < document.getElementsByClassName("earth").length; i++){
-        	document.getElementsByClassName("earth")[i].className = "earth hidden";
+        for(var i = 0; i < document.getElementsByClassName("other unlocked").length; i++){
+        	document.getElementsByClassName("other unlocked")[i].className = "other unlocked hidden";
         }
         $(this).addClass("collapsed");
     }
@@ -1909,13 +1902,13 @@ $('.collapseEarth').click(function(){
 
 $('.collapseFuel').click(function(){
     if($(this).hasClass("collapsed")){
-        for(var i = 0; i < document.getElementsByClassName("fuel").length; i++){
-        	document.getElementsByClassName("fuel")[i].className = "fuel";
+        for(var i = 0; i < document.getElementsByClassName("fuel unlocked").length; i++){
+        	document.getElementsByClassName("fuel unlocked")[i].className = "fuel unlocked";
         }
         $(this).removeClass("collapsed");
     } else {
-        for(var i = 0; i < document.getElementsByClassName("fuel").length; i++){
-        	document.getElementsByClassName("fuel")[i].className = "fuel hidden";
+        for(var i = 0; i < document.getElementsByClassName("fuel unlocked").length; i++){
+        	document.getElementsByClassName("fuel unlocked")[i].className = "fuel unlocked hidden";
         }
         $(this).addClass("collapsed");
     }
@@ -1923,34 +1916,20 @@ $('.collapseFuel').click(function(){
 
 $('.collapseEnergy').click(function(){
     if($(this).hasClass("collapsed")){
-        for(var i = 0; i < document.getElementsByClassName("energy").length; i++){
-        	document.getElementsByClassName("energy")[i].className = "energy";
+        for(var i = 0; i < document.getElementsByClassName("energy unlocked").length; i++){
+        	document.getElementsByClassName("energy unlocked")[i].className = "energy unlocked";
         } 
         $(this).removeClass("collapsed");
     } else {
-        for(var i = 0; i < document.getElementsByClassName("energy").length; i++){
-        	document.getElementsByClassName("energy")[i].className = "energy hidden";
-        }
-        $(this).addClass("collapsed");
-    }
-});
-
-$('.collapseMetal').click(function(){
-    if($(this).hasClass("collapsed")){
-        for(var i = 0; i < document.getElementsByClassName("metal").length; i++){
-        	document.getElementsByClassName("metal")[i].className = "metal";
-        } 
-        $(this).removeClass("collapsed");
-    } else {
-        for(var i = 0; i < document.getElementsByClassName("metal").length; i++){
-        	document.getElementsByClassName("metal")[i].className = "metal hidden";
+        for(var i = 0; i < document.getElementsByClassName("energy unlocked").length; i++){
+        	document.getElementsByClassName("energy unlocked")[i].className = "energy unlocked hidden";
         }
         $(this).addClass("collapsed");
     }
 });
 
 
-
+/*
 $('.collapseInnerPlanet').click(function(){
     if($(this).hasClass("collapsed")){
         for(var i = 0; i < document.getElementsByClassName("innerPlanet").length; i++){
@@ -1977,7 +1956,7 @@ $('.collapseOuterPlanet').click(function(){
         }
         $(this).addClass("collapsed");
     }
-});
+});*/
 
 $('.collapseInner').click(function(){
     if($(this).hasClass("collapsed")){

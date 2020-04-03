@@ -163,7 +163,7 @@ function activatePreciousWonder(){
 		gold -= 10000;
 		document.getElementById("nuclearPower").className = "";
 		document.getElementById("activatePreciousWonder").className = "hidden";
-		document.getElementById("uraniumNav").className = "innerPlanet";
+		document.getElementById("uraniumNav").className = "other unlocked";
 		document.getElementById("preciousActivation").innerHTML = "Activated";
 		resourcesUnlocked.push("uraniumNav", "nuclearPower");
 		buttonsHidden.push("activatePreciousWonder");
@@ -194,7 +194,7 @@ function activateEnergeticWonder(){
 		uranium -= 500;
 		document.getElementById("magmaticPower").className = "";
 		document.getElementById("activateEnergeticWonder").className = "hidden";
-		document.getElementById("lavaNav").className = "innerPlanet";
+		document.getElementById("lavaNav").className = "fuel unlocked";
 		document.getElementById("energeticActivation").innerHTML = "Activated";
 		resourcesUnlocked.push("lavaNav", "magmaticPower");
 		buttonsHidden.push("activateEnergeticWonder");

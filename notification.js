@@ -7,21 +7,27 @@ function tabClicked(tab){
 }
 
 function activeResourceTab(tab){
-	if(document.getElementById("plasmaNav").className != "hidden"){
-		document.getElementById("plasmaNav").className = "";
+	/*if(document.getElementById("plasmaNav").className != "energy hidden"){
+		document.getElementById("plasmaNav").className = "energy ";
 	}
-	if(document.getElementById("energyNav").className != "hidden"){
-		document.getElementById("energyNav").className = "";
+	if(document.getElementById("energyNav").className != "energy hidden"){
+		document.getElementById("energyNav").className = "energy";
 	}
 	if(document.getElementById("uraniumNav").className === " info"){
 		document.getElementById("uraniumNav").className = "";
 	}
 	if(document.getElementById("lavaNav").className === " info"){
 		document.getElementById("lavaNav").className = "";
-	}
+	}*/
 	for(var i = 0; i < resources.length; i++){
-		if(document.getElementById(resources[i] + "Nav").className === "earth info"){
-			document.getElementById(resources[i] + "Nav").className = "earth";
+		if(document.getElementById(resources[i] + "Nav").className === "energy info"){
+			document.getElementById(resources[i] + "Nav").className = "energy";
+		}
+        if(document.getElementById(resources[i] + "Nav").className === "fuel info"){
+			document.getElementById(resources[i] + "Nav").className = "fuel";
+		}
+        if(document.getElementById(resources[i] + "Nav").className === "other info"){
+			document.getElementById(resources[i] + "Nav").className = "other";
 		}
 		if(document.getElementById(resources[i] + "Nav").className === "innerPlanet info"){
 			document.getElementById(resources[i] + "Nav").className = "innerPlanet";
