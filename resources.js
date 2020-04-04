@@ -113,6 +113,7 @@ function gainResources(){
 
 	
 	document.getElementById("woodps").innerHTML = commafy(woodps - (woodburner*2) - (furnace*furnaceWoodInput) - (kiln*45));
+    document.getElementById("woodps2").innerHTML = document.getElementById("woodps").innerHTML;
 	if(charcoalToggled === true){
 		if(chemicalPlantToggled === true){
 			document.getElementById("charcoalps").innerHTML = commafy(charcoalps - charcoalEngine - (chemicalPlant*20));
@@ -130,6 +131,7 @@ function gainResources(){
 		}
 		
 	}
+    document.getElementById("charcoalps2").innerHTML = document.getElementById("charcoalps").innerHTML;
 	
 	
 
@@ -159,10 +161,13 @@ function gainResources(){
 		if(charcoal >= charcoalStorage){
 			document.getElementById("woodps").innerHTML = commafy(woodps);
 			document.getElementById("charcoal").className = "green";
+            document.getElementById("woodps2").innerHTML = commafy(woodps);
+			document.getElementById("charcoal2").className = "green";
 		}
 	}
 	else{
 		document.getElementById("woodps").innerHTML = commafy(woodps);
+        document.getElementById("woodps2").innerHTML = commafy(woodps);
 	}
 	// Up To Here
 	if(wood + woodps/10 < woodStorage){
@@ -173,12 +178,15 @@ function gainResources(){
 	}
 	if(methane >= methaneStorage){
 		document.getElementById("methane").className = "green";
+        document.getElementById("methane2").className = "green";
 	}
 	if(uranium >= uraniumStorage){
 		document.getElementById("uranium").className = "green";
+        document.getElementById("uranium2").className = "green";
 	}
 	if(lava >= lavaStorage){
 		document.getElementById("lava").className = "green";
+        document.getElementById("lava2").className = "green";
 	}
 }
 

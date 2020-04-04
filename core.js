@@ -64,7 +64,26 @@ function refresh(){
 	document.getElementById("helium").innerHTML = commafy(helium);
 	document.getElementById("ice").innerHTML = commafy(ice);
 	document.getElementById("meteorite").innerHTML = commafy(meteorite);
-	
+    
+    document.getElementById("plasma2").innerHTML = commafy(plasma);
+	document.getElementById("energy2").innerHTML = commafy(energy);
+	document.getElementById("oil2").innerHTML = commafy(oil);
+	document.getElementById("metal2").innerHTML = commafy(metal);
+	document.getElementById("gem2").innerHTML = commafy(gem);
+	document.getElementById("charcoal2").innerHTML = commafy(charcoal);
+	document.getElementById("wood2").innerHTML = commafy(wood);
+	document.getElementById("spaceMetal2").innerHTML = commafy(spaceMetal);
+	document.getElementById("methane2").innerHTML = commafy(methane);
+	document.getElementById("titanium2").innerHTML = commafy(titanium);
+	document.getElementById("gold2").innerHTML = commafy(gold);
+	document.getElementById("silver2").innerHTML = commafy(silver);
+	document.getElementById("silicon2").innerHTML = commafy(silicon);
+	document.getElementById("uranium2").innerHTML = commafy(uranium);
+	document.getElementById("lava2").innerHTML = commafy(lava);
+	document.getElementById("hydrogen2").innerHTML = commafy(hydrogen);
+	document.getElementById("helium2").innerHTML = commafy(helium);
+	document.getElementById("ice2").innerHTML = commafy(ice);
+	document.getElementById("meteorite2").innerHTML = commafy(meteorite);
 }
 
 function refreshPerSec(){
@@ -168,6 +187,7 @@ function refreshPerSec(){
 	document.getElementById("scienceps").innerHTML = commafy(scienceps*10)/10;
     document.getElementById("rocketFuelps").innerHTML = commafy(rocketFuelps*10)/10;
 	document.getElementById("plasmaps").innerHTML = commafy(plasmaps);
+    document.getElementById("plasmaps2").innerHTML = document.getElementById("plasmaps").innerHTML;
 	document.getElementById("plasma").className = "";
 	if(plasma <= 0){
 		document.getElementById("plasma").className = "red";
@@ -183,7 +203,9 @@ function refreshPerSec(){
 	else{
 		document.getElementById("energyps").innerHTML = Math.round(energyps);
 	}
+    document.getElementById("energyps2").innerHTML = document.getElementById("energyps").innerHTML;
 	document.getElementById("uraniumps").innerHTML = commafy(uraniumps - nuclearStation*7);
+    document.getElementById("uraniumps2").innerHTML = document.getElementById("uraniumps").innerHTML;
 	document.getElementById("uranium").className = "";
 	if(uranium === 0){
 		document.getElementById("uranium").className = "red";
@@ -194,6 +216,7 @@ function refreshPerSec(){
 	else{
 		document.getElementById("oilps").innerHTML = commafy(oilps);
 	}
+    document.getElementById("oilps2").innerHTML = document.getElementById("oilps").innerHTML;
 	document.getElementById("oil").className = "";
 	if(oil >= oilStorage){
 		document.getElementById("oil").className = "green";
@@ -202,6 +225,7 @@ function refreshPerSec(){
 		document.getElementById("oil").className = "red";
 	}
 	document.getElementById("metalps").innerHTML = commafy(metalps);
+    document.getElementById("metalps2").innerHTML = document.getElementById("metalps").innerHTML;
 	document.getElementById("metal").className = "";
 	if(metal >= metalStorage){
 		document.getElementById("metal").className = "green";
@@ -210,6 +234,7 @@ function refreshPerSec(){
 		document.getElementById("metal").className = "red";
 	}
 	document.getElementById("gemps").innerHTML = commafy(gemps);
+    document.getElementById("gemps2").innerHTML = document.getElementById("gemps").innerHTML;
 	document.getElementById("gem").className = "";
 	if(gem >= gemStorage){
 		document.getElementById("gem").className = "green";
@@ -229,6 +254,7 @@ function refreshPerSec(){
 		document.getElementById("wood").className = "red";
 	}
 	document.getElementById("spaceMetalps").innerHTML = commafy(spaceMetalps);
+    document.getElementById("spaceMetalps2").innerHTML = document.getElementById("spaceMetalps").innerHTML;
 	document.getElementById("spaceMetal").className = "";
 	if(spaceMetal >= spaceMetalStorage){
 		document.getElementById("spaceMetal").className = "green";
@@ -237,11 +263,13 @@ function refreshPerSec(){
 		document.getElementById("spaceMetal").className = "red";
 	}
 	document.getElementById("methaneps").innerHTML = commafy(methaneps - methaneStation*6);
+    document.getElementById("methaneps2").innerHTML = document.getElementById("methaneps").innerHTML;
 	document.getElementById("methane").className = "";
 	if(methane === 0){
 		document.getElementById("methane").className = "red";
 	}
 	document.getElementById("titaniumps").innerHTML = commafy(titaniumps);
+    document.getElementById("titaniumps2").innerHTML = document.getElementById("titaniumps").innerHTML;
 	document.getElementById("titanium").className = "";
 	if(titanium >= titaniumStorage){
 		document.getElementById("titanium").className = "green";
@@ -250,6 +278,7 @@ function refreshPerSec(){
 		document.getElementById("titanium").className = "red";
 	}
 	document.getElementById("goldps").innerHTML = commafy(goldps);
+    document.getElementById("goldps2").innerHTML = document.getElementById("goldps").innerHTML;
 	document.getElementById("gold").className = "";
 	if(gold >= goldStorage){
 		document.getElementById("gold").className = "green";
@@ -258,6 +287,7 @@ function refreshPerSec(){
 		document.getElementById("gold").className = "red";
 	}
 	document.getElementById("silverps").innerHTML = commafy(silverps);
+    document.getElementById("silverps2").innerHTML = document.getElementById("silverps").innerHTML;
 	document.getElementById("silver").className = "";
 	if(silver >= silverStorage){
 		document.getElementById("silver").className = "green";
@@ -266,6 +296,7 @@ function refreshPerSec(){
 		document.getElementById("silver").className = "red";
 	}
 	document.getElementById("siliconps").innerHTML = commafy(siliconps);
+    document.getElementById("siliconps2").innerHTML = document.getElementById("siliconps").innerHTML;
 	document.getElementById("silicon").className = "";
 	if(silicon >= siliconStorage){
 		document.getElementById("silicon").className = "green";
@@ -274,6 +305,7 @@ function refreshPerSec(){
 		document.getElementById("silicon").className = "red";
 	}
 	document.getElementById("lavaps").innerHTML = commafy(lavaps - magmatic*11);
+    document.getElementById("lavaps2").innerHTML = document.getElementById("lavaps").innerHTML;
 	document.getElementById("lava").className = "";
 	if(lava === 0){
 		document.getElementById("lava").className = "red";
@@ -284,16 +316,19 @@ function refreshPerSec(){
 	else{
 		document.getElementById("hydrogenps").innerHTML = commafy(hydrogenps - fusionReactor*10);
 	}
+    document.getElementById("hydrogenps2").innerHTML = document.getElementById("hydrogenps").innerHTML;
 	document.getElementById("hydrogen").className = "";
 	if(hydrogen === 0){
 		document.getElementById("hydrogen").className = "red";
 	}
 	document.getElementById("heliumps").innerHTML = commafy(heliumps - fusionReactor*10);
+    document.getElementById("heliumps2").innerHTML = document.getElementById("heliumps").innerHTML;
 	document.getElementById("helium").className = "";
 	if(helium === 0){
 		document.getElementById("helium").className = "red";
 	}
 	document.getElementById("iceps").innerHTML = commafy(iceps);
+    document.getElementById("iceps2").innerHTML = document.getElementById("iceps").innerHTML;
 	document.getElementById("ice").className = "";
 	if(ice >= iceStorage){
 		document.getElementById("ice").className = "green";
@@ -302,6 +337,7 @@ function refreshPerSec(){
 		document.getElementById("ice").className = "red";
 	}
 	document.getElementById("meteoriteps").innerHTML = commafy(meteoriteps);
+    document.getElementById("meteoriteps2").innerHTML = document.getElementById("meteoriteps").innerHTML;
 	document.getElementById("meteorite").className = "";
 	if(meteorite >= meteoriteStorage){
 		document.getElementById("meteorite").className = "green";
@@ -650,7 +686,18 @@ function refreshUI(){
 
 function checkRedCost(){
 
-	function turnRed(resource, variable, id){
+	function turnRed2(resource, variable, id){
+        id2 = id + "2"
+		if(resource < variable){
+			document.getElementById(id).className = "red";
+            document.getElementById(id2).className = "red";
+		}
+		else{
+			document.getElementById(id).className = "";
+            document.getElementById(id2).className = "";
+		}
+	}
+    function turnRed(resource, variable, id){
 		if(resource < variable){
 			document.getElementById(id).className = "red";
 		}
@@ -659,45 +706,45 @@ function checkRedCost(){
 		}
 	}
 
-	turnRed(energyps, 0, "energyps");
-	turnRed(uraniumps - nuclearStation*7, 0, "uraniumps");
+	turnRed2(energyps, 0, "energyps");
+	turnRed2(uraniumps - nuclearStation*7, 0, "uraniumps");
 	if(chemicalPlantToggled === true){
-		turnRed(oilps - chemicalPlant*20, 0, "oilps");
+		turnRed2(oilps - chemicalPlant*20, 0, "oilps");
 	}
 	else{
-		turnRed(oilps, 0, "oilps");
+		turnRed2(oilps, 0, "oilps");
 	}
 	if(chemicalPlantToggled === true){
 		if(charcoalToggled === true){
-			turnRed(charcoalps - charcoalEngine - chemicalPlant*20, 0, "charcoalps");
+			turnRed2(charcoalps - charcoalEngine - chemicalPlant*20, 0, "charcoalps");
 		}
 		else{
-			turnRed(0 - charcoalEngine - chemicalPlant*20, 0, "charcoalps");
+			turnRed2(0 - charcoalEngine - chemicalPlant*20, 0, "charcoalps");
 		}
 	}
 	else{
 		if(charcoalToggled === true){
-			turnRed(charcoalps - charcoalEngine, 0, "charcoalps");
+			turnRed2(charcoalps - charcoalEngine, 0, "charcoalps");
 		}
 		else{
-			turnRed(0 - charcoalEngine, 0, "charcoalps");
+			turnRed2(0 - charcoalEngine, 0, "charcoalps");
 		}
 	}
     if(charcoalToggled === true && (charcoal < charcoalStorage)){
-        turnRed(woodps - (woodburner*2) - (furnace*furnaceWoodInput) - (kiln*45), 0, "woodps");
+        turnRed2(woodps - (woodburner*2) - (furnace*furnaceWoodInput) - (kiln*45), 0, "woodps");
     } else{
-        turnRed(woodps, 0, "woodps");
+        turnRed2(woodps, 0, "woodps");
     }
-	turnRed(spaceMetalps, 0, "spaceMetalps");
-	turnRed(methaneps - methaneStation*6, 0, "methaneps");
-	turnRed(lavaps - magmatic*11, 0, "lavaps");
+	turnRed2(spaceMetalps, 0, "spaceMetalps");
+	turnRed2(methaneps - methaneStation*6, 0, "methaneps");
+	turnRed2(lavaps - magmatic*11, 0, "lavaps");
 	if(heaterToggled === true){
-		turnRed(hydrogenps - fusionReactor*10 - heater*10, 0, "hydrogenps");
+		turnRed2(hydrogenps - fusionReactor*10 - heater*10, 0, "hydrogenps");
 	}
 	else{
-		turnRed(hydrogenps - fusionReactor*10, 0, "hydrogenps");
+		turnRed2(hydrogenps - fusionReactor*10, 0, "hydrogenps");
 	}
-	turnRed(heliumps - fusionReactor*10, 0, "heliumps");
+	turnRed2(heliumps - fusionReactor*10, 0, "heliumps");
 	
 
 	turnRed(wood, 2, "manualCharcoalCost");
@@ -1734,55 +1781,71 @@ function refreshResources(){
 	}
 	if(contains(resourcesUnlocked, "oilNav")){
 		document.getElementById("oilNav").className = "other unlocked";
+        document.getElementById("oilNav2").className = "other unlocked";
 	}
 	if(contains(resourcesUnlocked, "charcoalNav")){
 		document.getElementById("charcoalNav").className = "fuel unlocked";
+        document.getElementById("charcoalNav2").className = "fuel unlocked";
 	}
 	if(contains(resourcesUnlocked, "spaceMetalNav")){
 		document.getElementById("spaceMetalNav").className = "other unlocked";
+        document.getElementById("spaceMetalNav2").className = "other unlocked";
 	}
 	if(contains(resourcesUnlocked, "methaneNav")){
 		document.getElementById("methaneNav").className = "fuel unlocked";
+        document.getElementById("metaneNav2").className = "fuel unlocked";
 	}
 	if(contains(resourcesUnlocked, "goldNav")){
 		document.getElementById("goldNav").className = "other unlocked";
+        document.getElementById("goldNav2").className = "other unlocked";
 	}
 	if(contains(resourcesUnlocked, "silverNav")){
 		document.getElementById("silverNav").className = "other unlocked";
+        document.getElementById("silverNav2").className = "other unlocked";
 	}
 	if(contains(resourcesUnlocked, "siliconNav")){
 		document.getElementById("siliconNav").className = "other unlocked";
+        document.getElementById("siliconNav2").className = "other unlocked";
 	}
 	if(contains(resourcesUnlocked, "hydrogenNav")){
 		document.getElementById("hydrogenNav").className = "fuel unlocked";
+        document.getElementById("hydrogenNav2").className = "fuel unlocked";
 	}
 	if(contains(resourcesUnlocked, "heliumNav")){
 		document.getElementById("heliumNav").className = "fuel unlocked";
+        document.getElementById("heliumNav2").className = "fuel unlocked";
 	}
 	if(contains(resourcesUnlocked, "iceNav")){
 		document.getElementById("iceNav").className = "other unlocked";
+        document.getElementById("iceNav2").className = "other unlocked";
 	}
 	if(contains(resourcesUnlocked, "meteoriteNav")){
 		document.getElementById("meteoriteNav").className = "other unlocked";
+        document.getElementById("meteoriteNav2").className = "other unlocked";
 	}
 	if(contains(resourcesUnlocked, "plasmaNav")){
 		document.getElementById("plasmaNav").className = "energy unlocked";
+        document.getElementById("plasmaNav2").className = "energy unlocked";
 	}
 	
 	if(contains(resourcesUnlocked, "energyNav")){
 		document.getElementById("energyNav").className = "energy unlocked";
+        document.getElementById("energyNav2").className = "energy unlocked";
 	}
 	
 	if(contains(resourcesUnlocked, "uraniumNav")){
 		document.getElementById("uraniumNav").className = "fuel unlocked";
+        document.getElementById("uraniumNav2").className = "fuel unlocked";
 	}
 	
 	if(contains(resourcesUnlocked, "titaniumNav")){
 		document.getElementById("titaniumNav").className = "other unlocked";
+        document.getElementById("titaniumNav2").className = "other unlocked";
 	}
 	
 	if(contains(resourcesUnlocked, "lavaNav")){
 		document.getElementById("lavaNav").className = "fuel unlocked";
+        document.getElementById("lavaNav2").className = "fuel unlocked";
 	}
 	
 	/*!if(contains(resourcesUnlocked, "metalNav")){
@@ -1932,14 +1995,19 @@ $('#sortBtn').tooltip({
     html: true,
     title: "Sorting by default.<br>Click to sort alphabetially."
 });
-function sortResources() {
+function sortResources(ev) {
+    ev.stopPropagation();
     let tabsToSort = document.querySelector('#sortTable');
+    let tabsToSort2 = document.querySelector('#sortTable2');
     let btn = document.getElementById("sortBtn");
     //if tabs are sorted alphabetically, re-sort them by the data-sortDefault attribute
     if(btn.dataset.sortingtype=="alph"){
         [...tabsToSort.firstElementChild.children]
             .sort( (a,b) => (parseInt(a.dataset.sortdefault) < parseInt(b.dataset.sortdefault) ? -1 : 1) )
             .map( node => tabsToSort.firstElementChild.appendChild(node) );
+        [...tabsToSort2.firstElementChild.children]
+            .sort( (a,b) => (parseInt(a.dataset.sortdefault) < parseInt(b.dataset.sortdefault) ? -1 : 1) )
+            .map( node => tabsToSort2.firstElementChild.appendChild(node) );
         btn.dataset.sortingtype = "default";
         $('#sortBtn').tooltip('destroy');
         $('#sortBtn').tooltip({ 
@@ -1951,6 +2019,9 @@ function sortResources() {
         [...tabsToSort.firstElementChild.children]
             .sort( (a,b) => (parseInt(a.dataset.sortalph) < parseInt(b.dataset.sortalph) ? -1 : 1) )
             .map( node => tabsToSort.firstElementChild.appendChild(node) );
+        [...tabsToSort2.firstElementChild.children]
+            .sort( (a,b) => (parseInt(a.dataset.sortalph) < parseInt(b.dataset.sortalph) ? -1 : 1) )
+            .map( node => tabsToSort2.firstElementChild.appendChild(node) );
         btn.dataset.sortingtype = "alph";
         $('#sortBtn').tooltip('destroy');
         $('#sortBtn').tooltip({ 

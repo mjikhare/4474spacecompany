@@ -43,7 +43,14 @@ function unlockBasicEnergy(){
         document.getElementById("collapseEnergy").className = "collapseEnergy";
 		document.getElementById("charcoalNav").className = "fuel unlocked";
 		document.getElementById("energyNav").className = "energy unlocked";
-		document.getElementById("collapseEarth").style.border = "";
+		document.getElementById("collapseOther").style.border = "";
+        
+        document.getElementById("collapseFuel2").className = "collapseFuel";
+        document.getElementById("collapseEnergy2").className = "collapseEnergy";
+		document.getElementById("charcoalNav2").className = "fuel unlocked";
+		document.getElementById("energyNav2").className = "energy unlocked";
+		document.getElementById("collapseOther2").style.border = "";
+        
 		document.getElementById("unlockBasicEnergy").className = "hidden";
 		document.getElementById("unlockSolar").className = "";
 		document.getElementById("unlockMachines").className = "";
@@ -63,6 +70,7 @@ function unlockOil(){
 		science -= 30;
 		document.getElementById("unlockOil").className = "hidden";
 		document.getElementById("oilNav").className = "other unlocked";
+        document.getElementById("oilNav2").className = "other unlocked";
 		refresh();
 		resourcesUnlocked.push("oilNav");
 		researched.push("unlockOil");
@@ -182,12 +190,15 @@ function unlockPlasma(){
 		science -= 40000;
 		document.getElementById("unlockPlasma").className = "hidden";
 		document.getElementById("plasmaNav").className = "energy unlocked";
+        document.getElementById("plasmaNav2").className = "energy unlocked";
 		for(var i = 0; i < 4; i++){
 			document.getElementById("energyNav" + [i]).style.border = "";
+            document.getElementById("energyNav" + [i] + "2").style.border = "";
 		}
 		researched.push("unlockPlasma");
 		techsResearchedNum += 1;
 		noBorder.push("energyNav");
+        noBorder.push("energyNav2");
 		resourcesUnlocked.push("plasmaNav");
 		newUnlock("resources");
 	}
@@ -213,6 +224,7 @@ function unlockMeteorite(){
 		science -= 100000;
 		document.getElementById("unlockMeteorite").className = "hidden";
 		document.getElementById("meteoriteNav").className = "other unlocked";
+        document.getElementById("meteoriteNav2").className = "other unlocked";
 		researched.push("unlockMeteorite");
 		techsResearchedNum += 1;
 		resourcesUnlockedNum += 1;

@@ -4,6 +4,11 @@ function newUnlock(tab){
 
 function tabClicked(tab){
 	document.getElementById(tab + "TabGlyph").className = "glyphicon glyphicon-exclamation-sign hidden";
+    if(tab == 'resources'){
+        document.getElementById("inventory").className = "container hidden";
+    } else{
+        document.getElementById("inventory").className = "container";
+    }
 }
 
 function activeResourceTab(tab){
