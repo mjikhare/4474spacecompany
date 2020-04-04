@@ -117,6 +117,12 @@
         display: inline;
         margin-left: 4px;
     }
+    .tooltip{
+        width: 160px;
+    }
+    .tooltip-inner{
+        text-align: left;
+    }
     
 	</style>
 
@@ -320,7 +326,7 @@
             <a href="#resources" aria-controls="resources" role="tab" data-toggle="tab" onclick="tabClicked('resources')">
                 <div id="resourcesTabGlyph" class="glyphicon glyphicon-exclamation-sign hidden"></div>
                 Resources 
-                <button onclick="sortResources()" class="btn btn-default btn-sm" data-sortingtype="default" id="sortBtn">Sort</button>
+                <button onclick="sortResources()" class="btn btn-default btn-sm" data-sortingtype="default" id="sortBtn" data-toggle="tooltip">Sort</button>
             </a>
         </li>
 		<li role="presentation" id="researchTab" class="hidden"><a href="#research" aria-controls="research" role="tab" data-toggle="tab" onclick="tabClicked('research')"><div id="researchTabGlyph" class="glyphicon glyphicon-exclamation-sign hidden"></div> Research</a></li>
@@ -5095,6 +5101,7 @@
 
 </body>
 <script type="text/javascript" src="jquery.min.js"></script>
+<script src="lib/popper.min.js"></script>
 <script type="text/javascript" src="bootstrap.min.js"></script>
 <script type="text/javascript" src="notification.js"></script>
 <script type="text/javascript" src="variable.js"></script>

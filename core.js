@@ -1928,6 +1928,10 @@ $('.collapseEnergy').click(function(){
     }
 });
 
+$('#sortBtn').tooltip({ 
+    html: true,
+    title: "Sorting by default.<br>Click to sort alphabetially."
+});
 function sortResources() {
     let tabsToSort = document.querySelector('#sortTable');
     let btn = document.getElementById("sortBtn");
@@ -1937,13 +1941,22 @@ function sortResources() {
             .sort( (a,b) => (parseInt(a.dataset.sortdefault) < parseInt(b.dataset.sortdefault) ? -1 : 1) )
             .map( node => tabsToSort.firstElementChild.appendChild(node) );
         btn.dataset.sortingtype = "default";
+        $('#sortBtn').tooltip('destroy');
+        $('#sortBtn').tooltip({ 
+            html: true,
+            title: "Sorting by default.<br>Click to sort alphabetially."
+        });
     }
     else if(btn.dataset.sortingtype=="default"){
-        console.log("in method");
         [...tabsToSort.firstElementChild.children]
             .sort( (a,b) => (parseInt(a.dataset.sortalph) < parseInt(b.dataset.sortalph) ? -1 : 1) )
             .map( node => tabsToSort.firstElementChild.appendChild(node) );
         btn.dataset.sortingtype = "alph";
+        $('#sortBtn').tooltip('destroy');
+        $('#sortBtn').tooltip({ 
+            html: true,
+            title: "Sorting alphabetically.<br>Click to sort by default."
+        });
     }
 }
 
