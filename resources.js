@@ -111,7 +111,7 @@ function gainResources(){
 		oil = oilStorage;
 	}
 
-	
+
 	document.getElementById("woodps").innerHTML = commafy(woodps - (woodburner*2) - (furnace*furnaceWoodInput) - (kiln*45));
     document.getElementById("woodps2").innerHTML = document.getElementById("woodps").innerHTML;
 	if(charcoalToggled === true){
@@ -129,11 +129,11 @@ function gainResources(){
 		else{
 			document.getElementById("charcoalps").innerHTML = commafy(0 - charcoalEngine);
 		}
-		
+
 	}
     document.getElementById("charcoalps2").innerHTML = document.getElementById("charcoalps").innerHTML;
-	
-	
+
+
 
 	// ReWrite This
 	if(charcoalToggled === true){
@@ -874,7 +874,7 @@ function getEnricher(){
 }
 
 function getPump(){
-	
+
 	if(metal >= pumpMetalCost && gem >= pumpGemCost){
 		metal -= pumpMetalCost;
 		gem -= pumpGemCost;
@@ -1099,8 +1099,30 @@ function getDiamondDrill(){
     }
 }
 
+function conf_purchase() {
+	woodps = parseInt(document.getElementById("woodps").innerHTML)
+	deficit = 2
+	if (woodps < deficit) {
+		var modal = document.getElementById("conf_modal");
+		modal.style.display = "block";
+	} else {
+		getWoodburner();
+	}
+}
+
+function conf_modal() {
+	  getWoodburner();
+		var modal = document.getElementById("conf_modal");
+		modal.style.display = "none";
+}
+
+function canc_modal() {
+	var modal = document.getElementById("conf_modal");
+	modal.style.display = "none";
+}
+
 function getWoodburner(){
-	
+
 	if(metal >= woodburnerMetalCost && wood >= woodburnerWoodCost){
 		metal -= woodburnerMetalCost;
 		wood -= woodburnerWoodCost;
