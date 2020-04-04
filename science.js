@@ -43,13 +43,13 @@ function unlockBasicEnergy(){
         document.getElementById("collapseEnergy").className = "collapseEnergy";
 		document.getElementById("charcoalNav").className = "fuel unlocked";
 		document.getElementById("energyNav").className = "energy unlocked";
-		document.getElementById("collapseEarth").style.border = "";
+		document.getElementById("collapseOther").style.border = "";
         
         document.getElementById("collapseFuel2").className = "collapseFuel";
         document.getElementById("collapseEnergy2").className = "collapseEnergy";
 		document.getElementById("charcoalNav2").className = "fuel unlocked";
 		document.getElementById("energyNav2").className = "energy unlocked";
-		document.getElementById("collapseEarth2").style.border = "";
+		document.getElementById("collapseOther2").style.border = "";
         
 		document.getElementById("unlockBasicEnergy").className = "hidden";
 		document.getElementById("unlockSolar").className = "";
