@@ -123,6 +123,9 @@
     .tooltip-inner{
         text-align: left;
     }
+    #inventory{
+        margin-right: 20px
+    }
     
 	</style>
 
@@ -326,7 +329,7 @@
             <a href="#resources" aria-controls="resources" role="tab" data-toggle="tab" onclick="tabClicked('resources')">
                 <div id="resourcesTabGlyph" class="glyphicon glyphicon-exclamation-sign hidden"></div>
                 Resources 
-                <button onclick="sortResources()" class="btn btn-default btn-sm" data-sortingtype="default" id="sortBtn" data-toggle="tooltip">Sort</button>
+                <button onclick="sortResources(event)" class="btn btn-default btn-sm" data-sortingtype="default" id="sortBtn" data-toggle="tooltip">Sort</button>
             </a>
         </li>
 		<li role="presentation" id="researchTab" class="hidden"><a href="#research" aria-controls="research" role="tab" data-toggle="tab" onclick="tabClicked('research')"><div id="researchTabGlyph" class="glyphicon glyphicon-exclamation-sign hidden"></div> Research</a></li>
@@ -354,17 +357,15 @@
 	</ul>
 
 <!--------------------- INVENTORY -------------------->   
- <!--
-<div class="container" style="width:250px; padding:0; float:left;">
-    <table class="table table-hover text-primary no-select pointer">
-        
-        <tr id="collapseEnergy2" class="collapseEnergy hidden" style="border:none;">
+<div id="inventory" class="container hidden" style="width:220px; padding:0; float:left;">
+    <table class="table table-hover text-primary no-select pointer" id="sortTable2" >
+        <tr id="collapseEnergy2" class="collapseEnergy hidden" data-sortDefault="1" data-sortAlph="1" style="border:none;">
             <td colspan="4">
                 <span>Energy Sources</span> <span class="caret"></span>
             </td>
         </tr>
         
-        <tr id="plasmaNav2" class="hidden" href="#plasmaTab" style="height:60px;">
+        <tr id="plasmaNav2" class="energy hidden" data-sortDefault="2" data-sortAlph="3" style="height:60px;">
             <td style="border:none; vertical-align:middle;">
                 <img src="Icons/plasmaIcon.png" style="width:30px; height:auto">
             </td>
@@ -384,34 +385,34 @@
                 </span>
             </td>
         </tr>
-        <tr id="energyNav4" class="hidden" href="#energyTab" style="height:60px;">
-            <td id="energyNav0" style="border:none; vertical-align:middle;">
+        <tr id="energyNav2" class="energy hidden" data-sortDefault="3" data-sortAlph="2" style="height:60px;">
+            <td id="energyNav02" style="border:none; vertical-align:middle;">
                 <img src="Icons/EnergyIcon.png" style="width:30px; height:auto">
             </td>
-            <td id="energyNav1" style="border:none; vertical-align:middle;">
+            <td id="energyNav12" style="border:none; vertical-align:middle;">
                 <span>
                     Energy
                 </span>
             </td>
-            <td id="energyNav2" style="border: none; vertical-align:middle; text-align:center;">
+            <td id="energyNav22" style="border: none; vertical-align:middle; text-align:center;">
                 <span>
                     <span id="energyps2">0</span>/Sec
                 </span>
             </td>
-            <td id="energyNav3" style="border:none; vertical-align:middle; text-align:right;">
+            <td id="energyNav32" style="border:none; vertical-align:middle; text-align:right;">
                 <span id="energy2">
                     0
                 </span>
             </td>
         </tr>
         
-        <tr id="collapseFuel2" class="collapseFuel hidden" style="border:none;">
+        <tr id="collapseFuel2" class="collapseFuel hidden" data-sortDefault="4" data-sortAlph="4" style="border:none;">
             <td colspan="4">
                 <span>Fuel Sources</span> <span class="caret"></span>
             </td>
         </tr>
         
-        <tr id="uraniumNav2" class="hidden" href="#uraniumTab" style="height:60px;">
+        <tr id="uraniumNav2" class="fuel hidden" data-sortDefault="5" data-sortAlph="10" style="height:60px;">
             <td style="vertical-align:middle;">
                 <img src="Icons/uraniumIcon.png" style="width:30px; height:auto">
             </td>
@@ -429,12 +430,10 @@
                 <span id="uranium2">
                     0
                 </span>
-                /
-                <span id="uraniumStorage2">50</span>
             </td>
         </tr>
         
-        <tr id="hydrogenNav2" class="hidden" href="#hydrogenTab" style="height:60px;">
+        <tr id="hydrogenNav2" class="fuel hidden" data-sortDefault="6" data-sortAlph="7" style="height:60px;">
             <td style="vertical-align:middle;">
                 <img src="Icons/hydrogenIcon.png" style="width:30px; height:auto">
             </td>
@@ -452,11 +451,9 @@
                 <span id="hydrogen2">
                     0
                 </span>
-                /
-                <span id="hydrogenStorage2">50</span>
             </td>
         </tr>
-        <tr id="heliumNav2" class="hidden" href="#heliumTab" style="height:60px;">
+        <tr id="heliumNav2" class="fuel hidden" data-sortDefault="7" data-sortAlph="6" style="height:60px;">
             <td style="vertical-align:middle;">
                 <img src="Icons/heliumIcon.png" style="width:30px; height:auto">
             </td>
@@ -474,12 +471,10 @@
                 <span id="helium2">
                     0
                 </span>
-                /
-                <span id="heliumStorage2">50</span>
             </td>
         </tr>
         
-        <tr id="methaneNav2" class="hidden" href="#methaneTab" style="height:60px;">
+        <tr id="methaneNav2" class="fuel hidden" data-sortDefault="8" data-sortAlph="9" style="height:60px;">
             <td style="vertical-align:middle;">
                 <img src="Icons/methaneIcon.png" style="width:30px; height:auto">
             </td>
@@ -497,12 +492,10 @@
                 <span id="methane2">
                     0
                 </span>
-                /
-                <span id="methaneStorage2">50</span>
             </td>
         </tr>
         
-        <tr id="lavaNav2" class="hidden" href="#lavaTab" style="height:60px;">
+        <tr id="lavaNav2" class="fuel hidden" data-sortDefault="9" data-sortAlph="8" style="height:60px;">
             <td style="vertical-align:middle;">
                 <img src="Icons/lavaIcon.png" style="width:30px; height:auto">
             </td>
@@ -520,12 +513,10 @@
                 <span id="lava2">
                     0
                 </span>
-                /
-                <span id="lavaStorage2">50</span>
             </td>
         </tr>
         
-        <tr id="charcoalNav2" class="hidden" href="#charcoalTab" style="height:60px;">
+        <tr id="charcoalNav2" class="fuel hidden" data-sortDefault="10" data-sortAlph="5" style="height:60px;">
             <td style="vertical-align:middle;">
                 <img src="Icons/charcoalIcon.png" style="width:30px; height:auto;">
             </td>
@@ -543,41 +534,37 @@
                 <span id="charcoal2">
                     0
                 </span>
-                /
-                <span id="charcoalStorage2">50</span>
             </td>
         </tr>
         
-        <tr id="collapseOther2" class="collapseOther" style="border:none;">
+        <tr id="collapseOther2" class="collapseOther" data-sortDefault="11" data-sortAlph="11" style="border:none;">
             <td colspan="4">
                 <span>Basic Resources</span> <span class="caret"></span>
             </td>
         </tr>
         
-        <tr id="metalNav4" class="other" href="#metalTab" style="height:60px;">
-            <td id="metalNav0" style="vertical-align:middle;">
+        <tr id="metalNav2" class="other unlocked" data-sortDefault="12" data-sortAlph="15" style="height:60px;">
+            <td id="metalNav02" style="vertical-align:middle;">
                 <img src="Icons/metalIcon.png" style="width:30px; height:auto">
             </td>
-            <td id="metalNav1" style="vertical-align:middle;">
+            <td id="metalNav12" style="vertical-align:middle;">
                 <span>
                     Metal
                 </span>
             </td>
-            <td id="metalNav2" style="vertical-align:middle; text-align:center;">
+            <td id="metalNav22" style="vertical-align:middle; text-align:center;">
                 <span>
                     <span id="metalps2">0</span>/Sec
                 </span>
             </td>
-            <td id="metalNav3" style="vertical-align:middle; text-align:right;">
+            <td id="metalNav32" style="vertical-align:middle; text-align:right;">
                 <span id="metal2">
                     0
                 </span>
-                /
-                <span id="metalStorage2">50</span>
             </td>
         </tr>
         
-        <tr id="gemNav2" class="other" href="#gemTab" style="height:60px;">
+        <tr id="gemNav2" class="other unlocked" data-sortDefault="13" data-sortAlph="12" style="height:60px;">
             <td style="vertical-align:middle;">
                 <img src="Icons/gemIcon.png" style="width:30px; height:auto">
             </td>
@@ -595,12 +582,10 @@
                 <span id="gem2">
                     0
                 </span>
-                /
-                <span id="gemStorage2">50</span>
             </td>
         </tr>
         
-        <tr id="woodNav2" class="other" href="#woodTab" style="height:60px;">
+        <tr id="woodNav2" class="other unlocked" data-sortDefault="14" data-sortAlph="22" style="height:60px;">
             <td style="vertical-align:middle;">
                 <img src="Icons/woodIcon.png" style="width:30px; height:auto">
             </td>
@@ -618,35 +603,31 @@
                 <span id="wood2">
                     0
                 </span>
-                /
-                <span id="woodStorage2">50</span>
             </td>
         </tr>
         
-        <tr id="oilNav4" class="hidden" href="#oilTab" style="height:60px;">
-            <td id="oilNav0" style="vertical-align:middle;">
+        <tr id="oilNav2" class="other hidden" data-sortDefault="15" data-sortAlph="17" style="height:60px;">
+            <td id="oilNav02" style="vertical-align:middle;">
                 <img src="Icons/oilIcon.png" style="width:30px; height:auto">
             </td>
-            <td id="oilNav1" style="vertical-align:middle;">
+            <td id="oilNav12" style="vertical-align:middle;">
                 <span>
                     Oil
                 </span>
             </td>
-            <td id="oilNav2" style="vertical-align:middle; text-align:center;">
+            <td id="oilNav22" style="vertical-align:middle; text-align:center;">
                 <span>
                     <span id="oilps2">0</span>/Sec
                 </span>
             </td>
-            <td id="oilNav3" style="vertical-align:middle; text-align:right;">
+            <td id="oilNav32" style="vertical-align:middle; text-align:right;">
                 <span id="oil2">
                     0
                 </span>
-                /
-                <span id="oilStorage2">50</span>
             </td>
         </tr>
         
-        <tr id="spaceMetalNav2" class="hidden" href="#spaceMetalTab" style="height:60px;">
+        <tr id="spaceMetalNav2" class="other hidden" data-sortDefault="16" data-sortAlph="20" style="height:60px;">
             <td style="vertical-align:middle;">
                 <img src="Icons/spaceMetalIcon.png" style="width:30px; height:auto">
             </td>
@@ -664,12 +645,10 @@
                 <span id="spaceMetal2">
                     0
                 </span>
-                /
-                <span id="spaceMetalStorage2">50</span>
             </td>
         </tr>
         
-        <tr id="titaniumNav" class="hidden" href="#titaniumTab" style="height:60px;">
+        <tr id="titaniumNav" class="other hidden" data-sortDefault="17" data-sortAlph="21" style="height:60px;">
             <td style="vertical-align:middle;">
                 <img src="Icons/titaniumIcon.png" style="width:30px; height:auto">
             </td>
@@ -687,11 +666,9 @@
                 <span id="titanium2">
                     0
                 </span>
-                /
-                <span id="titaniumStorage2">50</span>
             </td>
         </tr>
-        <tr id="goldNav2" class="hidden" href="#goldTab" style="height:60px;">
+        <tr id="goldNav2" class="other hidden" data-sortDefault="18" data-sortAlph="13" style="height:60px;">
             <td style="vertical-align:middle;">
                 <img src="Icons/goldIcon.png" style="width:30px; height:auto">
             </td>
@@ -709,11 +686,9 @@
                 <span id="gold2">
                     0
                 </span>
-                /
-                <span id="goldStorage2">50</span>
             </td>
         </tr>
-        <tr id="silverNav2" class="hidden" href="#silverTab" style="height:60px;">
+        <tr id="silverNav2" class="other hidden" data-sortDefault="19" data-sortAlph="19" style="height:60px;">
             <td style="vertical-align:middle;">
                 <img src="Icons/silverIcon.png" style="width:30px; height:auto">
             </td>
@@ -731,11 +706,9 @@
                 <span id="silver2">
                     0
                 </span>
-                /
-                <span id="silverStorage2">50</span>
             </td>
         </tr>
-        <tr id="siliconNav2" class="hidden" href="#siliconTab" style="height:60px;">
+        <tr id="siliconNav" class="other hidden" data-sortDefault="20" data-sortAlph="18" style="height:60px;">
             <td style="vertical-align:middle;">
                 <img src="Icons/siliconIcon.png" style="width:30px; height:auto">
             </td>
@@ -753,12 +726,11 @@
                 <span id="silicon2">
                     0
                 </span>
-                /
-                <span id="siliconStorage2">50</span>
             </td>
         </tr>
         
-        <tr id="meteoriteNav2" class="hidden" href="#meteoriteTab" style="height:60px;">
+        
+        <tr id="meteoriteNav2" class="other hidden" data-sortDefault="21" data-sortAlph="16" style="height:60px;">
             <td style="vertical-align:middle;">
                 <img src="Icons/meteoriteIcon.png" style="width:30px; height:auto">
             </td>
@@ -776,13 +748,11 @@
                 <span id="meteorite2">
                     0
                 </span>
-                /
-                <span id="meteoriteStorage2">50</span>
             </td>
         </tr>
         
         
-        <tr id="iceNav2" class="hidden" href="#iceTab" style="height:60px;">
+        <tr id="iceNav" class="other hidden" data-sortDefault="22" data-sortAlph="14" style="height:60px;">
             <td style="vertical-align:middle;">
                 <img src="Icons/iceIcon.png" style="width:30px; height:auto">
             </td>
@@ -800,8 +770,6 @@
                 <span id="ice2">
                     0
                 </span>
-                /
-                <span id="iceStorage2">50</span>
             </td>
         </tr>
         
@@ -809,7 +777,6 @@
         
     </table>
 </div>
-    -->
     
 <!-- Tab panes -->
 
