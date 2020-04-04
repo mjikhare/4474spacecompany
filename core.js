@@ -1928,6 +1928,24 @@ $('.collapseEnergy').click(function(){
     }
 });
 
+function sortResources() {
+    let tabsToSort = document.querySelector('#sortTable');
+    let btn = document.getElementById("sortBtn");
+    //if tabs are sorted alphabetically, re-sort them by the data-sortDefault attribute
+    if(btn.dataset.sortingtype=="alph"){
+        [...tabsToSort.firstElementChild.children]
+            .sort( (a,b) => (parseInt(a.dataset.sortdefault) < parseInt(b.dataset.sortdefault) ? -1 : 1) )
+            .map( node => tabsToSort.firstElementChild.appendChild(node) );
+        btn.dataset.sortingtype = "default";
+    }
+    else if(btn.dataset.sortingtype=="default"){
+        console.log("in method");
+        [...tabsToSort.firstElementChild.children]
+            .sort( (a,b) => (parseInt(a.dataset.sortalph) < parseInt(b.dataset.sortalph) ? -1 : 1) )
+            .map( node => tabsToSort.firstElementChild.appendChild(node) );
+        btn.dataset.sortingtype = "alph";
+    }
+}
 
 /*
 $('.collapseInnerPlanet').click(function(){

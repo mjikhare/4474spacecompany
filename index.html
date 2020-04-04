@@ -112,6 +112,12 @@
 	button.myBtn:hover{
 		background: #999 !important;
 	}
+    
+    #sortBtn{
+        display: inline;
+        margin-left: 4px;
+    }
+    
 	</style>
 
 	<script src="./lib/popper.min.js"></script>
@@ -310,7 +316,13 @@
 
 <!-- Nav tabs -->
 	<ul class="nav nav-tabs no-select" role="tablist">
-		<li role="presentation" class="active"><a href="#resources" aria-controls="resources" role="tab" data-toggle="tab" onclick="tabClicked('resources')"><div id="resourcesTabGlyph" class="glyphicon glyphicon-exclamation-sign hidden"></div> Resources</a></li>
+		<li role="presentation" class="active">
+            <a href="#resources" aria-controls="resources" role="tab" data-toggle="tab" onclick="tabClicked('resources')">
+                <div id="resourcesTabGlyph" class="glyphicon glyphicon-exclamation-sign hidden"></div>
+                Resources 
+                <button onclick="sortResources()" class="btn btn-default btn-sm" data-sortingtype="default" id="sortBtn">Sort</button>
+            </a>
+        </li>
 		<li role="presentation" id="researchTab" class="hidden"><a href="#research" aria-controls="research" role="tab" data-toggle="tab" onclick="tabClicked('research')"><div id="researchTabGlyph" class="glyphicon glyphicon-exclamation-sign hidden"></div> Research</a></li>
     	<li role="presentation" id="solarSystemTab" class="hidden"><a href="#solarSystem" aria-controls="solarSystem" role="tab" data-toggle="tab"onclick="tabClicked('solarSystem')"><div id="solarSystemTabGlyph" class="glyphicon glyphicon-exclamation-sign hidden"></div> Solar System</a></li>
     	<li role="presentation" id="wonderTab" class="hidden"><a href="#wonder" aria-control="wonder" role="tab" data-toggle="tab"onclick="tabClicked('wonder')"><div id="wonderTabGlyph" class="glyphicon glyphicon-exclamation-sign hidden"></div> Wonders</a></li>
@@ -334,7 +346,6 @@
     		</ul>
     	</li>
 	</ul>
-
 
 <!--------------------- INVENTORY -------------------->   
  <!--
@@ -800,15 +811,14 @@
 			<!-- Resources -->
 		<div role="tabpanel" class="tab-pane fade in active" id="resources">
 			<div class="container" style="width:380px; padding:0; float:left;">
-				<table class="table table-hover text-primary no-select pointer">
-					
-					<tr id="collapseEnergy" class="collapseEnergy hidden" style="border:none;">
+				<table class="table table-hover text-primary no-select pointer" id="sortTable" >
+					<tr id="collapseEnergy" class="collapseEnergy hidden" data-sortDefault="1" data-sortAlph="1" style="border:none;">
 						<td colspan="4">
 							<span>Energy Sources</span> <span class="caret"></span>
 						</td>
 					</tr>
 					
-					<tr id="plasmaNav" onclick="activeResourceTab('plasmaNav')" class="energy hidden" href="#plasmaTab" aria-controls="plasmaTab" role="tab" data-toggle="tab" style="height:60px;">
+					<tr id="plasmaNav" onclick="activeResourceTab('plasmaNav')" class="energy hidden" data-sortDefault="2" data-sortAlph="3" href="#plasmaTab" aria-controls="plasmaTab" role="tab" data-toggle="tab" style="height:60px;">
 						<td style="border:none; vertical-align:middle;">
 							<img src="Icons/plasmaIcon.png" style="width:30px; height:auto">
 						</td>
@@ -828,7 +838,7 @@
 							</span>
 						</td>
 					</tr>
-					<tr id="energyNav" onclick="activeResourceTab('energyNav')" class="energy hidden" href="#energyTab" aria-controls="energyTab" role="tab" data-toggle="tab" style="height:60px;">
+					<tr id="energyNav" onclick="activeResourceTab('energyNav')" class="energy hidden" data-sortDefault="3" data-sortAlph="2" href="#energyTab" aria-controls="energyTab" role="tab" data-toggle="tab" style="height:60px;">
 						<td id="energyNav0" style="border:none; vertical-align:middle;">
 							<img src="Icons/EnergyIcon.png" style="width:30px; height:auto">
 						</td>
@@ -849,13 +859,13 @@
 						</td>
 					</tr>
                     
-                    <tr id="collapseFuel" class="collapseFuel hidden" style="border:none;">
+                    <tr id="collapseFuel" class="collapseFuel hidden" data-sortDefault="4" data-sortAlph="4" style="border:none;">
 						<td colspan="4">
 							<span>Fuel Sources</span> <span class="caret"></span>
 						</td>
 					</tr>
                     
-					<tr id="uraniumNav" onclick="activeResourceTab('uraniumNav')" class="fuel hidden" href="#uraniumTab" aria-controls="uraniumTab" role="tab" data-toggle="tab" style="height:60px;">
+					<tr id="uraniumNav" onclick="activeResourceTab('uraniumNav')" class="fuel hidden" data-sortDefault="5" data-sortAlph="10" href="#uraniumTab" aria-controls="uraniumTab" role="tab" data-toggle="tab" style="height:60px;">
 						<td style="vertical-align:middle;">
 							<img src="Icons/uraniumIcon.png" style="width:30px; height:auto">
 						</td>
@@ -878,7 +888,7 @@
 						</td>
 					</tr>
 					
-					<tr id="hydrogenNav" onclick="activeResourceTab('hydrogenNav')" class="fuel hidden" href="#hydrogenTab" aria-controls="hydrogenTab" role="tab" data-toggle="tab" style="height:60px;">
+					<tr id="hydrogenNav" onclick="activeResourceTab('hydrogenNav')" class="fuel hidden" data-sortDefault="6" data-sortAlph="7" href="#hydrogenTab" aria-controls="hydrogenTab" role="tab" data-toggle="tab" style="height:60px;">
 						<td style="vertical-align:middle;">
 							<img src="Icons/hydrogenIcon.png" style="width:30px; height:auto">
 						</td>
@@ -900,7 +910,7 @@
 							<span id="hydrogenStorage">50</span>
 						</td>
 					</tr>
-					<tr id="heliumNav" onclick="activeResourceTab('heliumNav')" class="fuel hidden" href="#heliumTab" aria-controls="heliumTab" role="tab" data-toggle="tab" style="height:60px;">
+					<tr id="heliumNav" onclick="activeResourceTab('heliumNav')" class="fuel hidden" data-sortDefault="7" data-sortAlph="6" href="#heliumTab" aria-controls="heliumTab" role="tab" data-toggle="tab" style="height:60px;">
 						<td style="vertical-align:middle;">
 							<img src="Icons/heliumIcon.png" style="width:30px; height:auto">
 						</td>
@@ -923,7 +933,7 @@
 						</td>
 					</tr>
 					
-                    <tr id="methaneNav" onclick="activeResourceTab('methaneNav')" class="fuel hidden" href="#methaneTab" aria-controls="methaneTab" role="tab" data-toggle="tab" style="height:60px;">
+                    <tr id="methaneNav" onclick="activeResourceTab('methaneNav')" class="fuel hidden" data-sortDefault="8" data-sortAlph="9" href="#methaneTab" aria-controls="methaneTab" role="tab" data-toggle="tab" style="height:60px;">
 						<td style="vertical-align:middle;">
 							<img src="Icons/methaneIcon.png" style="width:30px; height:auto">
 						</td>
@@ -946,7 +956,7 @@
 						</td>
 					</tr>
                     
-                    <tr id="lavaNav" onclick="activeResourceTab('lavaNav')" class="fuel hidden" href="#lavaTab" aria-controls="lavaTab" role="tab" data-toggle="tab" style="height:60px;">
+                    <tr id="lavaNav" onclick="activeResourceTab('lavaNav')" class="fuel hidden" data-sortDefault="9" data-sortAlph="8" href="#lavaTab" aria-controls="lavaTab" role="tab" data-toggle="tab" style="height:60px;">
 						<td style="vertical-align:middle;">
 							<img src="Icons/lavaIcon.png" style="width:30px; height:auto">
 						</td>
@@ -969,7 +979,7 @@
 						</td>
 					</tr>
                     
-                    <tr id="charcoalNav" onclick="activeResourceTab('charcoalNav')" class="fuel hidden" href="#charcoalTab" aria-controls="charcoalTab" role="tab" data-toggle="tab" style="height:60px;">
+                    <tr id="charcoalNav" onclick="activeResourceTab('charcoalNav')" class="fuel hidden" data-sortDefault="10" data-sortAlph="5" href="#charcoalTab" aria-controls="charcoalTab" role="tab" data-toggle="tab" style="height:60px;">
 						<td style="vertical-align:middle;">
 							<img src="Icons/charcoalIcon.png" style="width:30px; height:auto;">
 						</td>
@@ -992,13 +1002,13 @@
 						</td>
 					</tr>
                     
-                    <tr id="collapseOther" class="collapseOther" style="border:none;">
+                    <tr id="collapseOther" class="collapseOther" data-sortDefault="11" data-sortAlph="11" style="border:none;">
 						<td colspan="4">
 							<span>Basic Resources</span> <span class="caret"></span>
 						</td>
 					</tr>
                     
-                    <tr id="metalNav" onclick="activeResourceTab('metalNav')" class="other unlocked" href="#metalTab" aria-controls="metalTab" role="tab" data-toggle="tab" style="height:60px;">
+                    <tr id="metalNav" onclick="activeResourceTab('metalNav')" class="other unlocked" data-sortDefault="12" data-sortAlph="15" href="#metalTab" aria-controls="metalTab" role="tab" data-toggle="tab" style="height:60px;">
 						<td id="metalNav0" style="vertical-align:middle;">
 							<img src="Icons/metalIcon.png" style="width:30px; height:auto">
 						</td>
@@ -1021,7 +1031,7 @@
 						</td>
 					</tr>
 					
-					<tr id="gemNav" onclick="activeResourceTab('gemNav')" class="other unlocked" href="#gemTab" aria-controls="gemTab" role="tab" data-toggle="tab" style="height:60px;">
+					<tr id="gemNav" onclick="activeResourceTab('gemNav')" class="other unlocked" data-sortDefault="13" data-sortAlph="12" href="#gemTab" aria-controls="gemTab" role="tab" data-toggle="tab" style="height:60px;">
 						<td style="vertical-align:middle;">
 							<img src="Icons/gemIcon.png" style="width:30px; height:auto">
 						</td>
@@ -1044,7 +1054,7 @@
 						</td>
 					</tr>
 					
-					<tr id="woodNav" onclick="activeResourceTab('woodNav')" class="other unlocked" href="#woodTab" aria-controls="woodTab" role="tab" data-toggle="tab" style="height:60px;">
+					<tr id="woodNav" onclick="activeResourceTab('woodNav')" class="other unlocked" data-sortDefault="14" data-sortAlph="22" href="#woodTab" aria-controls="woodTab" role="tab" data-toggle="tab" style="height:60px;">
 						<td style="vertical-align:middle;">
 							<img src="Icons/woodIcon.png" style="width:30px; height:auto">
 						</td>
@@ -1067,7 +1077,7 @@
 						</td>
 					</tr>
                     
-					<tr id="oilNav" onclick="activeResourceTab('oilNav')" class="other hidden" href="#oilTab" aria-controls="oilTab" role="tab" data-toggle="tab" style="height:60px;">
+					<tr id="oilNav" onclick="activeResourceTab('oilNav')" class="other hidden" data-sortDefault="15" data-sortAlph="17" href="#oilTab" aria-controls="oilTab" role="tab" data-toggle="tab" style="height:60px;">
 						<td id="oilNav0" style="vertical-align:middle;">
 							<img src="Icons/oilIcon.png" style="width:30px; height:auto">
 						</td>
@@ -1090,7 +1100,7 @@
 						</td>
 					</tr>
 					
-					<tr id="spaceMetalNav" onclick="activeResourceTab('spaceMetalNav')" class="other hidden" href="#spaceMetalTab" aria-controls="spaceMetalTab" role="tab" data-toggle="tab" style="height:60px;">
+					<tr id="spaceMetalNav" onclick="activeResourceTab('spaceMetalNav')" class="other hidden" data-sortDefault="16" data-sortAlph="20" href="#spaceMetalTab" aria-controls="spaceMetalTab" role="tab" data-toggle="tab" style="height:60px;">
 						<td style="vertical-align:middle;">
 							<img src="Icons/spaceMetalIcon.png" style="width:30px; height:auto">
 						</td>
@@ -1113,7 +1123,7 @@
 						</td>
 					</tr>
 					
-					<tr id="titaniumNav" onclick="activeResourceTab('titaniumNav')" class="other hidden" href="#titaniumTab" aria-controls="titaniumTab" role="tab" data-toggle="tab" style="height:60px;">
+					<tr id="titaniumNav" onclick="activeResourceTab('titaniumNav')" class="other hidden" data-sortDefault="17" data-sortAlph="21" href="#titaniumTab" aria-controls="titaniumTab" role="tab" data-toggle="tab" style="height:60px;">
 						<td style="vertical-align:middle;">
 							<img src="Icons/titaniumIcon.png" style="width:30px; height:auto">
 						</td>
@@ -1135,7 +1145,7 @@
 							<span id="titaniumStorage">50</span>
 						</td>
 					</tr>
-					<tr id="goldNav" onclick="activeResourceTab('goldNav')" class="other hidden" href="#goldTab" aria-controls="goldTab" role="tab" data-toggle="tab" style="height:60px;">
+					<tr id="goldNav" onclick="activeResourceTab('goldNav')" class="other hidden" data-sortDefault="18" data-sortAlph="13" href="#goldTab" aria-controls="goldTab" role="tab" data-toggle="tab" style="height:60px;">
 						<td style="vertical-align:middle;">
 							<img src="Icons/goldIcon.png" style="width:30px; height:auto">
 						</td>
@@ -1157,7 +1167,7 @@
 							<span id="goldStorage">50</span>
 						</td>
 					</tr>
-					<tr id="silverNav" onclick="activeResourceTab('silverNav')" class="other hidden" href="#silverTab" aria-controls="silverTab" role="tab" data-toggle="tab" style="height:60px;">
+					<tr id="silverNav" onclick="activeResourceTab('silverNav')" class="other hidden" data-sortDefault="19" data-sortAlph="19" href="#silverTab" aria-controls="silverTab" role="tab" data-toggle="tab" style="height:60px;">
 						<td style="vertical-align:middle;">
 							<img src="Icons/silverIcon.png" style="width:30px; height:auto">
 						</td>
@@ -1179,7 +1189,7 @@
 							<span id="silverStorage">50</span>
 						</td>
 					</tr>
-					<tr id="siliconNav" onclick="activeResourceTab('siliconNav')" class="other hidden" href="#siliconTab" aria-controls="siliconTab" role="tab" data-toggle="tab" style="height:60px;">
+					<tr id="siliconNav" onclick="activeResourceTab('siliconNav')" class="other hidden" data-sortDefault="20" data-sortAlph="18" href="#siliconTab" aria-controls="siliconTab" role="tab" data-toggle="tab" style="height:60px;">
 						<td style="vertical-align:middle;">
 							<img src="Icons/siliconIcon.png" style="width:30px; height:auto">
 						</td>
@@ -1203,7 +1213,7 @@
 					</tr>
 					
 					
-					<tr id="meteoriteNav" onclick="activeResourceTab('meteoriteNav')" class="other hidden" href="#meteoriteTab" aria-controls="meteoriteTab" role="tab" data-toggle="tab" style="height:60px;">
+					<tr id="meteoriteNav" onclick="activeResourceTab('meteoriteNav')" class="other hidden" data-sortDefault="21" data-sortAlph="16" href="#meteoriteTab" aria-controls="meteoriteTab" role="tab" data-toggle="tab" style="height:60px;">
 						<td style="vertical-align:middle;">
 							<img src="Icons/meteoriteIcon.png" style="width:30px; height:auto">
 						</td>
@@ -1227,7 +1237,7 @@
 					</tr>
 					
 					
-					<tr id="iceNav" onclick="activeResourceTab('iceNav')" class="other hidden" href="#iceTab" aria-controls="iceTab" role="tab" data-toggle="tab" style="height:60px;">
+					<tr id="iceNav" onclick="activeResourceTab('iceNav')" class="other hidden" data-sortDefault="22" data-sortAlph="14" href="#iceTab" aria-controls="iceTab" role="tab" data-toggle="tab" style="height:60px;">
 						<td style="vertical-align:middle;">
 							<img src="Icons/iceIcon.png" style="width:30px; height:auto">
 						</td>

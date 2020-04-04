@@ -20,14 +20,14 @@ function activeResourceTab(tab){
 		document.getElementById("lavaNav").className = "";
 	}*/
 	for(var i = 0; i < resources.length; i++){
-		if(document.getElementById(resources[i] + "Nav").className === "energy info"){
-			document.getElementById(resources[i] + "Nav").className = "energy";
+		if(document.getElementById(resources[i] + "Nav").className === "energy unlocked info"){
+			document.getElementById(resources[i] + "Nav").className = "energy unlocked";
 		}
-        if(document.getElementById(resources[i] + "Nav").className === "fuel info"){
-			document.getElementById(resources[i] + "Nav").className = "fuel";
+        if(document.getElementById(resources[i] + "Nav").className === "fuel unlocked info"){
+			document.getElementById(resources[i] + "Nav").className = "fuel unlocked";
 		}
-        if(document.getElementById(resources[i] + "Nav").className === "other info"){
-			document.getElementById(resources[i] + "Nav").className = "other";
+        if(document.getElementById(resources[i] + "Nav").className === "other unlocked info"){
+			document.getElementById(resources[i] + "Nav").className = "other unlocked";
 		}
 		if(document.getElementById(resources[i] + "Nav").className === "innerPlanet info"){
 			document.getElementById(resources[i] + "Nav").className = "innerPlanet";
