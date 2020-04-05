@@ -1099,30 +1099,33 @@ function getDiamondDrill(){
     }
 }
 
-function conf_purchase() {
-	woodps = parseInt(document.getElementById("woodps").innerHTML)
-	deficit = 2
-	if (woodps < deficit) {
-		var modal = document.getElementById("conf_modal");
-		modal.style.display = "block";
-	} else {
-		getWoodburner();
-	}
+function conf_purchase(param){
+    let modal = document.getElementById("conf_modal");
+    modal.setAttribute("data-param", param);
+    if(param==="woodburner"){
+        if( (woodps - ((woodburner+1)*2) - (furnace*furnaceWoodInput) - (kiln*45)) < 0 ){
+            document.getElementById("modal-text").innerHTML =
+                "Proceeding will result in negative wood per second production when charcoal production restarts.";
+            modal.style.display = "block";
+        } else{
+            getWoodburner();
+        }
+    }
+
 }
 
-function conf_modal() {
-	  getWoodburner();
-		var modal = document.getElementById("conf_modal");
-		modal.style.display = "none";
+function conf_modal(param) {
+    if(param==="woodburner"){
+        getWoodburner();
+    }
+    document.getElementById("conf_modal").style.display = "none";
 }
 
 function canc_modal() {
-	var modal = document.getElementById("conf_modal");
-	modal.style.display = "none";
+	document.getElementById("conf_modal").style.display = "none";
 }
 
 function getWoodburner(){
-
 	if(metal >= woodburnerMetalCost && wood >= woodburnerWoodCost){
 		metal -= woodburnerMetalCost;
 		wood -= woodburnerWoodCost;

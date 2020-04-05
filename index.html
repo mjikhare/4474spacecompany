@@ -1972,7 +1972,7 @@
 									</span>
 									<br>
 									<br>
-									<button onclick="getWoodburner()" class="btn btn-default">Get Woodburner</button>
+									<button onclick="conf_purchase('woodburner')" class="btn btn-default">Get Woodburner</button>
 									<button onclick="destroyMachine(woodburner, 'woodburner')" class="btn btn-default destroy hidden">Destroy Woodburner</button>
 								</td>
 							</tr>
@@ -5166,21 +5166,21 @@
 	</div>
 </div>
 
-<div id="conf_modal" class="modal" tabindex="-1" role="dialog">
+<div id="conf_modal" data-param="" class="modal" tabindex="-1" role="dialog">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title">Confirmation Request</h5>
+        <h3 class="modal-title">Negative resource warning</h3>
         <button onclick="canc_modal()" type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        <p>Proceeding will cause wood production to be negative in situations where charcoal is not full. </p>
+        <p id="modal-text"></p>
       </div>
       <div class="modal-footer">
-        <button onclick="conf_modal()" id="conf_butt_conf_modal" type="button" class="btn btn-primary">Confirm</button>
-        <button on_click="canc_modal()" id="canc_butt_conf_modal" type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+        <button onclick="conf_modal(document.getElementById('conf_modal').dataset.param)" id="conf_butt_conf_modal" type="button" class="btn btn-primary">Proceed</button>
+        <button onclick="canc_modal()" id="canc_butt_conf_modal" type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
       </div>
     </div>
   </div>
