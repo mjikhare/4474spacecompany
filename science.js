@@ -91,6 +91,7 @@ function unlockSolar(){
 		researched.push("unlockSolar");
 		techsResearchedNum += 1;
 		newUnlock("resources");
+        document.getElementById("e2").className = "dot";
 	}
 }
 
@@ -109,6 +110,12 @@ function unlockMachines(){
 		researched.push("unlockMachines");
 		techsResearchedNum += 1;
 		newUnlock("resources");
+        
+        document.getElementById("o2").className = "dot";
+        document.getElementById("me2").className = "dot";
+        document.getElementById("g2").className = "dot";
+        document.getElementById("ch2").className = "dot";
+        document.getElementById("w2").className = "dot";
 	}
 }
 

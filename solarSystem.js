@@ -68,6 +68,7 @@ function exploreVenus(){
 		document.getElementById("methaneNav").className = "fuel unlocked";
         document.getElementById("methaneNav2").className = "fuel unlocked";
 		document.getElementById("methanePower").className = "";
+        document.getElementById("e3").className = "dot";
 		resourcesUnlocked.push("methaneNav", "methanePower");
 		buttonsHidden.push("exploreVenus");
 		explored.push("venus");
@@ -144,6 +145,7 @@ function exploreJupiter(){
 		document.getElementById("hydrogenNav").className = "fuel unlocked";
         document.getElementById("hydrogenNav2").className = "fuel unlocked";
 		document.getElementById("fusionPower").className = "";
+        document.getElementById("e6").className = "dot";
 		resourcesUnlocked.push("hydrogenNav", "collapseOuterPlanet", "fusionPower");
 		buttonsHidden.push("exploreJupiter");
 		explored.push("jupiter");

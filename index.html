@@ -106,13 +106,12 @@
 		text-align: center;
 	}
 
-    /*
 	button.myBtn{
 		background: #999;
 	}
 	button.myBtn:hover{
 		background: #999 !important;
-	}*/
+	}
     
     #sortBtn{
         display: inline;
@@ -125,18 +124,13 @@
         text-align: left;
     }
 
-
-	
-	<!---For DOTs--->
 	.dot {
-		display:block;
-		height:25px;
-		width:25px;
-		background-color:#bbb;
+		display:inline-block;
+		height:10px;
+		width:10px;
 		border-radius:50%;
-		margin:auto;
+		margin:0px;
 	}
-	<!----end--->
 
     #inventory{
         margin-right: 20px
@@ -827,6 +821,9 @@
 								0
 							</span>
 						</td>
+                        <td style="vertical-align: middle;">
+                            <span id="p1" class="dot" style="background-color:#bbb"></span>
+						</td>
 					</tr>
 					<tr id="energyNav" onclick="activeResourceTab('energyNav')" class="energy hidden" data-sortDefault="3" data-sortAlph="2" href="#energyTab" aria-controls="energyTab" role="tab" data-toggle="tab" style="height:60px;">
 						<td id="energyNav0" style="border:none; vertical-align:middle;">
@@ -846,6 +843,14 @@
 							<span id="energy">
 								0
 							</span>
+						</td>
+                        <td style="vertical-align: middle;">
+                            <span id="e1" class="dot" style="background-color:#bbb"></span>
+                            <span id="e2" class="dot hidden" style="background-color:#bbb"></span>
+                            <span id="e3" class="dot hidden" style="background-color:#bbb"></span>
+                            <span id="e4" class="dot hidden" style="background-color:#bbb"></span>
+                            <span id="e5" class="dot hidden" style="background-color:#bbb"></span>
+                            <span id="e6" class="dot hidden" style="background-color:#bbb"></span>
 						</td>
 					</tr>
                     
@@ -875,6 +880,11 @@
 							</span>
 							/
 							<span id="uraniumStorage">50</span>
+                        </td>
+						<td style="vertical-align: middle;">
+                            <span id="u1" class="dot" style="background-color:#bbb"></span>
+                            <span id="u2" class="dot" style="background-color:#bbb"></span>
+                            <span id="u3" class="dot hidden" style="background-color:#bbb"></span>
 						</td>
 					</tr>
 					
@@ -899,6 +909,11 @@
 							/
 							<span id="hydrogenStorage">50</span>
 						</td>
+                        <td style="vertical-align: middle;">
+                            <span id="h1" class="dot" style="background-color:#bbb"></span>
+                            <span id="h2" class="dot" style="background-color:#bbb"></span>
+                            <span id="h3" class="dot hidden" style="background-color:#bbb"></span>
+						</td>
 					</tr>
 					<tr id="heliumNav" onclick="activeResourceTab('heliumNav')" class="fuel hidden" data-sortDefault="7" data-sortAlph="6" href="#heliumTab" aria-controls="heliumTab" role="tab" data-toggle="tab" style="height:60px;">
 						<td style="vertical-align:middle;">
@@ -920,6 +935,11 @@
 							</span>
 							/
 							<span id="heliumStorage">50</span>
+						</td>
+                        <td style="vertical-align: middle;">
+                            <span id="he1" class="dot" style="background-color:#bbb"></span>
+                            <span id="he2" class="dot" style="background-color:#bbb"></span>
+                            <span id="he3" class="dot hidden" style="background-color:#bbb"></span>
 						</td>
 					</tr>
 					
@@ -944,6 +964,11 @@
 							/
 							<span id="methaneStorage">50</span>
 						</td>
+                        <td style="vertical-align: middle;">
+                            <span id="m1" class="dot" style="background-color:#bbb"></span>
+                            <span id="m2" class="dot" style="background-color:#bbb"></span>
+                            <span id="m3" class="dot hidden" style="background-color:#bbb"></span>
+						</td>
 					</tr>
                     
                     <tr id="lavaNav" onclick="activeResourceTab('lavaNav')" class="fuel hidden" data-sortDefault="9" data-sortAlph="8" href="#lavaTab" aria-controls="lavaTab" role="tab" data-toggle="tab" style="height:60px;">
@@ -967,6 +992,11 @@
 							/
 							<span id="lavaStorage">50</span>
 						</td>
+                        <td style="vertical-align: middle;">
+                            <span id="l1" class="dot" style="background-color:#bbb"></span>
+                            <span id="l2" class="dot" style="background-color:#bbb"></span>
+                            <span id="l3" class="dot hidden" style="background-color:#bbb"></span>
+						</td>
 					</tr>
                     
                     <tr id="charcoalNav" onclick="activeResourceTab('charcoalNav')" class="fuel hidden" data-sortDefault="10" data-sortAlph="5" href="#charcoalTab" aria-controls="charcoalTab" role="tab" data-toggle="tab" style="height:60px;">
@@ -989,6 +1019,11 @@
 							</span>
 							/
 							<span id="charcoalStorage">50</span>
+						</td>
+                        <td style="vertical-align: middle;">
+                            <span id="ch1" class="dot" style="background-color:#bbb"></span>
+                            <span id="ch2" class="dot hidden" style="background-color:#bbb"></span>
+                            <span id="ch3" class="dot hidden" style="background-color:#bbb"></span>
 						</td>
 					</tr>
                     
@@ -1019,11 +1054,10 @@
 							/
 							<span id="metalStorage">50</span>
 						</td>
-						
-						<td>
-							<!--<img src="Icons/grey_dot.png" style="width:15px; height:auto">
-							<img src="Icons/green_dot.png" style="width:16px; height:auto">!-->
-							<!--<span class="dot"> </span>!-->
+						<td style="vertical-align: middle;">
+                            <span id="me1" class="dot" style="background-color:#bbb"></span> <!--#32CD32 #bbb-->
+                            <span id="me2" class="dot hidden" style="background-color:#bbb"></span>
+                            <span id="me3" class="dot hidden" style="background-color:#bbb"></span>
 						</td>
 					</tr>
 					
@@ -1048,6 +1082,11 @@
 							/
 							<span id="gemStorage">50</span>
 						</td>
+                        <td style="vertical-align: middle;">
+                            <span id="g1" class="dot" style="background-color:#bbb"></span>
+                            <span id="g2" class="dot hidden" style="background-color:#bbb"></span>
+                            <span id="g3" class="dot hidden" style="background-color:#bbb"></span>
+						</td>
 					</tr>
 					
 					<tr id="woodNav" onclick="activeResourceTab('woodNav')" class="other unlocked" data-sortDefault="14" data-sortAlph="22" href="#woodTab" aria-controls="woodTab" role="tab" data-toggle="tab" style="height:60px;">
@@ -1070,6 +1109,11 @@
 							</span>
 							/
 							<span id="woodStorage">50</span>
+						</td>
+                        <td style="vertical-align: middle;">
+                            <span id="w1" class="dot" style="background-color:#bbb"></span>
+                            <span id="w2" class="dot hidden" style="background-color:#bbb"></span>
+                            <span id="w3" class="dot hidden" style="background-color:#bbb"></span>
 						</td>
 					</tr>
                     
@@ -1094,6 +1138,11 @@
 							/
 							<span id="oilStorage">50</span>
 						</td>
+                        <td style="vertical-align: middle;">
+                            <span id="o1" class="dot" style="background-color:#bbb"></span>
+                            <span id="o2" class="dot hidden" style="background-color:#bbb"></span>
+                            <span id="o3" class="dot hidden" style="background-color:#bbb"></span>
+						</td>
 					</tr>
 					
 					<tr id="spaceMetalNav" onclick="activeResourceTab('spaceMetalNav')" class="other hidden" data-sortDefault="16" data-sortAlph="20" href="#spaceMetalTab" aria-controls="spaceMetalTab" role="tab" data-toggle="tab" style="height:60px;">
@@ -1116,6 +1165,11 @@
 							</span>
 							/
 							<span id="spaceMetalStorage">50</span>
+						</td>
+                        <td style="vertical-align: middle;">
+                            <span id="sm1" class="dot" style="background-color:#bbb"></span>
+                            <span id="sm2" class="dot" style="background-color:#bbb"></span>
+                            <span id="sm3" class="dot hidden" style="background-color:#bbb"></span>
 						</td>
 					</tr>
 					
@@ -1140,6 +1194,11 @@
 							/
 							<span id="titaniumStorage">50</span>
 						</td>
+                        <td style="vertical-align: middle;">
+                            <span id="t1" class="dot" style="background-color:#bbb"></span>
+                            <span id="t2" class="dot" style="background-color:#bbb"></span>
+                            <span id="t3" class="dot hidden" style="background-color:#bbb"></span>
+						</td>
 					</tr>
 					<tr id="goldNav" onclick="activeResourceTab('goldNav')" class="other hidden" data-sortDefault="18" data-sortAlph="13" href="#goldTab" aria-controls="goldTab" role="tab" data-toggle="tab" style="height:60px;">
 						<td style="vertical-align:middle;">
@@ -1161,6 +1220,11 @@
 							</span>
 							/
 							<span id="goldStorage">50</span>
+						</td>
+                        <td style="vertical-align: middle;">
+                            <span id="go1" class="dot" style="background-color:#bbb"></span>
+                            <span id="go2" class="dot" style="background-color:#bbb"></span>
+                            <span id="go3" class="dot hidden" style="background-color:#bbb"></span>
 						</td>
 					</tr>
 					<tr id="silverNav" onclick="activeResourceTab('silverNav')" class="other hidden" data-sortDefault="19" data-sortAlph="19" href="#silverTab" aria-controls="silverTab" role="tab" data-toggle="tab" style="height:60px;">
@@ -1184,6 +1248,11 @@
 							/
 							<span id="silverStorage">50</span>
 						</td>
+                        <td style="vertical-align: middle;">
+                            <span id="si1" class="dot" style="background-color:#bbb"></span>
+                            <span id="si2" class="dot" style="background-color:#bbb"></span>
+                            <span id="si3" class="dot hidden" style="background-color:#bbb"></span>
+						</td>
 					</tr>
 					<tr id="siliconNav" onclick="activeResourceTab('siliconNav')" class="other hidden" data-sortDefault="20" data-sortAlph="18" href="#siliconTab" aria-controls="siliconTab" role="tab" data-toggle="tab" style="height:60px;">
 						<td style="vertical-align:middle;">
@@ -1205,6 +1274,11 @@
 							</span>
 							/
 							<span id="siliconStorage">50</span>
+						</td>
+                        <td style="vertical-align: middle;">
+                            <span id="sil1" class="dot" style="background-color:#bbb"></span>
+                            <span id="sil2" class="dot" style="background-color:#bbb"></span>
+                            <span id="sil3" class="dot hidden" style="background-color:#bbb"></span>
 						</td>
 					</tr>
 					
@@ -1254,13 +1328,18 @@
 							/
 							<span id="iceStorage">50</span>
 						</td>
+                        <td style="vertical-align: middle;">
+                            <span id="i1" class="dot" style="background-color:#bbb"></span>
+                            <span id="i2" class="dot" style="background-color:#bbb"></span>
+                            <span id="i3" class="dot hidden" style="background-color:#bbb"></span>
+						</td>
 					</tr>
 					
 					
 					
 				</table>
 			</div>
-			<div class="tab-content" id="resourceTabParent">
+			<div class="tab-content" data-buttons="">
 				<div id="plasmaTab" class="tab-pane fade in" style="margin-left:10px; float:left;">
 					<div class="container" style="max-width:800px;">
 						<table class="table">
@@ -1288,7 +1367,7 @@
 									<h3 class="pointer btn-link">
 										Super-Heater: <span id="heater">0</span>
 									</h3>
-									<span>
+									<span data-dot="p1">
 										The Super-Heater throws electricity at Hydrogen to turn it into a plasmatic substance.
 										<br>
                                         <img src="Icons/plus.png" style="width:13px; height:auto"> 1 Plasma /sec.
@@ -1323,11 +1402,11 @@
 								</td>
 							</tr>
 							<tr>
-								<td>
+								<td>hidden
 									<h3 class="pointer btn-link">
 										Charcoal Engine: <span id="charcoalEngine">0</span>
 									</h3>
-									<span>
+									<span data-dot="e1">
 										Burns Charcoal to produce a steady source of Energy.
 										<br>
 										<img src="Icons/plus.png" style="width:13px; height:auto"> <span id="charcoalEngineOutput">2</span> Energy /sec.
@@ -1347,7 +1426,7 @@
 									<h3 class="pointer btn-link">
 										Solar Panels: <span id="solarPanel">0</span>
 									</h3>
-									<span>
+									<span data-dot="e2">
 										Gains Energy slowly from the sun without using any resources.
 										<br>
 										<img src="Icons/plus.png" style="width:13px; height:auto"> <span id="solarPanelOutput">1.5</span> Energy /sec.
@@ -1365,7 +1444,7 @@
 									<h3 class="pointer btn-link">
 										Methane Power Stations: <span id="methaneStation">0</span>
 									</h3>
-									<span>
+									<span data-dot="e3">
 										Burn powerful methane from Venus to satisfy all your power needs.
 										<br>
 										<img src="Icons/plus.png" style="width:13px; height:auto"> 23 Energy /sec.
@@ -1385,7 +1464,7 @@
 									<h3 class="pointer btn-link">
 										Nuclear Power Stations: <span id="nuclearStation">0</span>
 									</h3>
-									<span>
+									<span data-dot="e4">
 										Uses fission to create large amounts of power.
 										<br>
 										<img src="Icons/plus.png" style="width:13px; height:auto"> 153 Energy /sec.
@@ -1405,7 +1484,7 @@
 									<h3 class="pointer btn-link">
 										Magmatic Dynamo: <span id="magmatic">0</span>
 									</h3>
-									<span>
+									<span data-dot="e5">
 										The Magmatic Dynamo is a method of producing power by using lava as a fuel. Because of the extreme temperature of lava, a lot of Energy can be produced at once.
 										<br>
 										<img src="Icons/plus.png" style="width:13px; height:auto"> 191 Energy /sec.
@@ -1425,7 +1504,7 @@
 									<h3 class="pointer btn-link">
 										Fusion Reactor: <span id="fusionReactor">0</span>
 									</h3>
-									<span>
+									<span data-dot="e6">
 										In a fusion reaction, Energy is released when two light atomic nuclei are fused together to form one heavier atom. This is the same reaction that occurs in stars and produces a lot of power.
 										<br>
 										<img src="Icons/plus.png" style="width:13px; height:auto"> 273 Energy /sec.
@@ -1483,7 +1562,7 @@
 									<h3 class="pointer btn-link">
 										Grinder: <span id="grinder">0</span>
 									</h3>
-									<span>
+									<span data-dot="u1">
 										Pulverizes Uranium for easy transportation out of deep mineshafts.
 										<br>
 										<img src="Icons/plus.png" style="width:13px; height:auto"> 1 Uranium /sec.
@@ -1501,7 +1580,7 @@
 									<h3 class="pointer btn-link">
 										Cubic Teleposer: <span id="cubic">0</span>
 									</h3>
-									<span>
+									<span data-dot="u2">
 										This teleposes blocks of rock from far underground to the surface so that Uranium can be mined more easily.
 										<br>
 										<img src="Icons/plus.png" style="width:13px; height:auto"> 9 Uranium /sec.
@@ -1521,7 +1600,7 @@
 									<h3 class="pointer btn-link">
 										Uranium Enricher: <span id="enricher">0</span>
 									</h3>
-									<span>
+									<span data-dot="u3">
 										The Enricher increases the quality of uranium mined and thus allows more of the uranium in rocks to be used in your company.
 										<br>
 										<img src="Icons/plus.png" style="width:13px; height:auto"> 61 Uranium /sec.
@@ -1577,7 +1656,7 @@
 									<h3 class="pointer btn-link">
 										Small Pump: <span id="pump">0</span>
 									</h3>
-									<span>
+									<span data-dot="o1">
 										Build a small pump to extract Oil from the ground
 										<br>
                                         <img src="Icons/plus.png" style="width:13px; height:auto"> 1 Oil /sec.
@@ -1595,7 +1674,7 @@
 									<h3 class="pointer btn-link">
 										Pumpjack: <span id="pumpjack">0</span>
 									</h3>
-									<span>
+									<span data-dot="o2">
 										Pumpjacks are much bigger than small pumps and produce Oil on an industrial scale but they require a lot of Energy.
 										<br>
 										<img src="Icons/plus.png" style="width:13px; height:auto"> <span id="pumpjackOutput">5</span> Oil /sec.
@@ -1615,7 +1694,7 @@
 									<h3 class="pointer btn-link">
 										Oil Field: <span id="oilField">0</span>
 									</h3>
-									<span>
+									<span data-dot="o3">
 										Oil Fields are large open spaces, usually found in deserts where vast oil wells can be found under the ground. 
                                         <br>
                                         <img src="Icons/plus.png" style="width:13px; height:auto"> 23 Oil /sec.
@@ -1673,7 +1752,7 @@
 									<h3 class="pointer btn-link">
 										Miner: <span id="miner">0</span>
 									</h3>
-									<span>
+									<span data-dot="me1">
 										Build a pickaxe for your miner.
 										<br>
 										<img src="Icons/plus.png" style="width:13px; height:auto"> 1 Metal /sec.
@@ -1691,7 +1770,7 @@
 									<h3 class="pointer btn-link">
 										Heavy Drill: <span id="heavyDrill">0</span>
 									</h3>
-									<span>
+									<span data-dot="me2">
 										Heavy Drills mine Metal at mass.
 										<br>
 										<img src="Icons/plus.png" style="width:13px; height:auto"> <span id="heavyDrillOutput">8</span> Metal /sec.
@@ -1711,7 +1790,7 @@
 									<h3 class="pointer btn-link">
 										Giga Drill: <span id="gigaDrill">0</span>
 									</h3>
-									<span>
+									<span data-dot="me3">
 										Giga Drills extract Metal at colossal speeds.
 										<br>
 										<img src="Icons/plus.png" style="width:13px; height:auto"> 112 Metal /sec.
@@ -1778,7 +1857,7 @@
 									<h3 class="pointer btn-link">
 										Gem Miner: <span id="gemMiner">0</span>
 									</h3>
-									<span>
+									<span data-dot="g1">
 										Build an improved pickaxe to mine Gems.
 										<br>
                                         <img src="Icons/plus.png" style="width:13px; height:auto"> 1 Gem /sec.
@@ -1796,7 +1875,7 @@
 									<h3 class="pointer btn-link">
 										Advanced Drill: <span id="advancedDrill">0</span>
 									</h3>
-									<span>
+									<span data-dot="g2">
 										Advanced Drills mine gem at mass. Because of the toughness of the drill needed it is slower than the heavy drill.
 										<br>
                                         <img src="Icons/plus.png" style="width:13px; height:auto"> <span id="advancedDrillOutput">4</span> Gems /sec.
@@ -1816,7 +1895,7 @@
 									<h3 class="pointer btn-link">
 										Diamond Encrusted Drill: <span id="diamondDrill">0</span>
 									</h3>
-									<span>
+									<span data-dot="g3">
 										Diamond Encrusted Drills one of the strongest drills in the solar system, and as such, can collect Gems faster than anything before it.
 										<br>
                                         <img src="Icons/plus.png" style="width:13px; height:auto"> 89 Gems /sec.
@@ -1884,7 +1963,7 @@
 									<h3 class="pointer btn-link">
 										Woodburner: <span id="woodburner">0</span>
 									</h3>
-									<span>
+									<span data-dot="ch1">
 										Build an shovel for your woodburner.
 										<br>
                                         <img src="Icons/plus.png" style="width:13px; height:auto"> 1 Charcoal /sec.
@@ -1904,7 +1983,7 @@
 									<h3 class="pointer btn-link">
 										Furnace: <span id="furnace">0</span>
 									</h3>
-									<span>
+									<span data-dot="ch2">
 										Furnaces use electric heaters to produce heat to turn Wood into Charcoal. Because of the increased heat, the process is more efficient.
 										<br>
                                         <img src="Icons/plus.png" style="width:13px; height:auto"> <span id="furnaceOutput">4</span> Charcoal /sec.
@@ -1924,7 +2003,7 @@
 									<h3 class="pointer btn-link">
 										Industrial Kiln: <span id="kiln">0</span>
 									</h3>
-									<span>
+									<span data-dot="ch3">
 										These large kilns are much for effective than previous methods of creating charcoal and use less wood to make the same amount as a furnace.
 										<br>
                                         <img src="Icons/plus.png" style="width:13px; height:auto"> 27 Charcoal /sec.
@@ -1982,7 +2061,7 @@
 									<h3 class="pointer btn-link">
 										Woodcutter: <span id="woodcutter">0</span>
 									</h3>
-									<span>
+									<span data-dot="w1">
 										Build an axe for your woodcutter.
 										<br>
                                         <img src="Icons/plus.png" style="width:13px; height:auto"> 1 Wood /sec.
@@ -2000,7 +2079,7 @@
 									<h3 class="pointer btn-link">
 										Laser Cutter: <span id="laserCutter">0</span>
 									</h3>
-									<span>
+									<span data-dot="w2">
 										Laser Cutters slice trees (and fingers) quicker than axes and produce a lot more wood.
 										<br>
                                         <img src="Icons/plus.png" style="width:13px; height:auto"> <span id="laserCutterOutput">6</span> Wood /sec.
@@ -2020,7 +2099,7 @@
 									<h3 class="pointer btn-link">
 										Mass Deforester <span id="deforester">0</span>
 									</h3>
-									<span>
+									<span data-dot="w3">
 										This machine is the reason we're losing our rainforests. At least we get a ton of wood!
 										<br>
                                         <img src="Icons/plus.png" style="width:13px; height:auto"> <span id="deforesterOutput">74</span> Wood /sec.
@@ -2086,7 +2165,7 @@
 									<h3 class="pointer btn-link">
 										Native Moon Worker: <span id="moonWorker">0</span>
 									</h3>
-									<span>
+									<span data-dot="sm1">
 										Bribe local workers to mine your Space Metal.
 										<br>
                                         <img src="Icons/plus.png" style="width:13px; height:auto"> 1 Space Metal /sec.
@@ -2104,7 +2183,7 @@
 									<h3 class="pointer btn-link">
 										Low-Gravity Drill: <span id="moonDrill">0</span>
 									</h3>
-									<span>
+									<span data-dot="sm2">
 										These drills practically float!
 										<br>
                                         <img src="Icons/plus.png" style="width:13px; height:auto"> 10 Space Metal /sec.
@@ -2124,7 +2203,7 @@
 									<h3 class="pointer btn-link">
 										Moon Quarry: <span id="moonQuarry">0</span>
 									</h3>
-									<span>
+									<span data-dot="sm3">
 										This quarry tears up the surface of the moon so much that it can be seen from Earth.
 										<br>
                                         <img src="Icons/plus.png" style="width:13px; height:auto"> 53 Space Metal /sec.
@@ -2182,7 +2261,7 @@
 									<h3 class="pointer btn-link">
 										Vacuum Cleaner: <span id="vacuum">0</span>
 									</h3>
-									<span>
+									<span data-dot="m1">
 										Sucks in methane and cleans the planet at the same time!
 										<br>
                                         <img src="Icons/plus.png" style="width:13px; height:auto"> 1 Methane /sec.
@@ -2200,7 +2279,7 @@
 									<h3 class="pointer btn-link">
 										Suction Excavator: <span id="suctionExcavator">0</span>
 									</h3>
-									<span>
+									<span data-dot="m2">
 										Sucks more than anything!
 										<br>
                                         <img src="Icons/plus.png" style="width:13px; height:auto"> 8 Methane /sec.
@@ -2220,7 +2299,7 @@
 									<h3 class="pointer btn-link">
 										Space Cow Plantation: <span id="spaceCow">0</span>
 									</h3>
-									<span>
+									<span data-dot="m3">
 										These hold cows genetically modified to produce methane constantly.
 										<br>
                                         <img src="Icons/plus.png" style="width:13px; height:auto"> 37 Methane /sec.
@@ -2278,7 +2357,7 @@
 									<h3 class="pointer btn-link">
 										Explorers: <span id="explorer">0</span>
 									</h3>
-									<span>
+									<span data-dot="t1">
 										Hire explorers to search for Titanium on the surface, uncovered by winds on Mars.
 										<br>
                                         <img src="Icons/plus.png" style="width:13px; height:auto"> 1 Titanium /sec.
@@ -2296,7 +2375,7 @@
 									<h3 class="pointer btn-link">
 										Space Metal Drill: <span id="spaceMetalDrill">0</span>
 									</h3>
-									<span>
+									<span data-dot="t2">
 										These Space Metal Drills are extremely powerful, needed to mine out Titanium from inside Mars' crust.
 										<br>
                                         <img src="Icons/plus.png" style="width:13px; height:auto"> 6 Titanium /sec.
@@ -2316,7 +2395,7 @@
 									<h3 class="pointer btn-link">
 										Penta-Drill: <span id="pentaDrill">0</span>
 									</h3>
-									<span>
+									<span data-dot="t3">
 										This is a mining machine modified to have 5 drills on its face. This allows for a massive increase in resources gained per second.
 										<br>
                                         <img src="Icons/plus.png" style="width:13px; height:auto"> 32 Titanium /sec.
@@ -2374,7 +2453,7 @@
 									<h3 class="pointer btn-link">
 										Rocket Droid: <span id="droid">0</span>
 									</h3>
-									<span>
+									<span data-dot="go1">
 										Powered by Methane, this droid scouts the asteroids for gold deposits.
 										<br>
                                         <img src="Icons/plus.png" style="width:13px; height:auto"> 1 Gold /sec.
@@ -2392,7 +2471,7 @@
 									<h3 class="pointer btn-link">
 										Asteroid Destroyer: <span id="destroyer">0</span>
 									</h3>
-									<span>
+									<span data-dot="go2">
 										Mines through asteroids to find Gold. It is much more effective than the simple droid.
 										<br>
                                         <img src="Icons/plus.png" style="width:13px; height:auto"> 8 Gold /sec.
@@ -2412,7 +2491,7 @@
 									<h3 class="pointer btn-link">
 										Death Star Jr: <span id="deathStar">0</span>
 									</h3>
-									<span>
+									<span data-dot="go3">
 										That's no moon! That's a Space Station! This cuts through asteroids to expose all of the gold in the centers.
 										<br>
                                         <img src="Icons/plus.png" style="width:13px; height:auto"> 51 Gold /sec.
@@ -2470,7 +2549,7 @@
 									<h3 class="pointer btn-link">
 										Scout Ship: <span id="scout">0</span>
 									</h3>
-									<span>
+									<span data-dot="si1">
 										The Scout Ship searches through the asteroid field for pieces of silver embedded in asteroids.
 										<br>
                                         <img src="Icons/plus.png" style="width:13px; height:auto"> 1 Silver /sec.
@@ -2488,7 +2567,7 @@
 									<h3 class="pointer btn-link">
 										Interplanetary Laser: <span id="spaceLaser">0</span>
 									</h3>
-									<span>
+									<span data-dot="si2">
 										Cuts through asteroids to find silver deposits in their cores.
 										<br>
                                         <img src="Icons/plus.png" style="width:13px; height:auto"> 13 Silver /sec.
@@ -2508,7 +2587,7 @@
 									<h3 class="pointer btn-link">
 										Big Bertha: <span id="bertha">0</span>
 									</h3>
-									<span>
+									<span data-dot="si3">
 										This large, space drill, named after the World War One Howitzer built almost a milienia ago, is a silver seeking machine specially designed for 
 										<br>
                                         <img src="Icons/plus.png" style="width:13px; height:auto"> 53 Silver /sec.
@@ -2566,7 +2645,7 @@
 									<h3 class="pointer btn-link">
 										Empowered Blowtorch: <span id="blowtorch">0</span>
 									</h3>
-									<span>
+									<span data-dot="sil1">
 										This type of blowtorch instantly turns sand into Silicon, but only on a small scale. To make it, extraterrestrial resources are required.
 										<br>
                                         <img src="Icons/plus.png" style="width:13px; height:auto"> 1 Silcon /sec.
@@ -2584,7 +2663,7 @@
 									<h3 class="pointer btn-link">
 										Seaside Scorcher: <span id="scorcher">0</span>
 									</h3>
-									<span>
+									<span data-dot="sil2">
 										This tool almost melts parts of beaches to get silicon at a larger scale.
 										<br>
                                         <img src="Icons/plus.png" style="width:13px; height:auto"> 9 Silicon /sec.
@@ -2604,7 +2683,7 @@
 									<h3 class="pointer btn-link">
 										Beach Annihilator: <span id="annihilator">0</span>
 									</h3>
-									<span>
+									<span data-dot="sil3">
 										This weapon of mass destruction has been re-labelled and now hovers above coast-lines, or what is now left of them.
 										<br>
                                         <img src="Icons/plus.png" style="width:13px; height:auto"> 40 Silicon /sec.
@@ -2662,7 +2741,7 @@
 									<h3 class="pointer btn-link">
 										Heat Resistant Crucible: <span id="crucible">0</span>
 									</h3>
-									<span>
+									<span data-dot="l1">
 										You can use a modified crucible to pick up lava and to store it for later use.
 										<br>
                                         <img src="Icons/plus.png" style="width:13px; height:auto"> 1 Lava /sec.
@@ -2680,7 +2759,7 @@
 									<h3 class="pointer btn-link">
 										Lava Extractor: <span id="extractor">0</span>
 									</h3>
-									<span>
+									<span data-dot="l2">
 										This extracts lava from volcanoes automatically and quickly.
 										<br>
                                         <img src="Icons/plus.png" style="width:13px; height:auto"> 7 Lava /sec.
@@ -2700,7 +2779,7 @@
 									<h3 class="pointer btn-link">
 										Igneous Extruder: <span id="extruder">0</span>
 									</h3>
-									<span>
+									<span data-dot="l3">
 										Instead of going out and finding lava, it can be more convenient to make it yourself with heat and pressure.
 										<br>
                                         <img src="Icons/plus.png" style="width:13px; height:auto"> 43 Lava /sec.
@@ -2758,7 +2837,7 @@
 									<h3 class="pointer btn-link">
 										Hydrogen Collector: <span id="collector">0</span>
 									</h3>
-									<span>
+									<span data-dot="h1">
 										This collector travels around Jupiter seeking Hydrogen to store to bring back to Earth.
 										<br>
                                         <img src="Icons/plus.png" style="width:13px; height:auto"> 1 Hydrogen /sec.
@@ -2776,7 +2855,7 @@
 									<h3 class="pointer btn-link">
 										Gaseous Magnet: <span id="magnet">0</span>
 									</h3>
-									<span>
+									<span data-dot="h2">
 										The magnet attracts the Hydrogen to it to increase the amount collected per second.
 										<br>
                                         <img src="Icons/plus.png" style="width:13px; height:auto"> 5 Hydrogen /sec.
@@ -2796,7 +2875,7 @@
 									<h3 class="pointer btn-link">
 										Electrolytic Cell: <span id="eCell">0</span>
 									</h3>
-									<span>
+									<span data-dot="h3">
 										These are made here on Earth and can turn water into hydrogen with a constant supply of Energy.
 										<br>
                                         <img src="Icons/plus.png" style="width:13px; height:auto"> 28 Hydrogen /sec.
@@ -2854,7 +2933,7 @@
 									<h3 class="pointer btn-link">
 										Helium Drone: <span id="drone">0</span>
 									</h3>
-									<span>
+									<span data-dot="he1">
 										The Helium Drone scouts out the area on Saturn and picks out spots high in Helium which are then mined slowly by it.
 										<br>
                                         <img src="Icons/plus.png" style="width:13px; height:auto"> 1 Helium /sec.
@@ -2872,7 +2951,7 @@
 									<h3 class="pointer btn-link">
 										Helium Tanker: <span id="tanker">0</span>
 									</h3>
-									<span>
+									<span data-dot="he2">
 										This huge tanker holds large amounts of Helium and transports it from Saturn to Earth through the vacuum of space.
 										<br>
                                         <img src="Icons/plus.png" style="width:13px; height:auto"> 11 Helium /sec.
@@ -2892,7 +2971,7 @@
 									<h3 class="pointer btn-link">
 										Morphic Compressor: <span id="compressor">0</span>
 									</h3>
-									<span>
+									<span data-dot="he3">
 										The Compressor packs helium densely into a small space so that it can be easily transported back to Earth.
 										<br>
                                         <img src="Icons/plus.png" style="width:13px; height:auto"> 57 Helium /sec.
@@ -2950,7 +3029,7 @@
 									<h3 class="pointer btn-link">
 										Ice Pickaxe: <span id="icePick">0</span>
 									</h3>
-									<span>
+									<span data-dot="i1">
 										The Ice Pickaxe is the simplest way of mining frozen water, and although it is the cheapest, it is the slowest.
 										<br>
                                         <img src="Icons/plus.png" style="width:13px; height:auto"> 1 Ice /sec.
@@ -2968,7 +3047,7 @@
 									<h3 class="pointer btn-link">
 										Ice Drill: <span id="iceDrill">0</span>
 									</h3>
-									<span>
+									<span data-dot="i2">
 										The Ice Drill is more effective than the Pickaxe and gains much more Ice every second. However, it does use electricity.
 										<br>
                                         <img src="Icons/plus.png" style="width:13px; height:auto"> 9 Ice /sec.
@@ -2988,7 +3067,7 @@
 									<h3 class="pointer btn-link">
 										Ocean Freezer: <span id="freezer">0</span>
 									</h3>
-									<span>
+									<span data-dot="i3">
 										With advanced technology, you are now able to turn Earth's water into high-quality Ice, previously only found on Pluto.
 										<br>
                                         <img src="Icons/plus.png" style="width:13px; height:auto"> 65 Ice /sec.
@@ -3085,7 +3164,7 @@
 					</tr>
 				</table>
 			</div>
-			<div class="tab-content" id="resourceTabParent" style="float: left;"> <!--display: inline-block;-->
+			<div class="tab-content" data-buttons="" style="float: left;"> <!--display: inline-block;-->
 				<div id="scienceTab" class="tab-pane fade in" style="margin-left:10px; width:100px; float:left;">
 					<div class="container" style="max-width:800px;">
 						<table class="table">

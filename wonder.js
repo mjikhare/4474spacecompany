@@ -162,6 +162,7 @@ function activatePreciousWonder(){
 		silver -= 20000;
 		gold -= 10000;
 		document.getElementById("nuclearPower").className = "";
+        document.getElementById("e4").className = "dot";
 		document.getElementById("activatePreciousWonder").className = "hidden";
 		document.getElementById("uraniumNav").className = "other unlocked";
 		document.getElementById("preciousActivation").innerHTML = "Activated";
@@ -193,6 +194,7 @@ function activateEnergeticWonder(){
 		charcoal -= 15000;
 		uranium -= 500;
 		document.getElementById("magmaticPower").className = "";
+        document.getElementById("e5").className = "dot";
 		document.getElementById("activateEnergeticWonder").className = "hidden";
 		document.getElementById("lavaNav").className = "fuel unlocked";
 		document.getElementById("energeticActivation").innerHTML = "Activated";
@@ -235,6 +237,23 @@ function unlockTier3(){
 	document.getElementById("hydrogenTier3").className = "";
 	document.getElementById("heliumTier3").className = "";
 	document.getElementById("iceTier3").className = "";
+    
+    document.getElementById("o3").className = "dot";
+    document.getElementById("me3").className = "dot";
+    document.getElementById("g3").className = "dot";
+    document.getElementById("ch3").className = "dot";
+    document.getElementById("w3").className = "dot";
+    document.getElementById("sm3").className = "dot";
+    document.getElementById("me3").className = "dot";
+    document.getElementById("t3").className = "dot";
+    document.getElementById("go3").className = "dot";
+    document.getElementById("si3").className = "dot";
+    document.getElementById("sil3").className = "dot";
+    document.getElementById("u3").className = "dot";
+    document.getElementById("l3").className = "dot";
+    document.getElementById("h3").className = "dot";
+    document.getElementById("he3").className = "dot";
+    document.getElementById("i3").className = "dot";
 }
 
 function activateTechWonder(){

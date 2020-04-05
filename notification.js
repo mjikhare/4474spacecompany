@@ -24,10 +24,13 @@ function activeResourceTab(tab){
 	if(document.getElementById("lavaNav").className === " info"){
 		document.getElementById("lavaNav").className = "";
 	}*/
+    if(document.getElementById("energyNav").className === "energy unlocked info"){
+        document.getElementById("energyNav").className = "energy unlocked";
+    }
+    if(document.getElementById("plasmaNav").className === "energy unlocked info"){
+        document.getElementById("plasmaNav").className = "energy unlocked";
+    }
 	for(var i = 0; i < resources.length; i++){
-		if(document.getElementById(resources[i] + "Nav").className === "energy unlocked info"){
-			document.getElementById(resources[i] + "Nav").className = "energy unlocked";
-		}
         if(document.getElementById(resources[i] + "Nav").className === "fuel unlocked info"){
 			document.getElementById(resources[i] + "Nav").className = "fuel unlocked";
 		}

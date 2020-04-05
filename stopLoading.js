@@ -427,7 +427,7 @@ var Game = (function() {
 
         console.debug("Loading Game");
         
-        $('#loadScreen').hide()
+        //$('#loadScreen').hide()
         this.createInterval("Loading Animation", this.loadAnimation, 10);
         this.createInterval("Loading", this.loadDelay, 1000);
         setTimeout(()=>{
@@ -468,14 +468,22 @@ var Game = (function() {
         })
         $('[data-toggle="popover"]').popover()
         setInterval(()=>{
-            $('#resourceTabParent .tab-pane.active').find('table.table button').each(function(){
+            $('[data-buttons] .tab-pane.active').find('table.table button').each(function(){
                 if($(this).parent().find('>span').find('span.red').length>0){
                     $(this).attr('disabled','disabled')
-                    $(this).addClass('myBtn')
+                    //$(this).addClass('myBtn')
                     
                 }else{
                     $(this).removeAttr('disabled')
-                    $(this).removeClass('myBtn')
+                    //$(this).removeClass('myBtn')
+                }
+            })
+            
+            $('[data-dot]').each( function(){
+                if( $(this).find('>span.red').length>0 ){
+                    document.getElementById(this.dataset.dot).setAttribute("style", "background-color:#bbb");
+                } else{
+                    document.getElementById(this.dataset.dot).setAttribute("style", "background-color:#32CD32");
                 }
             })
            
