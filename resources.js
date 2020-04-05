@@ -159,7 +159,9 @@ function gainResources(){
 			}
 		}
 		if(charcoal >= charcoalStorage){
-			document.getElementById("woodps").innerHTML = commafy(woodps);
+            let wps_1 = woodps - (woodburner*2) - (furnace*furnaceWoodInput) - (kiln*45);
+            let wps_2 = woodps - wps_1;
+			document.getElementById("woodps").innerHTML = commafy(wps_1)+"+"+commafy(wps_2);
 			document.getElementById("charcoal").className = "green";
             document.getElementById("woodps2").innerHTML = commafy(woodps);
 			document.getElementById("charcoal2").className = "green";
@@ -976,6 +978,7 @@ function getMiner(){
 		document.getElementById("minerWoodCost").innerHTML = commafy(minerWoodCost);
 		if(researchUnlocked === false){
 			if(miner >= 1){
+                $("#unlockresearchmodal").modal('show');
 				document.getElementById("researchTab").className = "";
 				document.getElementById("dropdownMenu").className = "dropdown";
 				researchUnlocked = true;
@@ -984,6 +987,9 @@ function getMiner(){
 				newUnlock("research");
 			}
 		}
+        if(miner === 6){
+            $("#dotmodal").modal('show');
+        }
 		refresh();
 		refreshPerSec();
 		tier1 += 1;

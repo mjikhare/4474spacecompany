@@ -39,6 +39,9 @@ function unlockStorage(){
 function unlockBasicEnergy(){
 	if(science >= 20){
 		science -= 20;
+        
+        $('#unlockenergymodal').modal('show');
+        
         document.getElementById("collapseFuel").className = "collapseFuel";
         document.getElementById("collapseEnergy").className = "collapseEnergy";
 		document.getElementById("charcoalNav").className = "fuel unlocked";
@@ -157,6 +160,7 @@ function unlockDestruction(){
 
 function unlockSolarSystem(){
 	if(science >= 500){
+        $('#unlockspacemodal').modal('show');
 		science -= 500;
 		document.getElementById("unlockSolarSystem").className = "hidden";
 		document.getElementById("solarSystemTab").className = "";

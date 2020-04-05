@@ -2088,6 +2088,20 @@ $('.collapseOuter').click(function(){
     }
 });
 
+
+
+/*funcion clickInventory(){
+    $('#navtabs li.active').each(function(){
+        $(this).removeClass("active");
+    });
+    document.getElementById("restab").className = "active";
+    $('#tab-content > div.active').each(function(){
+        $(this).removeClass("active");
+    });
+    document.getElementById('resources').className += (" active");
+    tabClicked('resources');
+}*/
+
 /*function updateTheme(){
 	currentTheme = document.getElementById("themeSelector").options[themeSelector.selectedIndex].value;
     document.getElementById('theme_css').href = 'styles/'+currentTheme+'-bootstrap.min.css';

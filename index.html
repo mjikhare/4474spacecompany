@@ -185,21 +185,35 @@
 	  </button> -->
 	<!-- Modal -->
 <div class="modal fade" id="exampleModal" data-show="true" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-	<div class="modal-dialog" role="document">
+	<div class="modal-dialog" style="height:auto;" role="document">
 	  <div class="modal-content">
 		<div class="modal-header">
-		  <h5 class="modal-title" id="exampleModalLabel">Background story
+		  <h3 class="modal-title" id="exampleModalLabel">Background story
 			  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
 				<span aria-hidden="true">&times;</span>
 			</button>
-		</h5>
+		</h3>
 
 		</div>
 		<div class="modal-body">
 			<!--****bg STORY!!!!!!!*****-->
 		  write Here
 		</div>
-
+          <div class="modal-footer">
+            <button onclick="$('#exampleModal').hide();$('#exampleModal2').modal('show');" type="button" class="btn btn-primary" data-dismiss="modal">Next</button>
+          </div>
+	  </div>
+	</div>
+  </div>
+  <div class="modal fade" id="exampleModal2" data-show="true" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog" style="height:auto;width:500px;" role="document">
+	  <div class="modal-content">
+		<div class="modal-body">
+			Click the buttons and tabs in the tutorial to learn about the game! <br>A more in-depth overview of the game is available in the Help/FAQ tab.
+		</div>
+          <div class="modal-footer">
+            <button onclick="$('#exampleModal2').hide();" type="button" class="btn btn-primary" data-dismiss="modal">Next</button>
+          </div>
 	  </div>
 	</div>
   </div>
@@ -214,7 +228,7 @@
 				<ul class="nav ">
 						<li role="presentation" class="active"><a href="#menu1" data-toggle="tab">Resources</a></li>
 						<li role="presentation"><a href="#menu2" data-toggle="tab">Research</a></li>
-						<li role="presentation"><a href="#menu3" data-toggle="tab">Exploration</a></li>
+						<li role="presentation"><a href="#menu3" data-toggle="tab">Upgrades</a></li>
 						<li role="presentation"><a href="#menu4" data-toggle="tab">Challenges</a></li>
 				</ul>
 
@@ -237,7 +251,7 @@
 												<hide class="gainButton">
 												<br>
 												<br>
-												<div  class="btn btn-default" data-toggle="popover" title="Tips" data-content="Click this button to get the corresponding resources!">Gain <span id="">1</span></div>
+												<div  class="btn btn-default" data-toggle="popover" title="" data-content="Click to gain the resource!">Gain <span id="">1</span></div>
 												</hide>
 												<br>
 												<br>
@@ -258,7 +272,7 @@
 												</span>
 												<br>
 												<br>
-												<button  class="btn btn-default" data-toggle="popover" title="Tips" data-content="Click this button to synthesize the corresponding resources if the conditions are met!">Get Miner</button>
+												<button  class="btn btn-default" data-toggle="popover" title="" data-content="Click this button to buy a Miner. It will cost some resources and will produce 1 Metal per second. You can hire people or buy many kinds of machines to produce resources in the game.">Get Miner</button>
 												<button  class="btn btn-default destroy hidden">Destroy Miner</button>
 											</td>
 										</tr>
@@ -269,28 +283,21 @@
 							</div>
 				</div>
 				<div id="menu2" class="container tab-pane ">
-						To unlock research, you must purchase a metal miner, costing 10 Metal and 5 Wood. This is the first step to idle automation. The Research tab is where you can build laboratories to produce science for you, and also where you can discover and research new technologies to further help you through the game.
-
-						The first technology you can research is 'Storage Upgrades', which allows you to build storages to hold more of each type of resource. This is necessary when building machines and other tools costs more than 50 of a resource. You can also research 'Basic Energy Production', which opens up the world of power and advanced machines to help you get resources even faster.
-
+						Once you have purchased a metal Miner, you will unlock the research tab. This is the first step to idle automation! This allows you build laboratories to obtain Science points, which you can spend on researching new technologies to help further your progress.
 				</div>
 				<div id="menu3" class="container tab-pane fade">
-						This game has different amounts output by each machine. This can make balancing your resources hard, especially your Energy, Charcoal and Wood as they are consumed by other machines. As at tip, prioritise which resources you should build machines for first - in most cases Metal - and produce the 2 Energy required for a heavy drill. Don't upgrade everything to machines at once as you will end up with an Energy deficit (this is bad as the machines won't work without Energy). Build up your Charcoal to build engines or increase the number of solar panels to counter this.
+                        Several levels of upgrades are available throughout the game. Unlocking energy production will allow you to use energy to power more efficient machines to extract more resources. However you must first produce the energy through fuel. Further on you will be able to build a rocket and unlock space travel, giving you access to advanced tiers of resources and even more powerful machines. 
 
 				</div>
 				<div id="menu4" class="container tab-pane fade">
-						Well, it isn't called Space Company for nothing. The first thing needed to unlock inter-planetary exploration is to build a rocket. This is the first large goal that you should aim for as a target. To build a rocket, you need a lot of resources, which you most likely need to use advanced machines to get without taking an extremely long time. Secondly, to launch it requires 20 rocket fuel, which can be made in chemical plants. These require a large amount of Oil and Charcoal to produce - 20 of each per second per plant. Once you have 20 Rocket Fuel and have built a rocket, press the launch button to unlock exploration around the solar system and new technologies and ways to get resources.
-
+						Once you unlock space travel, many challenges await! There are over ten exploratory sites in the solar system that you can go to, including the Moon, Venus, Mars, Jupiter, the Asteroid Belt. Explore, obtain rare resources, build the most advanced technologies and discover the mysteries of the solar system.
 					</div>
 			</div>
 
 		</div>
-		<div class="" style="padding: 0 15px;">
-			<div class="btn btn-primary" id="tutorial_goback">
-				< go Back
-			</div>
+		<div class="" style="padding: 0 15px; padding-bottom: 15px;">
 			<div class="btn btn-success" id="tutorial_start" style="float: right;">
-				start >
+				Start Game
 			</div>
 		</div>
 	</div>
@@ -299,6 +306,82 @@
 
 </div>
 <!--******Comet-STOP*********-->
+
+<!-- UPGRADE INFO MODALS -->
+
+  <div class="modal fade" id="unlockresearchmodal" data-show="true" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog" style="height:auto;width:500px;" role="document">
+	  <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title">Research Unlocked</h3>
+        </div>
+		<div class="modal-body">
+			You have unlocked the Research tab! To research technologies, first build Science laboratories.<br><br>The first technology you can research is 'Storage Upgrades', which allows you to build storages to hold more of each type of resource. This is necessary when building machines and other tools costs more than 50 of a resource. You can also research 'Basic Energy Production', which opens up the world of power and advanced machines to help you get resources even faster.
+		</div>
+          <div class="modal-footer">
+            <button onclick="$('#unlockresearchmodal').hide();" type="button" class="btn btn-primary" data-dismiss="modal">Continue</button>
+          </div>
+	  </div>
+	</div>
+  </div>
+  
+<div class="modal fade" id="unlockenergymodal" data-show="true" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog" style="height:auto;width:500px;" role="document">
+	  <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title">Energy Unlocked</h3>
+        </div>
+		<div class="modal-body">
+			You have unlocked energy production! Energy production requires charcoal, which itself requires wood. Pay attention to the per second production rates of each resource to make sure you have enough of everything.
+            <br><br>
+            Different machines output different amounts, which can make it hard to balance resources, especially your Energy, Charcoal and Wood as they are consumed by other machines. As at tip, prioritise which resources you should build machines for first - in most cases Metal - and produce the 2 Energy required for a heavy drill. Don't upgrade everything to machines at once as you will end up with an Energy deficit (this is bad as the machines won't work without Energy). Build up your Charcoal to build engines or increase the number of solar panels to counter this.
+		</div>
+          <div class="modal-footer">
+            <button onclick="$('#unlockenergymodal').hide();" type="button" class="btn btn-primary" data-dismiss="modal">Continue</button>
+          </div>
+	  </div>
+	</div>
+</div>
+
+<div class="modal fade" id="unlockspacemodal" data-show="true" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog" style="height:auto;width:500px;" role="document">
+	  <div class="modal-content">
+        <div class="modal-header">
+        <h3 class="modal-title">Space Travel Unlocked</h3>
+        </div>
+		<div class="modal-body">
+			You have unlocked space travel! The first goal you should aim for is to build a rocket. This requires a lot of resources, which you most likely need to use advanced machines to get without taking an extremely long time.
+            <br><br>Secondly, to launch it requires rocket fuel, which can be made in chemical plants. These require a large amount of Oil and Charcoal to produce. Once you have enough rocket fuel production and have built a rocket, press the launch button to unlock exploration around the solar system and new technologies and ways to get resources. 
+		</div>
+          <div class="modal-footer">
+            <button onclick="$('#unlockspacemodal').hide();" type="button" class="btn btn-primary" data-dismiss="modal">Continue</button>
+          </div>
+	  </div>
+	</div>
+</div>
+
+  <div class="modal fade" id="dotmodal" data-show="true" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog" style="height:auto;width:500px;" role="document">
+	  <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title">Tip</h3>
+        </div>
+		<div class="modal-body">
+			The colored dots in the side resource panel represent the availability of machines for purchase. A green indicator means you have enough resources to buy the  machine, while a grey indicator means resources are insufficient.<br><br>Currently, only Tier 1 machines are unlocked; these are 'Miner' for metal, 'Gem Miner' for gems and 'Woodcutter' for wood. Once higher machine tiers are unlocked, additional indicator dots will appear for each unlocked machine.
+		</div>
+          <div class="modal-footer">
+            <button onclick="$('#dotmodal').hide();" type="button" class="btn btn-primary" data-dismiss="modal">Continue</button>
+          </div>
+	  </div>
+	</div>
+  </div>
+
+
+
+
+
+
+
 <div id="game" class="container hidden" style="width:95%; margin: auto;">
 
 	<!--  Bar at top of screen -->
@@ -333,8 +416,8 @@
 	<div height="30"></div>
 
 <!-- Nav tabs -->
-	<ul class="nav nav-tabs no-select" role="tablist">
-		<li role="presentation" class="active">
+	<ul class="nav nav-tabs no-select" id="navtabs" role="tablist">
+		<li id="restab" role="presentation" class="active">
             <a href="#resources" aria-controls="resources" role="tab" data-toggle="tab" onclick="tabClicked('resources')">
                 <div id="resourcesTabGlyph" class="glyphicon glyphicon-exclamation-sign hidden"></div>
                 Resources
@@ -366,7 +449,7 @@
 	</ul>
 
 <!--------------------- INVENTORY -------------------->
-<div id="inventory" class="container hidden" style="width:220px; padding:0; float:left;">
+<div id="inventory" onclick="clickInventory()" class="container hidden" style="width:220px; padding:0; float:left;">
     <table class="table table-hover text-primary no-select pointer" id="sortTable2" >
         <tr id="collapseEnergy2" class="collapseEnergy hidden" data-sortDefault="1" data-sortAlph="1" style="border:none;">
             <td colspan="4">
@@ -789,7 +872,7 @@
 
 <!-- Tab panes -->
 
-	<div class="tab-content">
+	<div id="tab-content" class="tab-content">
 			<!-- Resources -->
 		<div role="tabpanel" class="tab-pane fade in active" id="resources">
 			<div class="container" style="width:380px; padding:0; float:left;">
