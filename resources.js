@@ -164,7 +164,6 @@ function gainResources(){
 			document.getElementById("woodps").innerHTML = commafy(wps_1)+"+"+commafy(wps_2);
 			document.getElementById("charcoal").className = "green";
             document.getElementById("woodps2").innerHTML = commafy(woodps);
-			document.getElementById("charcoal2").className = "green";
 		}
 	}
 	else{
@@ -954,7 +953,7 @@ function noEnough(){
 function notify(title){
 	PNotify.prototype.options.styling = "bootstrap3";
 	new PNotify({
-		title: title+" is being produced",
+		title: title+" is now being produced automatically.",
 		type: 'info',
 		animation: 'fade',
 		animate_speed: 'fast',
