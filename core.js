@@ -2108,8 +2108,38 @@ $('.collapseOuter').click(function(){
 };*/
 
 window.onload = function(){
-	load('local');
+
+		load('local')
+
+	
 };
+//**************COMET change2-->
+function toggleSound (){
+	            var music = document.getElementById("player");
+	                console.log(music);
+	                console.log(music.paused);
+	            if (music.paused) {  
+	                music.paused=false;
+	                music.play(); 
+	            }  
+	            
+	        }
+	
+	var interval=setInterval("toggleSound()",1);
+	
+
+function closePlay() {
+		clearInterval(interval);
+		var music = document.getElementById("player");
+		  console.log(music);
+                console.log(music.paused);
+            if (!music.paused) {  
+     
+                music.pause(); 
+            }  
+            
+        }
+//******************chenge2 stop */
 
 window.setInterval(function(){
 	refreshPerSec();

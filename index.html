@@ -151,7 +151,11 @@
 	  ga('send', 'pageview');
 
 	</script>
+	
+
 </head>
+
+
 <body>
 <div id="loadScreen" style="width:100%; height:100%">
 	<div style="margin-left:31%; margin-top:3%;">
@@ -179,30 +183,52 @@
 
 	</div>
 </div>
-<div id="tutorial">
+<div id="tutorial" style="padding-top : 2%">
 	<!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
 		Launch demo modal
 	  </button> -->
 	<!-- Modal -->
+		
+
+
 <div class="modal fade" id="exampleModal" data-show="true" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 	<div class="modal-dialog" style="height:auto;" role="document">
 	  <div class="modal-content">
 		<div class="modal-header">
-		  <h3 class="modal-title" id="exampleModalLabel">Background story
-			  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				
+		  <h3 class="modal-title" id="exampleModalLabel"style="font-family: 'Orbitron', 'sans-serif'">Background Story
+	
+				<!--COMET change2*******-->	
+			  <button onclick="closePlay()" type="button" class="close" data-dismiss="modal" aria-label="Close">
+					
 				<span aria-hidden="true">&times;</span>
 			</button>
 		</h3>
 
 		</div>
-		<div class="modal-body">
-			<!--****bg STORY!!!!!!!*****-->
-			Obviously, science is trying to bring heaven to the earth, and humans are using various substances to build hell. 
-			So we chose to fly to the moon and do other things in this decade, not because they are easy, but because they are difficult.
-		  
+		<div class="modal-body" >
+
+			<!--COMET change2************-->
+				<audio autoplay loop="false" id="player" src="bgmusic.mp3" volume="10" >			
+				</audio>
+			
+				
+			<!--****COMET change2 bg STORY!!!!!!!*****-->
+			<h2 style="font-family: 'Orbitron', 'sans-serif'">The World is Calling You!</h2>
+		      <h3>Obviously, science is trying to bring heaven to our home, and humans are using various substances to build hell. 
+					So we chose to fly to the moon and do other things in this decade, not because they are easy, but because they are difficult.</h3>
+					
+					<p>The planet we are living is no longer in balance. There are many other companies in the universe try to find a way for all planets and creatures to survive. However, the wars between planets are seemingly inevitable.
+						Get prepared! We are here to help you expolre the resources and develop adavanced technology.</p>
+				
+						<p>The resources you can expolre is unlimited. The more basic resources you get will help you to unlock more, may even outside the solar system.
+						As the resources accumulate, the technology we obtain will also be improved. But remember the greed of human beings will lead them to destruction, your goal here is to help us find the balance for the planet.
+						Try to gain the resources and make the best of what you have expolerd to save the planet.
+						The future is in your hand.
+					</p>
 		</div>
           <div class="modal-footer">
-            <button onclick="$('#exampleModal').hide();$('#exampleModal2').modal('show');" type="button" class="btn btn-primary" data-dismiss="modal">Next</button>
+            <button onclick="closePlay();$('#exampleModal').hide();$('#exampleModal2').modal('show');" type="button" class="btn btn-primary" data-dismiss="modal">Next</button>
           </div>
 	  </div>
 	</div>
@@ -219,7 +245,7 @@
 	  </div>
 	</div>
   </div>
-  <div style="width:60%; font-size:50px; font-family: 'Orbitron', 'sans-serif'; font-weight: lighter; color:#000000; line-height:62px; text-align:left; margin-left:10%;margin-bottom:1%;">
+  <div style="width:60%; font-size:50px; font-family: 'Orbitron', 'sans-serif'; font-weight: lighter; color:#000000; line-height:62px; text-align:left;  margin-left:10%;margin-bottom:1%;">
 		Tutorial</div>
   <div style="width:30%; font-size:18px; font-family: 'Orbitron', 'sans-serif'; font-weight: lighter; color:#000000; line-height:22px; text-align:left; margin-left:10%;margin-bottom:3%;">
 				Try the buttons to see what you can do in this world.</div>
